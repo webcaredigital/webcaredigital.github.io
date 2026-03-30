@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lyons Heating &amp; AC | Stone Mountain, GA</title>
+<meta name="description" content="Lyons Heating &amp; AC — Commercial and residential heating repair, AC repair, and HVAC system installation in Stone Mountain, GA. Call (404) 297-5948.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1e3a5f;
+    --navy-dark: #0e1f35;
+    --charcoal: #1a1a1a;
+    --steel: #2c3e50;
+    --orange: #e8772e;
+    --orange-hot: #ff6b1a;
+    --white: #ffffff;
+    --off-white: #f0ebe3;
+    --light-gray: #e8e0d5;
+    --text-muted: #a0a0a0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--charcoal);
+    color: var(--white);
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--navy-dark);
+    border-bottom: 4px solid var(--orange);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 74px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.6);
+  }
+
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .header-monogram {
+    width: 48px;
+    height: 48px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.4rem;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .header-name {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.35rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.1;
+  }
+
+  .header-tagline {
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  .header-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.65rem 1.75rem;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    white-space: nowrap;
+  }
+
+  .header-cta:hover { background: var(--orange-hot); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: flex-end;
+    background: url('https://s3-media0.fl.yelpcdn.com/bphoto/bps2dcFRqqeAg6Ujuvjebg/l.jpg') center top / cover no-repeat;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(14,31,53,0.5) 0%, rgba(14,31,53,0.3) 30%, rgba(14,31,53,0.85) 75%, rgba(14,31,53,0.98) 100%);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(to bottom, var(--orange), var(--orange-hot));
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 4vw 5rem;
+    max-width: 900px;
+  }
+
+  .hero-service-tag {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Anton', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+  }
+
+  .hero-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 0.9;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  }
+
+  .hero-title .orange-line {
+    color: var(--orange);
+    -webkit-text-stroke: 0px;
+    display: block;
+  }
+
+  .hero-title .outline-line {
+    -webkit-text-stroke: 2px rgba(255,255,255,0.6);
+    color: transparent;
+    display: block;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    max-width: 500px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    border-left: 3px solid var(--orange);
+    padding-left: 1rem;
+  }
+
+  .hero-phone-block {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .hero-phone-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-phone-link {
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+    transition: color 0.2s;
+  }
+
+  .hero-phone-link:hover { color: var(--orange); }
+
+  .hero-phone-number {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: 0.08em;
+    line-height: 1;
+  }
+
+  /* ── TRUST STRIP ── */
+  .trust-strip {
+    background: var(--orange);
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .trust-inner {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .trust-item {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-family: 'Anton', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .trust-item + .trust-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: rgba(255,255,255,0.3);
+  }
+
+  /* ── SECTION SHARED ── */
+  section.content-section {
+    padding: 5rem 2rem;
+  }
+
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+
+  .section-kicker {
+    font-family: 'Anton', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .section-kicker::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--orange);
+  }
+
+  .section-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 0.95;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .section-title .accent { color: var(--orange); }
+
+  /* ── SERVICES ── */
+  .services {
+    background: var(--navy-dark);
+  }
+
+  .services-header { margin-bottom: 3rem; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .service-card {
+    background: var(--navy-dark);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.25s;
+  }
+
+  .service-card:hover { background: var(--steel); }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--orange);
+    transition: height 0.3s;
+  }
+
+  .service-card:hover::before { height: 100%; }
+
+  .service-number {
+    font-family: 'Anton', sans-serif;
+    font-size: 4rem;
+    color: rgba(232,119,46,0.1);
+    line-height: 1;
+    margin-bottom: -1rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+
+  .service-card:hover .service-number { color: rgba(232,119,46,0.2); }
+
+  .service-name {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ── GALLERY ── */
+  .gallery {
+    background: var(--charcoal);
+    padding: 5rem 0;
+  }
+
+  .gallery-header {
+    padding: 0 2rem;
+    margin-bottom: 2.5rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gallery-scroll {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3px;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+  }
+
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(4) {
+    aspect-ratio: 3/5;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(30%) contrast(1.1);
+    transition: all 0.5s;
+  }
+
+  .gallery-item:hover img {
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.05);
+  }
+
+  .gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(232,119,46,0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .gallery-item:hover::after { opacity: 1; }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--navy-dark);
+    padding: 6rem 2rem;
+  }
+
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .about-body {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-credentials {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .credential {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255,255,255,0.04);
+    border-left: 4px solid var(--orange);
+  }
+
+  .credential-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+
+  .credential-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--off-white);
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%) contrast(1.1);
+  }
+
+  .about-img-frame {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-img-frame::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: -20px;
+    bottom: -20px;
+    border: 3px solid var(--orange);
+    z-index: -1;
+  }
+
+  .location-tag {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Anton', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+  }
+
+  /* ── CTA ── */
+  .contact-cta {
+    background: var(--charcoal);
+    padding: 7rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-cta::before {
+    content: 'LYONS';
+    position: absolute;
+    font-family: 'Anton', sans-serif;
+    font-size: 25vw;
+    letter-spacing: 0.05em;
+    color: rgba(255,255,255,0.02);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+    line-height: 1;
+  }
+
+  .cta-inner { position: relative; z-index: 1; }
+
+  .cta-label {
+    font-family: 'Anton', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1rem;
+  }
+
+  .cta-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 0.95;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-title span { color: var(--orange); display: block; }
+
+  .cta-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 3rem;
+    font-style: italic;
+  }
+
+  .cta-phone-link {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .cta-phone-number {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3rem, 9vw, 7rem);
+    letter-spacing: 0.05em;
+    color: var(--white);
+    line-height: 1;
+    display: block;
+    transition: color 0.2s;
+    text-transform: uppercase;
+  }
+
+  .cta-phone-link:hover .cta-phone-number { color: var(--orange); }
+
+  .cta-phone-note {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-top: 0.5rem;
+    display: block;
+  }
+
+  .cta-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--orange);
+    margin: 2rem auto 0;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060d16;
+    padding: 2rem;
+    border-top: 3px solid var(--orange);
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-brand {
+    font-family: 'Anton', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .footer-brand strong { color: var(--orange); }
+
+  .footer-copy {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.25);
+    text-align: center;
+  }
+
+  .footer-by {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.25);
+    text-align: right;
+  }
+
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .gallery-scroll { grid-template-columns: repeat(3, 1fr); }
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .trust-inner { flex-wrap: wrap; }
+    .trust-item { flex: 1 1 45%; font-size: 0.72rem; padding: 0.75rem 0.5rem; }
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-by { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-brand">
+    <div class="header-monogram">L</div>
+    <div>
+      <div class="header-name">Lyons Heating &amp; AC</div>
+      <div class="header-tagline">Stone Mountain, Georgia</div>
+    </div>
+  </div>
+  <a href="tel:4042975948" class="header-cta">
+    ☎ (404) 297-5948
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-service-tag">Serving Stone Mountain &amp; Metro Atlanta</div>
+    <h1 class="hero-title">
+      <span class="orange-line">Lyons</span>
+      <span class="outline-line">Heating</span>
+      <span style="display: block;">&amp; AC</span>
+    </h1>
+    <p class="hero-desc">
+      Residential and commercial HVAC you can count on. Heating repair, AC repair, system installations — done right the first time.
+    </p>
+    <div class="hero-phone-block">
+      <span class="hero-phone-label">Call Now — Free Estimates</span>
+      <a href="tel:4042975948" class="hero-phone-link">
+        <span class="hero-phone-number">(404) 297-5948</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">🔧 Heating Repair</div>
+    <div class="trust-item">❄️ AC Repair</div>
+    <div class="trust-item">🏢 Commercial HVAC</div>
+    <div class="trust-item">⚙️ System Installation</div>
+    <div class="trust-item">📍 Stone Mountain, GA</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="content-section services">
+  <div class="section-inner">
+    <div class="services-header">
+      <p class="section-kicker">What We Do</p>
+      <h2 class="section-title">Our <span class="accent">Services</span></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-number">01</div>
+        <div class="service-name">Heating Repair</div>
+        <div class="service-desc">Expert diagnosis and repair for furnaces, heat pumps, and all heating systems. Fast turnaround so you're never left in the cold.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-number">02</div>
+        <div class="service-name">AC Repair</div>
+        <div class="service-desc">Same-day AC repair available. We fix central air, ductless mini-splits, and all major brands before the Georgia heat gets to you.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-number">03</div>
+        <div class="service-name">Commercial HVAC</div>
+        <div class="service-desc">Full-scale commercial HVAC service for offices, retail spaces, warehouses, and multi-unit buildings. Scheduled maintenance available.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-number">04</div>
+        <div class="service-name">System Installation</div>
+        <div class="service-desc">New construction and full system replacements. We size, source, and install the right system for your space and budget.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="gallery-header section-inner">
+    <p class="section-kicker">Our Work</p>
+    <h2 class="section-title">Built to <span class="accent">Last</span></h2>
+  </div>
+  <div class="gallery-scroll">
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/Cqxey0wJkApNlr3d5oQoyg/l.jpg" alt="Lyons HVAC work photo 1" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/1rvU-CCaVAsszFNZzuBH5g/l.jpg" alt="Lyons HVAC work photo 2" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/I96McFfDzS6x9Lvxajt8BA/l.jpg" alt="Lyons HVAC work photo 3" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/btyte8thPlA3oGehEIQUXQ/l.jpg" alt="Lyons HVAC work photo 4" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/WwLtBQMGfR_P_9FY5hA8tQ/l.jpg" alt="Lyons HVAC work photo 5" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/bps2dcFRqqeAg6Ujuvjebg/l.jpg" alt="Lyons HVAC work photo 6" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-inner">
+    <div>
+      <p class="section-kicker">About Lyons</p>
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">Serving Stone<br><span class="accent">Mountain</span></h2>
+      <p class="about-body">Lyons Heating &amp; AC has been keeping homes and businesses comfortable in Stone Mountain and the surrounding Metro Atlanta communities. Our team brings hard-earned expertise and a no-nonsense work ethic to every call.</p>
+      <p class="about-body">Whether it's an emergency repair in the middle of summer or a planned commercial installation, we approach every job with the same level of commitment — get it done right, the first time, at a fair price.</p>
+      <div class="about-credentials">
+        <div class="credential">
+          <div class="credential-icon">🛡</div>
+          <div class="credential-text">Licensed &amp; Fully Insured</div>
+        </div>
+        <div class="credential">
+          <div class="credential-icon">🏢</div>
+          <div class="credential-text">Commercial &amp; Residential</div>
+        </div>
+        <div class="credential">
+          <div class="credential-icon">🔧</div>
+          <div class="credential-text">All Major Brands Serviced</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-img-frame">
+        <img src="https://s3-media0.fl.yelpcdn.com/bphoto/I96McFfDzS6x9Lvxajt8BA/l.jpg" alt="Lyons HVAC technician at work" class="about-img" loading="lazy">
+        <div class="location-tag">Stone Mountain, GA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="contact-cta">
+  <div class="cta-inner">
+    <p class="cta-label">Get a Free Estimate</p>
+    <h2 class="cta-title">
+      Call Lyons
+      <span>We'll Handle It.</span>
+    </h2>
+    <p class="cta-sub">Residential and commercial HVAC — Stone Mountain, GA and beyond</p>
+    <a href="tel:4042975948" class="cta-phone-link">
+      <span class="cta-phone-number">(404) 297-5948</span>
+      <span class="cta-phone-note">Stone Mountain, Georgia · Licensed &amp; Insured</span>
+    </a>
+    <div class="cta-divider"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><strong>LYONS</strong> HEATING &amp; AC</div>
+    <div class="footer-copy">© 2025 Lyons Heating &amp; AC · Stone Mountain, GA</div>
+    <div class="footer-by">Website by WebCare Digital</div>
+  </div>
+</footer>
+
+</body>
+</html>

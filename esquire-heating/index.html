@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquire Heating And Air Conditioning | Atlanta, GA</title>
+<meta name="description" content="Esquire Heating And Air Conditioning — Premier HVAC repair, AC installation, heating, and 24-hour emergency service in Atlanta, GA. Call (404) 397-8224.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1e3a5f;
+    --navy-deep: #0f2240;
+    --navy-mid: #16305a;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --orange: #e8772e;
+    --cream: #f5f0e8;
+    --cream-light: #faf7f2;
+    --white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-muted: #666;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--cream-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+
+  /* ── STICKY HEADER ── */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--navy-deep);
+    border-bottom: 2px solid var(--gold);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header-crest {
+    width: 44px;
+    height: 44px;
+    background: var(--gold);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    flex-shrink: 0;
+  }
+
+  .header-name {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+  }
+
+  .header-name span {
+    display: block;
+    font-size: 0.7rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .header-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+    white-space: nowrap;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .header-cta:hover { background: #d06520; }
+
+  .header-cta-icon {
+    font-size: 1.1rem;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://s3-media0.fl.yelpcdn.com/bphoto/RnAI41HhGExQ9Br8jP7Q4w/l.jpg') center center / cover no-repeat;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(10,20,40,0.82) 0%, rgba(14,30,55,0.70) 50%, rgba(200,120,20,0.35) 100%);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--navy-deep), var(--gold), var(--orange), var(--gold), var(--navy-deep));
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 2rem;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero-eyebrow::before,
+  .hero-eyebrow::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-divider-line {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.6;
+  }
+
+  .hero-divider-diamond {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+  }
+
+  .hero-phone {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-decoration: none;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid var(--gold);
+    padding: 1rem 2.5rem;
+    color: var(--white);
+    transition: all 0.3s;
+    backdrop-filter: blur(8px);
+  }
+
+  .hero-phone:hover {
+    background: var(--gold);
+    color: var(--navy-deep);
+  }
+
+  .hero-phone-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--gold-light);
+  }
+
+  .hero-phone:hover .hero-phone-label {
+    color: var(--navy-deep);
+  }
+
+  .hero-phone-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+
+  /* ── TRUST STRIP ── */
+  .trust-strip {
+    background: var(--navy-deep);
+    border-top: 1px solid rgba(201,168,76,0.3);
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+    padding: 1.25rem 2rem;
+  }
+
+  .trust-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 2rem;
+    color: var(--cream);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .trust-item + .trust-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 1px;
+    background: rgba(201,168,76,0.4);
+  }
+
+  .trust-icon {
+    color: var(--gold);
+    font-size: 1rem;
+  }
+
+  /* ── SECTION SHARED ── */
+  section {
+    padding: 5rem 2rem;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .section-eyebrow::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: var(--orange);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 500;
+    color: var(--navy-deep);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--orange);
+  }
+
+  /* ── SERVICES ── */
+  .services {
+    background: var(--cream-light);
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .services-header .section-eyebrow {
+    justify-content: center;
+  }
+
+  .services-header .section-eyebrow::before {
+    display: none;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5px;
+    background: linear-gradient(135deg, var(--navy-deep), var(--navy));
+    border: 1.5px solid var(--navy);
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 2.5rem 1.75rem;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--orange));
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .service-card:hover {
+    background: var(--navy-deep);
+  }
+
+  .service-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .service-card:hover .service-name { color: var(--white); }
+  .service-card:hover .service-desc { color: rgba(255,255,255,0.6); }
+  .service-card:hover .service-icon { color: var(--gold); }
+
+  .service-icon {
+    font-size: 2rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+  }
+
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy-deep);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+    letter-spacing: 0.02em;
+  }
+
+  .service-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    transition: color 0.3s;
+  }
+
+  /* ── GALLERY ── */
+  .gallery {
+    background: var(--navy-deep);
+    padding: 5rem 0;
+  }
+
+  .gallery-header {
+    text-align: center;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .gallery-header .section-eyebrow {
+    justify-content: center;
+    color: var(--gold);
+  }
+
+  .gallery-header .section-eyebrow::before { display: none; }
+
+  .gallery-header .section-title {
+    color: var(--white);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 4px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    position: relative;
+    background: var(--navy);
+  }
+
+  .gallery-item:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: 220px;
+    transition: transform 0.6s ease;
+    filter: brightness(0.9) sepia(0.1);
+  }
+
+  .gallery-item:first-child img { min-height: 460px; }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1) sepia(0);
+  }
+
+  .gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 0px solid var(--gold);
+    transition: border-width 0.3s;
+    pointer-events: none;
+  }
+
+  .gallery-item:hover::after {
+    border-width: 3px;
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--white);
+  }
+
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-ornament {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .ornament-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .ornament-diamond {
+    width: 10px;
+    height: 10px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  .about-body {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--navy-deep);
+    font-weight: 500;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(201,168,76,0.3);
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--gold);
+    border: 1px solid var(--gold);
+  }
+
+  .stat-box {
+    background: var(--navy-deep);
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* ── CONTACT CTA ── */
+  .contact-cta {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-mid) 60%, #1a3a6a 100%);
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(ellipse, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact-cta::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--orange), var(--gold), transparent);
+  }
+
+  .cta-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .cta-eyebrow::before,
+  .cta-eyebrow::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+  }
+
+  .cta-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 3rem;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+  }
+
+  .cta-phone-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.3s;
+  }
+
+  .cta-phone-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    color: var(--gold-light);
+    text-shadow: 0 0 40px rgba(201,168,76,0.3);
+    display: block;
+    transition: color 0.3s;
+  }
+
+  .cta-phone-link:hover .cta-phone-number {
+    color: var(--white);
+  }
+
+  .cta-phone-note {
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-top: 0.5rem;
+  }
+
+  .cta-emergency {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    background: rgba(232,119,46,0.15);
+    border: 1px solid rgba(232,119,46,0.4);
+    color: var(--orange);
+    padding: 0.6rem 1.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 1px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080f1c;
+    padding: 2.5rem 2rem;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-brand strong {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+  }
+
+  .footer-by {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .header-name { font-size: 1rem; }
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
+    .gallery-item:first-child img { min-height: 260px; }
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-by { text-align: center; }
+    .trust-item { padding: 0.5rem 1rem; font-size: 0.72rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY HEADER -->
+<header>
+  <div class="header-brand">
+    <div class="header-crest"></div>
+    <div class="header-name">
+      Esquire Heating &amp; Air
+      <span>Atlanta, Georgia</span>
+    </div>
+  </div>
+  <a href="tel:4043978224" class="header-cta">
+    <span class="header-cta-icon">☎</span>
+    (404) 397-8224
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Atlanta's Premier HVAC Specialists</p>
+    <h1 class="hero-title">
+      Distinguished<br><em>Comfort &amp; Care</em>
+    </h1>
+    <p class="hero-subtitle">Trusted heating and air conditioning excellence since day one</p>
+    <div class="hero-divider">
+      <div class="hero-divider-line"></div>
+      <div class="hero-divider-diamond"></div>
+      <div class="hero-divider-line"></div>
+    </div>
+    <a href="tel:4043978224" class="hero-phone">
+      <span class="hero-phone-label">Call Now — 24/7 Emergency Service</span>
+      <span class="hero-phone-number">(404) 397-8224</span>
+    </a>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <span class="trust-icon">★</span>
+      5.0 Rating · 12 Reviews
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">✦</span>
+      Licensed &amp; Insured
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">✦</span>
+      24-Hour Emergency Service
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">✦</span>
+      Atlanta, GA
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">✦</span>
+      Free Estimates
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="section-inner">
+    <div class="services-header">
+      <p class="section-eyebrow">What We Offer</p>
+      <h2 class="section-title">Our <em>Services</em></h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 500px; margin: 0.75rem auto 0;">Comprehensive HVAC solutions delivered with the care and precision your home deserves.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <div class="service-name">HVAC Repair</div>
+        <div class="service-desc">Swift, reliable diagnostics and repair for all major HVAC systems.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">❄️</div>
+        <div class="service-name">AC Installation</div>
+        <div class="service-desc">Expert installation of central air and ductless systems sized for your space.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔥</div>
+        <div class="service-name">Heating</div>
+        <div class="service-desc">Furnace repair, heat pump service, and full heating system replacements.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚨</div>
+        <div class="service-name">Emergency Service</div>
+        <div class="service-desc">Rapid-response emergency HVAC care when your system can't wait.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🕐</div>
+        <div class="service-name">24hr HVAC</div>
+        <div class="service-desc">Round-the-clock availability for comfort that never stops.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="gallery-header">
+    <p class="section-eyebrow">Our Work</p>
+    <h2 class="section-title" style="color: var(--white);">Craftsmanship <em style="color: var(--gold-light);">in Every Detail</em></h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/rLmnBWOGVeqX8u2-M5aBLQ/l.jpg" alt="Esquire HVAC work photo 1" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/Qe9Yeb4vt5x-Hli1OmjI9Q/l.jpg" alt="Esquire HVAC work photo 2" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/87cTybnlPJ-eQwGbYF_1Gg/l.jpg" alt="Esquire HVAC work photo 3" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/-3pgN6ICDB770l438CNMeQ/l.jpg" alt="Esquire HVAC work photo 4" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/iNbER7u4YQx7m3jU5dK_lQ/l.jpg" alt="Esquire HVAC work photo 5" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <div class="about-ornament">
+        <div class="ornament-diamond"></div>
+        <div class="ornament-line"></div>
+      </div>
+      <p class="section-eyebrow">About Us</p>
+      <h2 class="section-title">Atlanta's <em>Trusted</em><br>HVAC Professionals</h2>
+      <p class="about-body">
+        Esquire Heating And Air Conditioning brings a distinguished level of service to every job. We believe your home's comfort is not a luxury — it's a right. Our certified technicians approach each call with meticulous attention to detail, transparent pricing, and a commitment to doing the job right the first time.
+      </p>
+      <p class="about-body">
+        From urgent emergency repairs in the dead of summer to full system installations, we treat every client's home with the respect and care it deserves. Our 5-star reputation in Atlanta is built on trust, quality, and results.
+      </p>
+      <div class="about-signature">Esquire Heating &amp; Air</div>
+    </div>
+    <div>
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="stat-number">5.0</div>
+          <div class="stat-label">Star Rating</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Emergency Service</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Satisfaction</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">ATL</div>
+          <div class="stat-label">Locally Owned</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="contact-cta">
+  <p class="cta-eyebrow">Get In Touch</p>
+  <h2 class="cta-title">Ready for Superior Comfort?</h2>
+  <p class="cta-sub">Call us day or night — we're always here for you.</p>
+  <a href="tel:4043978224" class="cta-phone-link">
+    <span class="cta-phone-number">(404) 397-8224</span>
+    <p class="cta-phone-note">Atlanta, Georgia · Licensed &amp; Insured</p>
+  </a>
+  <br>
+  <div class="cta-emergency">⚡ 24-Hour Emergency HVAC Response Available</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>Esquire Heating &amp; Air Conditioning</strong>
+    </div>
+    <div class="footer-copy">© 2025 Esquire Heating And Air Conditioning · Atlanta, GA</div>
+    <div class="footer-by">Website by WebCare Digital</div>
+  </div>
+</footer>
+
+</body>
+</html>

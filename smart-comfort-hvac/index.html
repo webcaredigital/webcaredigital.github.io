@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Comfort Heating and Air | Lilburn, GA Metro Atlanta</title>
+<meta name="description" content="Smart Comfort Heating and Air — AC repair, installation, air duct cleaning, ductless AC, and home performance services in Lilburn, GA. Call (404) 667-3801.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1e3a5f;
+    --navy-light: #2a4f7f;
+    --blue-accent: #2d7dd2;
+    --sky: #e8f4fd;
+    --orange: #e8772e;
+    --orange-light: #f59b5c;
+    --white: #ffffff;
+    --off-white: #f7fafd;
+    --text: #1e2d3d;
+    --text-muted: #6b7c8e;
+    --border: #d6e8f5;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 3px solid var(--blue-accent);
+    backdrop-filter: blur(10px);
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 20px rgba(30,58,95,0.12);
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--navy), var(--blue-accent));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+
+  .logo-text span {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .header-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--sky);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .badge-star { color: #f5a623; }
+
+  .header-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.65rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    box-shadow: 0 4px 15px rgba(232,119,46,0.35);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .header-phone:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(232,119,46,0.45);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    background: url('https://s3-media0.fl.yelpcdn.com/bphoto/GbYMCyhYh7TBIvn1Mnt71Q/l.jpg') center center / cover no-repeat;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(30,58,95,0.88) 0%, rgba(30,58,95,0.65) 55%, rgba(45,125,210,0.25) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    padding: 3rem 2.5rem 3rem 6vw;
+  }
+
+  .hero-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+    padding: 0.35rem 1rem;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(4px);
+  }
+
+  .chip-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4cdb7f;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-title .highlight {
+    color: var(--orange-light);
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    max-width: 500px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    box-shadow: 0 8px 25px rgba(232,119,46,0.4);
+    transition: all 0.2s;
+  }
+
+  .hero-cta-primary:hover {
+    background: #d4651e;
+    transform: translateY(-2px);
+  }
+
+  .hero-cta-secondary {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  /* ── TRUST STRIP ── */
+  .trust-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2.5rem;
+    box-shadow: 0 2px 12px rgba(30,58,95,0.06);
+  }
+
+  .trust-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 2.5rem;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+
+  .trust-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--sky);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  /* ── SECTION COMMON ── */
+  section.content-section {
+    padding: 5rem 2.5rem;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blue-accent);
+    margin-bottom: 0.6rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title .accent { color: var(--orange); }
+
+  /* ── SERVICES ── */
+  .services {
+    background: var(--white);
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .service-card {
+    background: var(--off-white);
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    transition: all 0.25s;
+    cursor: default;
+  }
+
+  .service-card:hover {
+    border-color: var(--blue-accent);
+    box-shadow: 0 8px 30px rgba(30,58,95,0.1);
+    transform: translateY(-4px);
+    background: var(--white);
+  }
+
+  .service-card-icon {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, var(--sky), var(--border));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+    transition: all 0.25s;
+  }
+
+  .service-card:hover .service-card-icon {
+    background: linear-gradient(135deg, var(--navy), var(--blue-accent));
+  }
+
+  .service-card-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── GALLERY ── */
+  .gallery {
+    background: var(--off-white);
+    padding: 5rem 2.5rem;
+  }
+
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+    gap: 12px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gallery-item:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .gallery-item:hover img { transform: scale(1.06); }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(30,58,95,0.5) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 12px;
+  }
+
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--white);
+  }
+
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-body {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-features {
+    list-style: none;
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .about-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .feature-check {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.65rem;
+    flex-shrink: 0;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img-main {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 20px 60px rgba(30,58,95,0.2);
+  }
+
+  .about-stats-overlay {
+    position: absolute;
+    bottom: -1.5rem;
+    left: -1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    background: var(--navy);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(30,58,95,0.3);
+  }
+
+  .stat-cell {
+    background: var(--navy);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .stat-cell:first-child { background: var(--orange); }
+
+  .stat-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+  }
+
+  /* ── CTA ── */
+  .contact-cta {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #1a4a7a 100%);
+    padding: 6rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-cta::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(45,125,210,0.2) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(232,119,46,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-inner { position: relative; z-index: 1; }
+
+  .cta-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    padding: 0.35rem 1.1rem;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-title {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .cta-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .cta-phone-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .cta-phone-link:hover { transform: scale(1.03); }
+
+  .cta-phone-number {
+    display: block;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .cta-phone-sub {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--orange-light);
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+  }
+
+  .cta-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-badge {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0d1f35;
+    padding: 2rem 2.5rem;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-brand {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-brand strong { color: rgba(255,255,255,0.8); }
+
+  .footer-copy {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+  }
+
+  .footer-by {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.3);
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .header-badge { display: none; }
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 180px; }
+    .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-by { text-align: center; }
+    .hero-content { padding: 3rem 2rem; }
+    .about-stats-overlay { position: static; margin-top: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-logo">
+    <div class="logo-icon">SC</div>
+    <div class="logo-text">
+      Smart Comfort HVAC
+      <span>Lilburn · Metro Atlanta</span>
+    </div>
+  </div>
+  <div class="header-nav">
+    <div class="header-badge">
+      <span class="badge-star">★</span> 5.0 · 10 Reviews
+    </div>
+    <a href="tel:4046673801" class="header-phone">
+      📞 (404) 667-3801
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-chip">
+      <div class="chip-dot"></div>
+      Available Now — Metro Atlanta
+    </div>
+    <h1 class="hero-title">
+      Smarter Heating<br>&amp; <span class="highlight">Air Conditioning</span>
+    </h1>
+    <p class="hero-desc">
+      Efficient, reliable HVAC solutions for your home. From AC repair to ductless installations and air duct cleaning — we deliver comfort you can trust.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:4046673801" class="hero-cta-primary">
+        📞 Call (404) 667-3801
+      </a>
+      <div class="hero-cta-secondary">
+        ⚡ Fast Response · Free Estimates
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon">⭐</div>
+      5.0 Stars · 10 Reviews
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🛡</div>
+      Licensed &amp; Insured
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">💨</div>
+      Air Duct Cleaning
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">📋</div>
+      Free Estimates
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">📍</div>
+      Lilburn, GA
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="content-section services">
+  <div class="section-inner">
+    <div class="services-header">
+      <p class="section-label">What We Do</p>
+      <h2 class="section-title">Smart Solutions for <span class="accent">Every Season</span></h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 480px; margin: 0.75rem auto 0;">Technology-forward HVAC service built for modern homes in Lilburn and the Metro Atlanta area.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-icon">❄️</div>
+        <div class="service-card-name">AC Repair &amp; Installation</div>
+        <div class="service-card-desc">Fast diagnostics and expert installation for central air systems of any brand.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🔥</div>
+        <div class="service-card-name">Heating</div>
+        <div class="service-card-desc">Furnace repair, heat pump services, and full heating system replacements.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">💨</div>
+        <div class="service-card-name">Air Duct Cleaning</div>
+        <div class="service-card-desc">Professional duct cleaning for better air quality and system efficiency.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🏠</div>
+        <div class="service-card-name">Home Performance</div>
+        <div class="service-card-desc">Energy audits and efficiency upgrades that lower your monthly bills.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🌡️</div>
+        <div class="service-card-name">Ductless AC</div>
+        <div class="service-card-desc">Mini-split installation and service for rooms without existing ductwork.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="gallery-header section-inner">
+    <p class="section-label">Our Work</p>
+    <h2 class="section-title">Quality You Can <span class="accent">See</span></h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/k3g653TfDyzgtoDTsTbiuA/l.jpg" alt="Smart Comfort HVAC photo 1" loading="lazy">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/dEQjg171eqU6VgA_-5jlVw/l.jpg" alt="Smart Comfort HVAC photo 2" loading="lazy">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/2e2YL6jo5b4Iw7oPfFaNiw/l.jpg" alt="Smart Comfort HVAC photo 3" loading="lazy">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/UofC5zv8wEYm2qeSm5xtlA/l.jpg" alt="Smart Comfort HVAC photo 4" loading="lazy">
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/SlDmM8lVRykhTkf_QozOBw/l.jpg" alt="Smart Comfort HVAC photo 5" loading="lazy">
+      <div class="gallery-overlay"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="content-section about">
+  <div class="about-inner">
+    <div>
+      <p class="section-label">About Us</p>
+      <h2 class="section-title">Comfort Built on <span class="accent">Trust</span></h2>
+      <p class="about-body">Smart Comfort Heating and Air brings a modern, systematic approach to home climate control. Serving Lilburn and all of Metro Atlanta, we combine cutting-edge HVAC knowledge with old-fashioned customer care — the kind where we show up on time, explain what we're doing, and leave your home better than we found it.</p>
+      <p class="about-body">Our technicians are trained on the latest systems, from traditional central air to high-efficiency ductless mini-splits and whole-home performance upgrades. We believe comfort should be smart, efficient, and affordable.</p>
+      <ul class="about-features">
+        <li class="about-feature"><div class="feature-check">✓</div> Licensed &amp; Insured</li>
+        <li class="about-feature"><div class="feature-check">✓</div> Free Estimates</li>
+        <li class="about-feature"><div class="feature-check">✓</div> All Major Brands</li>
+        <li class="about-feature"><div class="feature-check">✓</div> Energy Efficient</li>
+        <li class="about-feature"><div class="feature-check">✓</div> Duct Cleaning</li>
+        <li class="about-feature"><div class="feature-check">✓</div> Same-Day Available</li>
+      </ul>
+    </div>
+    <div class="about-visual">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/GbYMCyhYh7TBIvn1Mnt71Q/l.jpg" alt="Smart Comfort team at work" class="about-img-main" loading="lazy">
+      <div class="about-stats-overlay">
+        <div class="stat-cell">
+          <div class="stat-value">5.0</div>
+          <div class="stat-label">Stars</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="contact-cta">
+  <div class="cta-inner">
+    <div class="cta-chip">📞 Get a Free Estimate Today</div>
+    <h2 class="cta-title">Let's Fix Your Comfort Problem</h2>
+    <p class="cta-sub">One call is all it takes. We serve Lilburn, Lawrenceville, and Metro Atlanta.</p>
+    <a href="tel:4046673801" class="cta-phone-link">
+      <span class="cta-phone-number">(404) 667-3801</span>
+      <p class="cta-phone-sub">Lilburn, GA · Metro Atlanta · Licensed &amp; Insured</p>
+    </a>
+    <div class="cta-badges">
+      <div class="cta-badge">⭐ 5.0 Rated</div>
+      <div class="cta-badge">💨 Duct Cleaning</div>
+      <div class="cta-badge">🌡 Ductless AC</div>
+      <div class="cta-badge">🏠 Home Performance</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><strong>Smart Comfort Heating and Air</strong></div>
+    <div class="footer-copy">© 2025 Smart Comfort Heating and Air · Lilburn, GA</div>
+    <div class="footer-by">Website by WebCare Digital</div>
+  </div>
+</footer>
+
+</body>
+</html>
