@@ -1,453 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pass Electric &amp; HVAC | Complete Home Services in Fairburn, GA</title>
-<meta name="description" content="Pass Electric &amp; HVAC provides electrical, HVAC, water heater, and AC installation services in Fairburn, GA. Call (404) 671-6481.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --navy: #1e3a5f;
-    --navy-dark: #0b1929;
-    --navy-mid: #1a3050;
-    --orange: #e8772e;
-    --orange-dark: #c85f18;
-    --electric: #f4d03f;
-    --electric-dark: #e2b90e;
-    --white: #ffffff;
-    --gray-50: #f6f8fc;
-    --gray-100: #edf1f8;
-    --gray-200: #d5dce8;
-    --gray-600: #4e6080;
-    --gray-800: #1e2a3c;
-    --font-head: 'Exo 2', sans-serif;
-    --font: 'Roboto', sans-serif;
-    --radius: 8px;
-    --radius-lg: 14px;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font); color: var(--gray-800); background: var(--white); line-height: 1.65; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pass Electric &amp; HVAC — Fairburn, GA HVAC &amp; Electrical</title>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; color: #1e3a5f; background: #fff; }
 
-  /* HEADER */
-  header {
-    position: sticky; top: 0; z-index: 100;
-    background: var(--navy-dark);
-    border-bottom: 2px solid rgba(244,208,63,0.4);
-    box-shadow: 0 2px 16px rgba(0,0,0,0.35);
-  }
-  .header-inner {
-    max-width: 1140px; margin: 0 auto; padding: 0 28px;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 70px;
-  }
-  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .logo-bolt {
-    width: 42px; height: 42px; background: var(--electric);
-    border-radius: var(--radius); display: flex; align-items: center; justify-content: center;
-    font-size: 22px; flex-shrink: 0; color: var(--navy-dark);
-  }
-  .logo-name {
-    font-family: var(--font-head); font-size: 18px; font-weight: 800;
-    color: var(--white); letter-spacing: 0.01em; line-height: 1.15;
-  }
-  .logo-sub {
-    font-family: var(--font); font-size: 11px; color: rgba(255,255,255,0.5);
-    display: block; font-weight: 300; letter-spacing: 0.05em;
-  }
-  .header-cta {
-    display: flex; align-items: center; gap: 9px;
-    background: var(--orange); color: var(--white);
-    padding: 10px 22px; border-radius: var(--radius);
-    text-decoration: none; font-family: var(--font-head); font-weight: 700; font-size: 16px;
-    transition: background 0.2s;
-  }
-  .header-cta:hover { background: var(--orange-dark); }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 36px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.28);
+    }
+    .header-brand { display: flex; align-items: center; gap: 10px; }
+    .header-bolt { color: #e8772e; font-size: 1.3rem; }
+    .header-name { color: #fff; font-family: 'Exo 2', sans-serif; font-size: 1.15rem; font-weight: 800; }
+    .header-call {
+      background: #e8772e; color: #fff;
+      padding: 10px 22px; border-radius: 5px;
+      font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-call:hover { background: #cf6420; }
 
-  /* HERO */
-  .hero {
-    background:
-      repeating-linear-gradient(
-        135deg,
-        rgba(255,255,255,0.018) 0px,
-        rgba(255,255,255,0.018) 1px,
-        transparent 1px,
-        transparent 42px
-      ),
-      linear-gradient(155deg, var(--navy-dark) 0%, var(--navy) 55%, #193060 100%);
-    padding: 100px 28px 90px;
-    text-align: center; color: var(--white);
-    position: relative; overflow: hidden;
-  }
-  /* Electric glow hints */
-  .hero::before {
-    content: "";
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-    width: 600px; height: 600px;
-    background: radial-gradient(ellipse at center, rgba(244,208,63,0.05) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(244,208,63,0.12); border: 1px solid rgba(244,208,63,0.3);
-    color: var(--electric); padding: 5px 14px; border-radius: 4px;
-    font-family: var(--font-head); font-size: 12px; font-weight: 600;
-    letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 22px;
-  }
-  .hero h1 {
-    font-family: var(--font-head); font-size: clamp(34px, 5vw, 62px); font-weight: 900;
-    line-height: 1.1; margin-bottom: 18px; letter-spacing: -0.01em;
-  }
-  .hero h1 .elec { color: var(--electric); }
-  .hero h1 .ac { color: var(--orange-light, #f09050); }
-  .hero-sub {
-    font-family: var(--font); font-size: clamp(16px, 2vw, 19px); color: rgba(255,255,255,0.72);
-    max-width: 500px; margin: 0 auto 34px; font-weight: 300;
-  }
-  .hero-address {
-    font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 30px; font-weight: 300;
-  }
-  .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .btn-electric {
-    background: var(--electric); color: var(--navy-dark);
-    padding: 15px 32px; border-radius: var(--radius);
-    font-family: var(--font-head); font-size: 17px; font-weight: 800;
-    text-decoration: none; transition: background 0.2s, transform 0.15s;
-    display: inline-flex; align-items: center; gap: 8px;
-  }
-  .btn-electric:hover { background: var(--electric-dark); transform: translateY(-1px); }
-  .btn-outline-w {
-    background: transparent; color: var(--white);
-    padding: 15px 30px; border-radius: var(--radius);
-    font-family: var(--font-head); font-size: 16px; font-weight: 600;
-    text-decoration: none; border: 2px solid rgba(255,255,255,0.3);
-    transition: border-color 0.2s;
-    display: inline-flex; align-items: center; gap: 8px;
-  }
-  .btn-outline-w:hover { border-color: rgba(255,255,255,0.6); }
+    .hero {
+      background: linear-gradient(150deg, #071525 0%, #1e3a5f 50%, #1a3f6a 100%);
+      position: relative; overflow: hidden;
+      padding: 96px 36px 86px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(ellipse at 80% 20%, rgba(232,119,46,0.07) 0%, transparent 55%),
+                        repeating-linear-gradient(60deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px);
+    }
+    .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
+    .hero-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 22px; }
+    .hero-chip {
+      display: inline-block;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.75); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 3px;
+    }
+    .hero h1 { color: #fff; font-family: 'Exo 2', sans-serif; font-size: clamp(2.1rem, 5vw, 3.4rem); font-weight: 800; line-height: 1.1; margin-bottom: 14px; }
+    .hero h1 em { color: #e8772e; font-style: normal; }
+    .hero-tagline { color: rgba(255,255,255,0.68); font-size: 1.05rem; margin-bottom: 36px; }
+    .hero-cta {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      padding: 15px 44px; border-radius: 5px;
+      font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1.05rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.45);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
 
-  /* TRUST STRIP */
-  .trust-strip {
-    background: var(--navy); padding: 18px 28px;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-  .trust-inner {
-    max-width: 1140px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: center;
-    flex-wrap: wrap; gap: 30px;
-  }
-  .trust-item {
-    display: flex; align-items: center; gap: 9px;
-    font-family: var(--font-head); font-size: 14px; font-weight: 600;
-    color: rgba(255,255,255,0.84); letter-spacing: 0.03em;
-  }
-  .trust-item .ti { font-size: 18px; }
+    .stats {
+      background: #e8772e;
+      display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-item {
+      flex: 1 1 150px; text-align: center;
+      padding: 22px 18px;
+      border-right: 1px solid rgba(255,255,255,0.22);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Exo 2', sans-serif; font-size: 1.7rem; font-weight: 800; color: #fff; line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.85); font-weight: 500; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
 
-  /* SECTIONS */
-  section.padded { padding: 80px 28px; }
-  .section-inner { max-width: 1140px; margin: 0 auto; }
-  .section-label {
-    font-family: var(--font-head); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange);
-    margin-bottom: 8px;
-  }
-  .section-title {
-    font-family: var(--font-head); font-size: clamp(26px, 3.5vw, 42px); font-weight: 800;
-    color: var(--navy); letter-spacing: -0.01em; line-height: 1.15; margin-bottom: 14px;
-  }
-  .section-desc { font-size: 16px; color: var(--gray-600); max-width: 540px; line-height: 1.72; }
+    .services { padding: 76px 36px; background: #f4f7fa; }
+    .section-label { text-align: center; font-family: 'Exo 2', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
+    .section-title { text-align: center; font-family: 'Exo 2', sans-serif; font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 800; color: #1e3a5f; margin-bottom: 50px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+    .service-card {
+      background: #fff; border-radius: 6px;
+      padding: 28px 18px; text-align: center;
+      box-shadow: 0 2px 10px rgba(30,58,95,0.07);
+      border-right: 3px solid #e8772e;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(30,58,95,0.12); }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 { font-family: 'Exo 2', sans-serif; font-size: 0.92rem; font-weight: 700; color: #1e3a5f; }
 
-  /* SERVICES */
-  .services { background: var(--gray-50); }
-  .services-header { text-align: center; margin-bottom: 50px; }
-  .services-header .section-desc { margin: 0 auto; }
-  .services-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px;
-  }
-  .service-card {
-    background: var(--white); border: 1px solid var(--gray-200);
-    border-radius: var(--radius-lg); padding: 30px 26px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    position: relative; overflow: hidden;
-  }
-  .service-card::after {
-    content: "";
-    position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: var(--electric); transform: scaleX(0); transform-origin: left;
-    transition: transform 0.3s;
-  }
-  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(30,58,95,0.12); }
-  .service-card:hover::after { transform: scaleX(1); }
-  .service-icon {
-    width: 54px; height: 54px; border-radius: 12px;
-    background: var(--navy); color: var(--white);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 26px; margin-bottom: 18px;
-  }
-  .service-card h3 {
-    font-family: var(--font-head); font-size: 18px; font-weight: 700;
-    color: var(--navy); margin-bottom: 8px;
-  }
-  .service-card p { font-size: 14px; color: var(--gray-600); line-height: 1.62; }
+    .about { padding: 76px 36px; background: #fff; }
+    .about-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .about-text p { font-size: 0.96rem; line-height: 1.78; color: #445; margin-bottom: 16px; }
+    .info-grid { display: flex; flex-direction: column; gap: 14px; }
+    .info-item { display: flex; gap: 12px; align-items: flex-start; background: #f4f7fa; border-radius: 5px; padding: 14px 16px; }
+    .info-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .info-item strong { display: block; font-family: 'Exo 2', sans-serif; font-size: 0.78rem; font-weight: 700; color: #1e3a5f; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+    .info-item span { font-size: 0.9rem; color: #556; }
+    @media (max-width: 640px) { .about-inner { grid-template-columns: 1fr; } }
 
-  /* ABOUT */
-  .about { background: var(--white); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .about-visual {
-    background: linear-gradient(150deg, var(--navy) 0%, var(--navy-dark) 100%);
-    border-radius: var(--radius-lg); padding: 48px 36px; text-align: center; color: var(--white);
-    position: relative; overflow: hidden;
-  }
-  .about-visual::before {
-    content: "⚡";
-    position: absolute; bottom: -10px; right: 0;
-    font-size: 140px; opacity: 0.05; line-height: 1; pointer-events: none;
-  }
-  .bolt-big { font-size: 64px; display: block; margin-bottom: 16px; }
-  .company-name-big { font-family: var(--font-head); font-size: 22px; font-weight: 800; margin-bottom: 6px; }
-  .company-loc { font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 28px; }
-  .about-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
-  .stat-block {
-    background: rgba(255,255,255,0.07); border-radius: var(--radius); padding: 16px 12px; text-align: center;
-  }
-  .stat-block .num { font-family: var(--font-head); font-size: 24px; font-weight: 800; color: var(--electric); line-height: 1; display: block; }
-  .stat-block .lbl { font-size: 10px; color: rgba(255,255,255,0.58); margin-top: 4px; font-weight: 400; letter-spacing: 0.04em; }
-  .about-content .section-desc { margin-bottom: 22px; }
-  .about-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .about-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--gray-600); }
-  .about-list li .check { color: var(--orange); font-weight: 700; flex-shrink: 0; }
+    .cta-section {
+      background: linear-gradient(150deg, #071525, #1e3a5f);
+      padding: 76px 36px; text-align: center;
+    }
+    .cta-section h2 { color: #fff; font-family: 'Exo 2', sans-serif; font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
+    .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+    .cta-phone { font-family: 'Exo 2', sans-serif; font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 800; color: #e8772e; display: block; margin-bottom: 28px; text-decoration: none; }
+    .cta-phone:hover { color: #f0944a; }
+    .cta-btn {
+      display: inline-block; background: #e8772e; color: #fff;
+      padding: 17px 48px; border-radius: 5px;
+      font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1.05rem; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #cf6420; }
 
-  /* CTA BAND */
-  .cta-band {
-    background:
-      repeating-linear-gradient(
-        135deg,
-        rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px,
-        transparent 1px, transparent 40px
-      ),
-      linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
-    padding: 80px 28px; text-align: center; color: var(--white);
-  }
-  .cta-band h2 {
-    font-family: var(--font-head); font-size: clamp(28px, 4vw, 46px); font-weight: 900;
-    margin-bottom: 12px; letter-spacing: -0.01em;
-  }
-  .cta-band h2 .bolt-inline { color: var(--electric); }
-  .cta-band p { font-size: 17px; color: rgba(255,255,255,0.72); margin-bottom: 34px; font-weight: 300; }
-  .phone-big {
-    display: inline-flex; align-items: center; gap: 14px;
-    background: var(--orange); color: var(--white);
-    padding: 20px 44px; border-radius: var(--radius);
-    font-family: var(--font-head); font-size: clamp(22px, 3.5vw, 36px); font-weight: 800;
-    text-decoration: none; letter-spacing: -0.01em;
-    transition: background 0.2s, transform 0.15s;
-    box-shadow: 0 6px 28px rgba(232,119,46,0.45);
-  }
-  .phone-big:hover { background: var(--orange-dark); transform: translateY(-2px); }
-
-  /* CONTACT */
-  .contact { background: var(--gray-50); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
-  .contact-info h3 { font-family: var(--font-head); font-size: 24px; font-weight: 800; color: var(--navy); margin-bottom: 22px; }
-  .contact-details { display: flex; flex-direction: column; gap: 16px; }
-  .contact-row { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--gray-600); }
-  .c-icon { width: 36px; height: 36px; background: var(--gray-100); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
-  .contact-row a { color: var(--navy); font-weight: 700; text-decoration: none; }
-  .contact-row a:hover { color: var(--orange); }
-  .cta-card {
-    background: var(--white); border: 1px solid var(--gray-200);
-    border-radius: var(--radius-lg); padding: 32px; text-align: center;
-  }
-  .cta-card .bolt-med { font-size: 48px; display: block; margin-bottom: 14px; }
-  .cta-card h4 { font-family: var(--font-head); font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
-  .cta-card p { font-size: 14px; color: var(--gray-600); margin-bottom: 18px; line-height: 1.65; }
-  .cta-card a {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--orange); color: var(--white);
-    padding: 13px 26px; border-radius: var(--radius);
-    font-family: var(--font-head); font-size: 17px; font-weight: 700;
-    text-decoration: none; transition: background 0.2s;
-  }
-  .cta-card a:hover { background: var(--orange-dark); }
-
-  footer {
-    background: var(--navy-dark); color: rgba(255,255,255,0.5);
-    padding: 26px 28px; font-size: 13px;
-  }
-  .footer-inner {
-    max-width: 1140px; margin: 0 auto;
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 10px;
-  }
-  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
-  footer a:hover { color: var(--white); }
-
-  @media (max-width: 768px) {
-    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
-    .hero { padding: 70px 20px 60px; }
-    .about-stats { grid-template-columns: 1fr 1fr; }
-  }
-</style>
+    footer {
+      background: #060f1c; color: rgba(255,255,255,0.42);
+      text-align: center; padding: 22px 36px;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.72); }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <a class="logo" href="#">
-      <div class="logo-bolt">⚡</div>
-      <div>
-        <div class="logo-name">Pass Electric &amp; HVAC</div>
-        <span class="logo-sub">Fairburn, GA &bull; Complete Home Services</span>
-      </div>
-    </a>
-    <a class="header-cta" href="tel:4046716481">⚡ (404) 671-6481</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-eyebrow">⚡ Fairburn, GA 30213</div>
-  <h1><span class="elec">Electric</span> &amp; HVAC —<br>Complete <span class="ac">Home Services</span></h1>
-  <p class="hero-sub">One company for all your electrical and HVAC needs. Power, heating, cooling, and more — handled by a single trusted team.</p>
-  <p class="hero-address">📍 2455 Village Green Dr, Fairburn, GA 30213</p>
-  <div class="hero-actions">
-    <a class="btn-electric" href="tel:4046716481">⚡ (404) 671-6481</a>
-    <a class="btn-outline-w" href="#services">All Services</a>
-  </div>
-</section>
-
-<div class="trust-strip">
-  <div class="trust-inner">
-    <div class="trust-item"><span class="ti">⚡</span> Licensed Electricians</div>
-    <div class="trust-item"><span class="ti">❄️</span> HVAC Specialists</div>
-    <div class="trust-item"><span class="ti">🚿</span> Water Heater Install &amp; Repair</div>
-    <div class="trust-item"><span class="ti">📍</span> Fairburn, GA 30213</div>
-    <div class="trust-item"><span class="ti">🛡️</span> Fully Licensed &amp; Insured</div>
-  </div>
-</div>
-
-<section class="padded services" id="services">
-  <div class="section-inner">
-    <div class="services-header">
-      <div class="section-label">Services</div>
-      <h2 class="section-title">Complete Home Services</h2>
-      <p class="section-desc">Electrical, HVAC, water heaters, and more — all under one roof. Pass Electric &amp; HVAC does it all for Fairburn homeowners.</p>
+  <header>
+    <div class="header-brand">
+      <div class="header-bolt">&#9889;</div>
+      <div class="header-name">Pass Electric &amp; HVAC</div>
     </div>
+    <a href="tel:4046716481" class="header-call">&#128222; (404) 671-6481</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-chips">
+        <span class="hero-chip">Fairburn, GA</span>
+        <span class="hero-chip">Electric</span>
+        <span class="hero-chip">HVAC</span>
+        <span class="hero-chip">Water Heaters</span>
+      </div>
+      <h1>Pass <em>Electric</em> &amp; HVAC</h1>
+      <p class="hero-tagline">Fairburn's Full-Service Electric, HVAC &amp; Water Heater Experts</p>
+      <a href="tel:4046716481" class="hero-cta">Call (404) 671-6481</a>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">Fairburn</div><div class="stat-label">Fairburn, GA</div></div>
+    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates</div></div>
+    <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">Service Types</div></div>
+    <div class="stat-item"><div class="stat-num">Pro</div><div class="stat-label">Licensed Techs</div></div>
+  </div>
+
+  <section class="services">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">Electric, HVAC &amp; More</h2>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">⚡</div>
-        <h3>Electrical Services</h3>
-        <p>Licensed electricians for panel upgrades, wiring, outlets, lighting, and all residential and commercial electrical work.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">❄️</div>
-        <h3>HVAC Services</h3>
-        <p>Heating and cooling repair, maintenance, and system upgrades to keep your home comfortable all year.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🚿</div>
-        <h3>Water Heater Install &amp; Repair</h3>
-        <p>New water heater installations, replacements, and repairs — traditional and tankless systems.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🌬️</div>
-        <h3>AC Installation</h3>
-        <p>New air conditioning installation with proper sizing and configuration for maximum efficiency and comfort.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">💨</div>
-        <h3>Air Duct Installation</h3>
-        <p>Ductwork design, installation, and replacement to optimize your HVAC system's airflow and energy performance.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🏠</div>
-        <h3>Full Home Systems</h3>
-        <p>Comprehensive electrical and HVAC services for new construction, renovation, and whole-home upgrades.</p>
-      </div>
+      <div class="service-card"><div class="service-icon">&#9889;</div><h3>Electricians</h3></div>
+      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Service</h3></div>
+      <div class="service-card"><div class="service-icon">&#128166;</div><h3>Water Heater Installation</h3></div>
+      <div class="service-card"><div class="service-icon">&#10052;</div><h3>AC Installation</h3></div>
+      <div class="service-card"><div class="service-icon">&#128168;</div><h3>Air Duct Installation</h3></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="padded about" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-visual">
-        <span class="bolt-big">⚡</span>
-        <div class="company-name-big">Pass Electric &amp; HVAC</div>
-        <div class="company-loc">2455 Village Green Dr, Fairburn, GA 30213</div>
-        <div class="about-stats">
-          <div class="stat-block"><span class="num">⚡</span><div class="lbl">Electric</div></div>
-          <div class="stat-block"><span class="num">❄️</span><div class="lbl">HVAC</div></div>
-          <div class="stat-block"><span class="num">1</span><div class="lbl">Call</div></div>
-          <div class="stat-block"><span class="num">GA</span><div class="lbl">Licensed</div></div>
-          <div class="stat-block"><span class="num">100%</span><div class="lbl">Insured</div></div>
-          <div class="stat-block"><span class="num">5+</span><div class="lbl">Services</div></div>
+  <section class="about">
+    <div class="section-label">About Pass Electric</div>
+    <h2 class="section-title">Fairburn's Multi-Service Home Pros</h2>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>Pass Electric &amp; HVAC is Fairburn's trusted choice for electrical work, HVAC service, and water heater installations. Our team handles everything from AC installs to full electrical projects.</p>
+        <p>Located at 2455 Village Green Dr in Fairburn, we serve the local community with professional, licensed service. Call today for a free estimate on any job.</p>
+      </div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><strong>Phone</strong><span><a href="tel:4046716481" style="color:#e8772e;text-decoration:none;">(404) 671-6481</a></span></div>
         </div>
-      </div>
-      <div class="about-content">
-        <div class="section-label">About Us</div>
-        <h2 class="section-title">Fairburn's Electric &amp; HVAC Team</h2>
-        <p class="section-desc">Pass Electric &amp; HVAC serves Fairburn and the surrounding area with complete home comfort services. We combine electrical expertise with HVAC know-how — one company you can trust for everything.</p>
-        <ul class="about-list">
-          <li><span class="check">✓</span> Licensed electricians and HVAC technicians</li>
-          <li><span class="check">✓</span> Water heater installation and repair</li>
-          <li><span class="check">✓</span> AC installation and duct work</li>
-          <li><span class="check">✓</span> Residential and commercial service</li>
-          <li><span class="check">✓</span> Serving Fairburn, GA 30213 and surrounding areas</li>
-          <li><span class="check">✓</span> Fully licensed and insured</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="cta-band" id="contact">
-  <h2><span class="bolt-inline">⚡</span> Ready for Complete Home Service?</h2>
-  <p>Electric and HVAC — one call handles it all. Fast response, licensed pros, done right.</p>
-  <a class="phone-big" href="tel:4046716481">📞 (404) 671-6481</a>
-</div>
-
-<section class="padded contact">
-  <div class="section-inner">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="section-label">Find Us</div>
-        <h3>Contact Pass Electric &amp; HVAC</h3>
-        <div class="contact-details">
-          <div class="contact-row">
-            <div class="c-icon">📞</div>
-            <div><a href="tel:4046716481">(404) 671-6481</a><br><span style="font-size:13px;color:#aaa;">Call or text for service</span></div>
-          </div>
-          <div class="contact-row">
-            <div class="c-icon">📍</div>
-            <div>2455 Village Green Dr<br>Fairburn, GA 30213</div>
-          </div>
-          <div class="contact-row">
-            <div class="c-icon">⚡</div>
-            <div>Electric &bull; HVAC &bull; Water Heaters<br><span style="font-size:13px;color:#aaa;">Full home services</span></div>
-          </div>
+        <div class="info-item">
+          <div class="info-icon">&#128205;</div>
+          <div><strong>Address</strong><span>2455 Village Green Dr<br>Fairburn, GA</span></div>
         </div>
-      </div>
-      <div>
-        <div class="cta-card">
-          <span class="bolt-med">⚡</span>
-          <h4>Schedule Service Today</h4>
-          <p>From electrical panels to AC installations and water heaters — call Pass Electric &amp; HVAC for fast, professional service in Fairburn and the surrounding area.</p>
-          <a href="tel:4046716481">📞 Call Now</a>
+        <div class="info-item">
+          <div class="info-icon">&#128336;</div>
+          <div><strong>Hours</strong><span>Mon&ndash;Fri: 8am&ndash;6pm<br>Sat: 9am&ndash;3pm</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#9889;</div>
+          <div><strong>Licensed</strong><span>Electrical &amp; HVAC work</span></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="footer-inner">
-    <div>&copy; 2025 Pass Electric &amp; HVAC &mdash; 2455 Village Green Dr, Fairburn, GA 30213</div>
-    <div>Website by <a href="#">WebCare Digital</a></div>
-  </div>
-</footer>
+  <section class="cta-section">
+    <h2>Electric. HVAC. Done Right.</h2>
+    <p>Call Pass Electric &amp; HVAC for service in Fairburn, GA</p>
+    <a href="tel:4046716481" class="cta-phone">(404) 671-6481</a>
+    <a href="tel:4046716481" class="cta-btn">Call Pass Electric Today</a>
+  </section>
+
+  <footer>
+    <p><strong>Pass Electric &amp; HVAC</strong> &mdash; 2455 Village Green Dr, Fairburn, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
+  </footer>
 
 </body>
 </html>

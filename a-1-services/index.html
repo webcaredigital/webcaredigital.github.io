@@ -1,402 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A 1 Services | Top-Tier HVAC &amp; Home Services | Atlanta, GA</title>
-<meta name="description" content="A 1 Services — A-1 quality HVAC, electrical furnace installation, painting, and home services in Atlanta, GA. Call (404) 914-0032.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Open Sans', sans-serif; color: #1a1a2a; background: #fff; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A 1 Services — Atlanta, GA HVAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; color: #1e3a5f; background: #fff; }
 
-  /* STICKY HEADER */
-  header {
-    position: sticky; top: 0; z-index: 1000;
-    background: #1e3a5f;
-    padding: 0 36px;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 70px;
-  }
-  .header-logo {
-    display: flex; align-items: baseline; gap: 2px;
-  }
-  .logo-a1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.2rem; color: #e8772e;
-    letter-spacing: 0.04em; line-height: 1;
-  }
-  .logo-rest {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem; color: #fff;
-    letter-spacing: 0.06em; line-height: 1;
-    margin-left: 6px;
-  }
-  .header-cta a {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: #e8772e; color: #fff;
-    font-weight: 700; font-size: 0.95rem;
-    text-decoration: none; padding: 12px 26px;
-    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
-    transition: background 0.2s;
-  }
-  .header-cta a:hover { background: #cf651e; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 36px; height: 62px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.26);
+    }
+    .header-name { color: #fff; font-family: 'Oswald', sans-serif; font-size: 1.4rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    .header-name em { color: #e8772e; font-style: normal; }
+    .header-call {
+      background: #e8772e; color: #fff;
+      padding: 10px 22px; border-radius: 3px;
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-call:hover { background: #cf6420; }
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(155deg, #0a1628 0%, #1e3a5f 35%, #24487a 60%, #162d4a 100%);
-    padding: 100px 36px 90px;
-    position: relative; overflow: hidden;
-    text-align: center;
-  }
-  .hero-rule-left {
-    position: absolute; left: 0; top: 0; bottom: 0; width: 8px;
-    background: linear-gradient(180deg, #e8772e, transparent, #e8772e);
-  }
-  .hero-rule-right {
-    position: absolute; right: 0; top: 0; bottom: 0; width: 8px;
-    background: linear-gradient(180deg, #e8772e, transparent, #e8772e);
-  }
-  .hero-a1 {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 40vw; color: rgba(255,255,255,0.02);
-    white-space: nowrap; pointer-events: none;
-    letter-spacing: -0.05em;
-  }
-  .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
-  .hero-sup {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase;
-    color: #e8772e; margin-bottom: 16px;
-    display: block;
-  }
-  .hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3.5rem, 8vw, 6rem);
-    color: #fff;
-    line-height: 1.0; margin-bottom: 12px;
-    letter-spacing: 0.04em;
-  }
-  .hero h1 .orange { color: #e8772e; }
-  .hero-sub {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    color: rgba(255,255,255,0.55);
-    letter-spacing: 0.12em; margin-bottom: 36px;
-  }
-  .hero p {
-    font-size: 1.05rem; color: rgba(255,255,255,0.75);
-    max-width: 500px; margin: 0 auto 44px;
-    line-height: 1.75;
-  }
-  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .btn-a1 {
-    background: #e8772e; color: #fff;
-    font-weight: 700; font-size: 1rem;
-    text-decoration: none; padding: 16px 40px;
-    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
-    box-shadow: 0 4px 24px rgba(232,119,46,0.45);
-    transition: background 0.2s;
-  }
-  .btn-a1:hover { background: #cf651e; }
-  .btn-outline {
-    background: transparent; color: rgba(255,255,255,0.9);
-    border: 2px solid rgba(255,255,255,0.3);
-    font-weight: 600; font-size: 0.95rem;
-    text-decoration: none; padding: 14px 34px;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .btn-outline:hover { border-color: #e8772e; color: #e8772e; }
+    .hero {
+      background: linear-gradient(150deg, #09192c 0%, #1e3a5f 50%, #1a3e66 100%);
+      position: relative; overflow: hidden;
+      padding: 96px 36px 86px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255,255,255,0.02) 80px);
+    }
+    .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
+    .hero-grade {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 2px; margin-bottom: 18px;
+    }
+    .hero h1 { color: #fff; font-family: 'Oswald', sans-serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1; margin-bottom: 16px; }
+    .hero h1 span { color: #e8772e; }
+    .hero-tagline { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 36px; }
+    .hero-cta {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      padding: 14px 42px; border-radius: 3px;
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.1rem; letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.45);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
 
-  /* TRUST STRIP */
-  .trust-strip {
-    background: #13273f;
-    padding: 0 36px;
-    display: flex; justify-content: center; flex-wrap: wrap;
-    border-bottom: 4px solid #e8772e;
-  }
-  .trust-item {
-    padding: 16px 28px;
-    display: flex; align-items: center; gap: 14px;
-    border-right: 1px solid rgba(255,255,255,0.06);
-  }
-  .trust-item:last-child { border-right: none; }
-  .trust-icon-wrap {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.4rem; color: #e8772e;
-    min-width: 32px; text-align: center;
-  }
-  .trust-text {
-    font-size: 0.82rem; font-weight: 700;
-    color: rgba(255,255,255,0.85);
-    text-transform: uppercase; letter-spacing: 0.06em;
-    line-height: 1.3;
-  }
+    .stats {
+      background: #e8772e;
+      display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-item {
+      flex: 1 1 150px; text-align: center;
+      padding: 22px 18px;
+      border-right: 1px solid rgba(255,255,255,0.22);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Oswald', sans-serif; font-size: 1.9rem; font-weight: 700; color: #fff; line-height: 1; letter-spacing: 0.04em; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.85); font-weight: 500; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
 
-  /* SERVICES */
-  .services {
-    padding: 80px 36px;
-    background: #f8f9fb;
-  }
-  .services-inner { max-width: 1100px; margin: 0 auto; }
-  .section-heading {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
-    color: #1e3a5f; letter-spacing: 0.04em;
-    margin-bottom: 6px;
-  }
-  .section-sub {
-    font-size: 0.88rem; color: #7a8fa8;
-    margin-bottom: 48px; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 0.08em;
-  }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
-  .service-card {
-    background: #fff;
-    border-radius: 0;
-    padding: 32px 24px;
-    border: 1px solid #e0e8f0;
-    border-top: 5px solid #1e3a5f;
-    position: relative;
-    transition: border-top-color 0.2s, box-shadow 0.2s, transform 0.15s;
-  }
-  .service-card:hover {
-    border-top-color: #e8772e;
-    box-shadow: 0 6px 28px rgba(30,58,95,0.1);
-    transform: translateY(-2px);
-  }
-  .service-rank {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem; color: rgba(30,58,95,0.07);
-    position: absolute; top: 16px; right: 20px;
-    line-height: 1;
-  }
-  .service-icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
-  .service-card h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.25rem; color: #1e3a5f;
-    letter-spacing: 0.04em;
-  }
+    .services { padding: 76px 36px; background: #f4f6fa; }
+    .section-label { text-align: center; font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
+    .section-title { text-align: center; font-family: 'Oswald', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: #1e3a5f; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 960px; margin: 0 auto; }
+    .service-card {
+      background: #fff; border-radius: 4px;
+      padding: 28px 20px; text-align: center;
+      box-shadow: 0 2px 10px rgba(30,58,95,0.07);
+      border-top: 4px solid #1e3a5f;
+      transition: transform 0.2s, box-shadow 0.2s, border-top-color 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(30,58,95,0.12); border-top-color: #e8772e; }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.05rem; font-weight: 600; color: #1e3a5f; text-transform: uppercase; letter-spacing: 0.04em; }
 
-  /* ABOUT */
-  .about {
-    background: #1e3a5f;
-    padding: 80px 36px;
-  }
-  .about-inner {
-    max-width: 1000px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
-    align-items: start;
-  }
-  .about-text {}
-  .about-kicker {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.9rem; letter-spacing: 0.2em;
-    color: #e8772e; margin-bottom: 12px;
-  }
-  .about-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: #fff; line-height: 1.05;
-    letter-spacing: 0.04em; margin-bottom: 22px;
-  }
-  .about-title em { color: #e8772e; font-style: normal; }
-  .about-text p {
-    color: rgba(255,255,255,0.78);
-    line-height: 1.8; font-size: 0.96rem;
-    margin-bottom: 16px;
-  }
-  .contact-block {
-    background: rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 0; overflow: hidden;
-  }
-  .cb-head {
-    background: #e8772e;
-    padding: 14px 24px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem; letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .cb-body { padding: 24px; }
-  .cb-row {
-    display: flex; gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    font-size: 0.9rem;
-  }
-  .cb-row:last-child { border-bottom: none; }
-  .cb-key { color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; min-width: 80px; margin-top: 2px; }
-  .cb-val { color: #fff; font-weight: 600; }
-  .cb-val a { color: #e8772e; text-decoration: none; font-weight: 700; }
+    .about { padding: 76px 36px; background: #fff; }
+    .about-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .about-text p { font-size: 0.97rem; line-height: 1.78; color: #445; margin-bottom: 16px; }
+    .info-grid { display: flex; flex-direction: column; gap: 14px; }
+    .info-item { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; background: #f4f6fa; border-radius: 4px; }
+    .info-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .info-item strong { display: block; font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 600; color: #1e3a5f; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+    .info-item span { font-size: 0.9rem; color: #556; }
+    @media (max-width: 640px) { .about-inner { grid-template-columns: 1fr; } }
 
-  /* PHONE CTA */
-  .phone-cta {
-    background: #e8772e;
-    padding: 72px 36px;
-    text-align: center;
-  }
-  .phone-cta h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
-    color: #fff; letter-spacing: 0.04em; margin-bottom: 8px;
-  }
-  .phone-cta p {
-    color: rgba(255,255,255,0.9); font-size: 1.05rem;
-    margin-bottom: 36px; font-weight: 500;
-  }
-  .phone-number-large {
-    display: inline-flex; align-items: center; gap: 16px;
-    background: #1e3a5f; color: #fff;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2rem, 4.5vw, 3.2rem);
-    text-decoration: none;
-    padding: 20px 52px;
-    letter-spacing: 0.04em;
-    box-shadow: 0 6px 28px rgba(0,0,0,0.2);
-    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
-    transition: background 0.2s, transform 0.15s;
-  }
-  .phone-number-large:hover { background: #0f2540; transform: translateY(-2px); }
+    .cta-section {
+      background: linear-gradient(150deg, #09192c, #1e3a5f);
+      padding: 76px 36px; text-align: center;
+    }
+    .cta-section h2 { color: #fff; font-family: 'Oswald', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+    .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+    .cta-phone { font-family: 'Oswald', sans-serif; font-size: clamp(2.2rem, 6.5vw, 4rem); font-weight: 700; color: #e8772e; display: block; margin-bottom: 28px; text-decoration: none; letter-spacing: 0.06em; }
+    .cta-phone:hover { color: #f0944a; }
+    .cta-btn {
+      display: inline-block; background: #e8772e; color: #fff;
+      padding: 16px 48px; border-radius: 3px;
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.08em;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #cf6420; }
 
-  /* FOOTER */
-  footer {
-    background: #0a1628;
-    padding: 28px;
-    text-align: center;
-    color: rgba(255,255,255,0.4);
-    font-size: 0.82rem;
-  }
-  footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
-  footer a:hover { color: #e8772e; }
-
-  @media (max-width: 768px) {
-    .about-inner { grid-template-columns: 1fr; gap: 32px; }
-    .trust-item { padding: 14px 16px; }
-  }
-</style>
+    footer {
+      background: #060f1c; color: rgba(255,255,255,0.42);
+      text-align: center; padding: 22px 36px;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.72); }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="header-logo">
-    <span class="logo-a1">A-1</span>
-    <span class="logo-rest">Services</span>
-  </div>
-  <div class="header-cta">
-    <a href="tel:4049140032">
-      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      (404) 914-0032
-    </a>
-  </div>
-</header>
+  <header>
+    <div class="header-name"><em>A-1</em> Services</div>
+    <a href="tel:4049140032" class="header-call">&#128222; (404) 914-0032</a>
+  </header>
 
-<section class="hero">
-  <div class="hero-rule-left"></div>
-  <div class="hero-rule-right"></div>
-  <div class="hero-a1">A1</div>
-  <div class="hero-inner">
-    <span class="hero-sup">Atlanta, GA 30302</span>
-    <h1><span class="orange">A-1</span><br>Quality.</h1>
-    <div class="hero-sub">Every Time. Every Job.</div>
-    <p>Top-tier HVAC, home services, and more. When you need work done right — and done at the highest standard — A 1 Services delivers.</p>
-    <div class="hero-actions">
-      <a href="tel:4049140032" class="btn-a1">Call (404) 914-0032</a>
-      <a href="#services" class="btn-outline">See All Services</a>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-grade">Atlanta, GA &mdash; HVAC &amp; Home Services</div>
+      <h1><span>A&#8209;1</span> Services</h1>
+      <p class="hero-tagline">A-1 Quality Every Time</p>
+      <a href="tel:4049140032" class="hero-cta">Call (404) 914-0032</a>
     </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">A&#8209;1</div><div class="stat-label">Quality</div></div>
+    <div class="stat-item"><div class="stat-num">Atlanta</div><div class="stat-label">Atlanta, GA</div></div>
+    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates</div></div>
+    <div class="stat-item"><div class="stat-num">Pro</div><div class="stat-label">Certified Team</div></div>
   </div>
-</section>
 
-<div class="trust-strip">
-  <div class="trust-item"><div class="trust-icon-wrap">A1</div><div class="trust-text">Top-Tier<br>Quality</div></div>
-  <div class="trust-item"><div class="trust-icon-wrap">✓</div><div class="trust-text">Licensed &amp;<br>Insured</div></div>
-  <div class="trust-item"><div class="trust-icon-wrap">⚡</div><div class="trust-text">Fast<br>Response</div></div>
-  <div class="trust-item"><div class="trust-icon-wrap">ATL</div><div class="trust-text">Atlanta,<br>GA</div></div>
-</div>
-
-<section class="services" id="services">
-  <div class="services-inner">
-    <h2 class="section-heading">Our Services</h2>
-    <p class="section-sub">All the services you need, all at A-1 quality</p>
+  <section class="services">
+    <div class="section-label">Services</div>
+    <h2 class="section-title">A-1 Home Services</h2>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-rank">01</div>
-        <span class="service-icon">🌡️</span>
-        <h3>HVAC</h3>
-      </div>
-      <div class="service-card">
-        <div class="service-rank">02</div>
-        <span class="service-icon">🎨</span>
-        <h3>Painters</h3>
-      </div>
-      <div class="service-card">
-        <div class="service-rank">03</div>
-        <span class="service-icon">⚡</span>
-        <h3>Electric Furnace Installation</h3>
-      </div>
-      <div class="service-card">
-        <div class="service-rank">04</div>
-        <span class="service-icon">🏠</span>
-        <h3>Home Services</h3>
-      </div>
+      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Service</h3></div>
+      <div class="service-card"><div class="service-icon">&#9889;</div><h3>Electric Furnace Installation</h3></div>
+      <div class="service-card"><div class="service-icon">&#127968;</div><h3>Home Services</h3></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="about" id="about">
-  <div class="about-inner">
-    <div class="about-text">
-      <div class="about-kicker">About A 1 Services</div>
-      <h2 class="about-title">One Name.<br><em>One Standard.</em><br>A-1.</h2>
-      <p>A 1 Services brings Atlanta homeowners and businesses the highest standard of quality across HVAC, painting, electrical furnace installation, and home services. Our name says it all — we're always first in class.</p>
-      <p>Based in Atlanta, GA 30302, we combine skilled craftsmanship with reliable service delivery. When quality is non-negotiable, you call A 1.</p>
-    </div>
-    <div class="contact-block">
-      <div class="cb-head">Contact A 1 Services</div>
-      <div class="cb-body">
-        <div class="cb-row">
-          <span class="cb-key">Location</span>
-          <span class="cb-val">Atlanta, GA 30302</span>
+  <section class="about">
+    <div class="section-label">About A-1 Services</div>
+    <h2 class="section-title">Atlanta's A-1 Team</h2>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>A 1 Services delivers A-1 quality HVAC and home services to Atlanta and surrounding areas. We specialize in HVAC service, electric furnace installation, and a full range of home maintenance services.</p>
+        <p>When quality matters, Atlanta residents choose A 1 Services. We show up on time, do the work right, and charge fair prices. Call today for your free estimate.</p>
+      </div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><strong>Phone</strong><span><a href="tel:4049140032" style="color:#e8772e;text-decoration:none;">(404) 914-0032</a></span></div>
         </div>
-        <div class="cb-row">
-          <span class="cb-key">Phone</span>
-          <span class="cb-val"><a href="tel:4049140032">(404) 914-0032</a></span>
+        <div class="info-item">
+          <div class="info-icon">&#128205;</div>
+          <div><strong>Location</strong><span>Atlanta, GA &amp; Surrounding Areas</span></div>
         </div>
-        <div class="cb-row">
-          <span class="cb-key">Services</span>
-          <span class="cb-val">HVAC, Paint, Electric, Home</span>
+        <div class="info-item">
+          <div class="info-icon">&#128336;</div>
+          <div><strong>Hours</strong><span>Mon&ndash;Fri: 8am&ndash;6pm</span></div>
         </div>
-        <div class="cb-row">
-          <span class="cb-key">Status</span>
-          <span class="cb-val">Licensed &amp; Insured</span>
+        <div class="info-item">
+          <div class="info-icon">&#10003;</div>
+          <div><strong>Free Estimates</strong><span>A-1 quality, fair pricing</span></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="phone-cta">
-  <h2>Ready for A-1 Service?</h2>
-  <p>Atlanta's top-tier home services team is one call away.</p>
-  <a href="tel:4049140032" class="phone-number-large">
-    <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-    (404) 914-0032
-  </a>
-</section>
+  <section class="cta-section">
+    <h2>A-1 Quality Every Time</h2>
+    <p>Call A 1 Services for HVAC and home services in Atlanta, GA</p>
+    <a href="tel:4049140032" class="cta-phone">(404) 914-0032</a>
+    <a href="tel:4049140032" class="cta-btn">Call A-1 Services Today</a>
+  </section>
 
-<footer>
-  <p>&copy; 2025 A 1 Services &bull; Atlanta, GA 30302</p>
-  <p style="margin-top:8px;">Website by <a href="#">WebCare Digital</a></p>
-</footer>
+  <footer>
+    <p><strong>A 1 Services</strong> &mdash; Atlanta, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
+  </footer>
 
 </body>
 </html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accurate AC | Precision Cooling & Heating | Atlanta, GA</title>
+<meta name="description" content="Accurate AC delivers precision HVAC repair, mini split installation, and AC maintenance in Atlanta, GA. Call (404) 690-3337.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1e3a5f;
+    --navy-light: #2a4f7e;
+    --orange: #e8772e;
+    --orange-light: #f09456;
+    --bg-code: #0e1e30;
+    --bg-rule: #f2f6fb;
+    --text: #1a2634;
+    --text-light: #546070;
+    --white: #ffffff;
+    --border: #c8d8e8;
+    --green: #1daa87;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'IBM Plex Sans', sans-serif; color: var(--text); background: var(--white); }
+
+  /* HEADER */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--navy);
+    padding: 0 5%;
+    height: 66px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.1), 0 4px 14px rgba(0,0,0,0.25);
+  }
+  .logo { text-decoration: none; display: flex; align-items: baseline; gap: 6px; }
+  .logo-main { font-size: 1.25rem; font-weight: 700; color: var(--white); letter-spacing: -0.01em; }
+  .logo-main span { color: var(--orange); }
+  .logo-sub { font-size: 0.68rem; font-weight: 300; color: rgba(255,255,255,0.5); letter-spacing: 0.12em; text-transform: uppercase; }
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  .header-rating {
+    font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.7);
+    display: none; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.15); border-radius: 2px;
+  }
+  @media(min-width:560px){ .header-rating { display: block; } }
+  .btn-hdr {
+    background: var(--orange); color: var(--white);
+    padding: 9px 22px; border-radius: 2px;
+    text-decoration: none; font-size: 0.92rem; font-weight: 600;
+    letter-spacing: 0.02em; transition: background 0.2s; white-space: nowrap;
+  }
+  .btn-hdr:hover { background: var(--orange-light); }
+
+  /* HERO */
+  .hero {
+    position: relative; min-height: 86vh;
+    display: flex; align-items: center;
+    background: url('https://s3-media0.fl.yelpcdn.com/bphoto/YtmkakMypd7YuFpti2U9UQ/l.jpg') center center / cover no-repeat;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(14,30,48,0.95) 45%, rgba(14,30,48,0.5) 100%);
+  }
+  /* grid overlay for technical feel */
+  .hero::after {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative; z-index: 1;
+    padding: 80px 5%; max-width: 640px;
+  }
+  .hero-label {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--green);
+    background: rgba(29,170,135,0.12); border: 1px solid rgba(29,170,135,0.3);
+    padding: 5px 14px; border-radius: 2px; margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.7rem); font-weight: 700;
+    color: var(--white); line-height: 1.1; letter-spacing: -0.025em;
+    margin-bottom: 18px;
+  }
+  .hero h1 .precision { color: var(--orange); }
+  .hero p {
+    font-size: 1.05rem; color: rgba(255,255,255,0.78);
+    line-height: 1.65; margin-bottom: 36px; font-weight: 300;
+    max-width: 480px;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--orange); color: var(--white);
+    padding: 15px 34px; border-radius: 2px;
+    text-decoration: none; font-size: 0.97rem; font-weight: 600;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--orange-light); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    padding: 14px 32px; border-radius: 2px;
+    text-decoration: none; font-size: 0.97rem; font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.35);
+    transition: border-color 0.2s;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.7); }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; flex-wrap: wrap; justify-content: center;
+  }
+  .trust-item {
+    flex: 1; min-width: 130px;
+    padding: 22px 14px; text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-num { font-size: 1.75rem; font-weight: 700; color: var(--orange); letter-spacing: -0.02em; }
+  .trust-label { font-size: 0.67rem; color: rgba(255,255,255,0.5); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 4px; font-weight: 400; }
+
+  /* SECTIONS */
+  section { padding: 80px 5%; }
+  .eyebrow { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); font-weight: 600; margin-bottom: 10px; }
+  h2.section-h {
+    font-size: clamp(1.75rem, 3.4vw, 2.55rem); font-weight: 700;
+    color: var(--navy); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 12px;
+  }
+  .section-p { font-size: 0.97rem; color: var(--text-light); line-height: 1.72; max-width: 580px; font-weight: 300; }
+  .sec-hdr { margin-bottom: 50px; }
+
+  /* SERVICES */
+  .services-bg { background: var(--bg-rule); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1px; background: var(--border); border: 1px solid var(--border);
+    border-radius: 3px; overflow: hidden;
+  }
+  .service-card {
+    background: var(--white); padding: 28px 24px;
+    transition: background 0.2s;
+  }
+  .service-card:hover { background: #f7fbff; }
+  .svc-tag {
+    display: inline-block;
+    background: var(--bg-rule); color: var(--navy);
+    font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 3px 10px; border-radius: 2px;
+    margin-bottom: 14px; border: 1px solid var(--border);
+  }
+  .service-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+  .service-card p { font-size: 0.87rem; color: var(--text-light); line-height: 1.62; font-weight: 300; }
+
+  /* GALLERY */
+  .gallery-bg { background: var(--bg-code); }
+  .gallery-bg .eyebrow { color: var(--green); }
+  .gallery-bg h2.section-h { color: var(--white); }
+  .gallery-bg .section-p { color: rgba(255,255,255,0.5); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 200px;
+    gap: 8px;
+  }
+  .gallery-grid img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 2px; filter: brightness(0.9); transition: filter 0.2s; }
+  .gallery-grid img:hover { filter: brightness(1.05); }
+  .gallery-grid img.wide { grid-column: span 2; }
+  @media(max-width:640px){
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gallery-grid img { height: 150px; }
+    .gallery-grid img.wide { grid-column: span 2; height: 180px; }
+  }
+
+  /* ABOUT */
+  .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  @media(max-width:730px){ .about-layout { grid-template-columns: 1fr; gap: 36px; } }
+  .about-media { position: relative; }
+  .about-media img { width: 100%; display: block; border-radius: 2px; aspect-ratio: 4/3; object-fit: cover; border: 1px solid var(--border); }
+  .about-media .spec-block {
+    position: absolute; bottom: -16px; right: -16px;
+    background: var(--navy); color: var(--white);
+    padding: 14px 18px; border-radius: 2px;
+    font-size: 0.78rem; line-height: 1.6;
+    border-left: 3px solid var(--orange);
+  }
+  .spec-block .sp-label { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+  .spec-block .sp-val { font-weight: 600; font-size: 0.9rem; }
+  @media(max-width:730px){ .about-media .spec-block { position: static; margin-top: 12px; display: inline-block; } }
+  .about-text h2 { margin-bottom: 16px; }
+  .about-text p { font-size: 0.95rem; color: var(--text-light); line-height: 1.75; margin-bottom: 14px; font-weight: 300; }
+  .about-text p:last-of-type { margin-bottom: 28px; }
+  .spec-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .spec-list li { display: grid; grid-template-columns: auto 1fr; gap: 12px; font-size: 0.88rem; align-items: center; }
+  .spec-list li .dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
+  .spec-list li span { color: var(--navy); font-weight: 500; }
+
+  /* CTA */
+  .cta-bg {
+    background: var(--navy);
+    text-align: center; padding: 100px 5%;
+    border-top: 3px solid var(--orange);
+  }
+  .cta-bg .eyebrow { color: rgba(255,255,255,0.5); }
+  .cta-bg h2.section-h { color: var(--white); }
+  .cta-bg > p { font-size: 1rem; color: rgba(255,255,255,0.65); max-width: 440px; margin: 0 auto 38px; line-height: 1.65; font-weight: 300; }
+  .phone-cta {
+    display: inline-block; background: var(--orange); color: var(--white);
+    padding: 20px 54px; border-radius: 2px;
+    text-decoration: none; font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700; letter-spacing: -0.01em;
+    transition: background 0.2s;
+    box-shadow: 0 4px 20px rgba(232,119,46,0.35);
+  }
+  .phone-cta:hover { background: var(--orange-light); }
+  .cta-sub { margin-top: 14px; font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg-code);
+    padding: 30px 5%;
+    display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .footer-logo { font-size: 0.92rem; font-weight: 700; color: var(--white); }
+  .footer-logo span { color: var(--orange); }
+  .footer-nav { display: flex; gap: 20px; }
+  .footer-nav a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.8rem; }
+  .footer-nav a:hover { color: var(--orange); }
+  .footer-credit { font-size: 0.72rem; color: rgba(255,255,255,0.28); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">
+    <span class="logo-main">Accurate <span>AC</span></span>
+    <span class="logo-sub">Atlanta, GA</span>
+  </a>
+  <div class="header-right">
+    <span class="header-rating">★★★★★ 5.0 / Yelp</span>
+    <a class="btn-hdr" href="tel:4046903337">(404) 690-3337</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-label">● Precision HVAC · Atlanta, GA</div>
+    <h1><span class="precision">Precision</span> Cooling<br>&amp; Heating</h1>
+    <p>Accurate AC delivers technical excellence in HVAC repair, mini split installation, and system maintenance — measured, reliable, exact.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="tel:4046903337">Call (404) 690-3337</a>
+      <a class="btn-outline" href="#services">View Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item">
+    <span class="trust-num">5.0★</span>
+    <span class="trust-label">Yelp Rating</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">100%</span>
+    <span class="trust-label">5-Star Reviews</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">Mini</span>
+    <span class="trust-label">Split Experts</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">ATL</span>
+    <span class="trust-label">Atlanta, GA</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">Free</span>
+    <span class="trust-label">Estimates</span>
+  </div>
+</div>
+
+<section class="services-bg" id="services">
+  <div class="sec-hdr">
+    <p class="eyebrow">Services</p>
+    <h2 class="section-h">What We Deliver</h2>
+    <p class="section-p">Every service executed with precision diagnostics and clean workmanship. No guesswork — just accurate results.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="svc-tag">Repair</span>
+      <h3>HVAC Repair</h3>
+      <p>Precise fault diagnosis and targeted repairs for all residential and light commercial HVAC systems.</p>
+    </div>
+    <div class="service-card">
+      <span class="svc-tag">Cooling</span>
+      <h3>AC Repair</h3>
+      <p>From refrigerant recovery to blower motor replacement — accurate repairs the first time, every time.</p>
+    </div>
+    <div class="service-card">
+      <span class="svc-tag">Install</span>
+      <h3>Mini Split Installation</h3>
+      <p>Expert ductless mini split installation for efficient zone cooling and heating — properly sized and installed.</p>
+    </div>
+    <div class="service-card">
+      <span class="svc-tag">Maintenance</span>
+      <h3>AC Maintenance</h3>
+      <p>Scheduled tune-ups that keep your system running at peak efficiency and prevent costly failures.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-bg" id="gallery">
+  <div class="sec-hdr">
+    <p class="eyebrow">Our Work</p>
+    <h2 class="section-h">Proof of Precision</h2>
+    <p class="section-p">Clean installs, careful repairs — every job reflects the Accurate AC standard.</p>
+  </div>
+  <div class="gallery-grid">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/bf5rZMX0Nb3V35fPy437vA/l.jpg" alt="Mini split installation Atlanta">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/eskhE2uEEiltNtpYFzQJXw/l.jpg" alt="AC repair Atlanta">
+    <img class="wide" src="https://s3-media0.fl.yelpcdn.com/bphoto/cgEOUNlrnaI1CEZpirZO-g/l.jpg" alt="HVAC work Atlanta">
+    <img class="wide" src="https://s3-media0.fl.yelpcdn.com/bphoto/NNHvWq3vkHQWuJKBDSHHnQ/l.jpg" alt="HVAC maintenance">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/MzPzy1AM-Rvg13UnGysj1A/l.jpg" alt="HVAC technician Atlanta">
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-layout">
+    <div class="about-media">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/YtmkakMypd7YuFpti2U9UQ/l.jpg" alt="Accurate AC technician">
+      <div class="spec-block">
+        <div class="sp-label">Rating</div>
+        <div class="sp-val">5.0★ on Yelp</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">About Accurate AC</p>
+      <h2 class="section-h">The Right Diagnosis. The Right Fix.</h2>
+      <p>Accurate AC was founded on a simple premise: HVAC service should be done accurately. That means proper diagnosis before any repair, clean installations that perform as specified, and maintenance schedules that actually extend system life.</p>
+      <p>Based in Atlanta, we specialize in mini split systems alongside traditional HVAC — giving you more efficient options for your home or business.</p>
+      <ul class="spec-list">
+        <li><span class="dot"></span><span>Licensed &amp; insured technicians</span></li>
+        <li><span class="dot"></span><span>Mini split installation specialists</span></li>
+        <li><span class="dot"></span><span>All major brands serviced</span></li>
+        <li><span class="dot"></span><span>5.0-star Yelp rating</span></li>
+        <li><span class="dot"></span><span>Free, no-obligation estimates</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta-bg" id="contact">
+  <p class="eyebrow">Schedule Service</p>
+  <h2 class="section-h">Get an Accurate Assessment</h2>
+  <p>Call today for a free estimate. We'll diagnose the issue correctly and give you an honest recommendation.</p>
+  <a class="phone-cta" href="tel:4046903337">(404) 690-3337</a>
+  <p class="cta-sub">Atlanta, GA · Licensed &amp; Insured · Mini Split Specialists</p>
+</section>
+
+<footer>
+  <div class="footer-logo">Accurate <span>AC</span> | Atlanta, GA</div>
+  <nav class="footer-nav">
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="tel:4046903337">Call</a>
+  </nav>
+  <div class="footer-credit">Website by WebCare Digital</div>
+</footer>
+
+</body>
+</html>

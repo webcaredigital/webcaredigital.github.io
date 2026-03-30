@@ -1,419 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atlantis Heating &amp; Cooling | Decatur, GA | Legendary Comfort</title>
-<meta name="description" content="Atlantis Heating &amp; Cooling — legendary HVAC comfort in every season. Serving Decatur, GA. 5.0★ rated. Call (404) 378-1653.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Lato', sans-serif; color: #1a2835; background: #fff; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlantis Heating &amp; Cooling — Decatur, GA HVAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Lato', sans-serif; color: #1e3a5f; background: #fff; }
 
-  /* STICKY HEADER */
-  header {
-    position: sticky; top: 0; z-index: 1000;
-    background: linear-gradient(90deg, #0d1f35 0%, #1e3a5f 100%);
-    padding: 0 32px;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 68px;
-    border-bottom: 1px solid rgba(56,178,172,0.25);
-  }
-  .header-brand {
-    display: flex; align-items: center; gap: 12px;
-  }
-  .brand-trident { font-size: 1.5rem; color: #38b2ac; }
-  .brand-name {
-    font-family: 'Cinzel', serif;
-    font-size: 1.1rem; font-weight: 700; color: #fff;
-    letter-spacing: 0.05em;
-  }
-  .brand-name span { color: #38b2ac; }
-  .header-cta a {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: #e8772e; color: #fff;
-    font-family: 'Cinzel', serif;
-    font-weight: 600; font-size: 0.88rem;
-    text-decoration: none; padding: 10px 22px;
-    border-radius: 2px; letter-spacing: 0.06em;
-    box-shadow: 0 2px 10px rgba(232,119,46,0.35);
-    transition: background 0.2s;
-  }
-  .header-cta a:hover { background: #cf651e; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 13px 36px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.26);
+    }
+    .header-name { color: #fff; font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.06em; }
+    .header-call {
+      background: #e8772e; color: #fff;
+      padding: 10px 22px; border-radius: 4px;
+      font-weight: 700; font-size: 0.93rem;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-call:hover { background: #cf6420; }
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(160deg, #061525 0%, #0d2240 25%, #1e3a5f 55%, #163254 75%, #07192e 100%);
-    padding: 104px 32px 92px;
-    text-align: center;
-    position: relative; overflow: hidden;
-  }
-  /* Deep water ripple effect */
-  .hero::before {
-    content: '';
-    position: absolute; bottom: -60px; left: -10%; right: -10%;
-    height: 180px;
-    background: radial-gradient(ellipse at 50% 100%, rgba(56,178,172,0.12) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-  .hero-glow {
-    position: absolute; top: -100px; left: 50%;
-    transform: translateX(-50%);
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(56,178,172,0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-inner { position: relative; }
-  .hero-crest {
-    font-size: 2.5rem; margin-bottom: 18px;
-    display: block; color: #38b2ac; opacity: 0.9;
-  }
-  .hero-subtitle-top {
-    font-family: 'Cinzel', serif;
-    font-size: 0.75rem; letter-spacing: 0.28em;
-    text-transform: uppercase; color: rgba(56,178,172,0.8);
-    margin-bottom: 16px;
-  }
-  .hero h1 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(2.4rem, 5.5vw, 4rem);
-    font-weight: 900; color: #fff;
-    line-height: 1.15; margin-bottom: 6px;
-    letter-spacing: 0.04em;
-  }
-  .hero-subtitle {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    font-weight: 400; color: #38b2ac;
-    letter-spacing: 0.12em; margin-bottom: 26px;
-    font-style: italic;
-  }
-  .hero p {
-    font-size: 1.05rem; color: rgba(255,255,255,0.72);
-    max-width: 540px; margin: 0 auto 44px;
-    line-height: 1.8; font-weight: 300;
-  }
-  .hero-badge {
-    display: inline-block;
-    border: 1px solid rgba(56,178,172,0.3);
-    background: rgba(56,178,172,0.07);
-    color: rgba(56,178,172,0.9);
-    font-size: 0.77rem; letter-spacing: 0.12em;
-    padding: 6px 18px; margin-bottom: 18px;
-    font-family: 'Cinzel', serif;
-  }
-  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .btn-legend {
-    background: #e8772e; color: #fff;
-    font-family: 'Cinzel', serif;
-    font-weight: 600; font-size: 0.95rem;
-    letter-spacing: 0.06em;
-    text-decoration: none; padding: 16px 40px;
-    border-radius: 2px;
-    box-shadow: 0 4px 20px rgba(232,119,46,0.4);
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-legend:hover { background: #cf651e; transform: translateY(-1px); }
-  .btn-ghost {
-    background: transparent; color: rgba(255,255,255,0.8);
-    border: 1px solid rgba(56,178,172,0.35);
-    font-family: 'Cinzel', serif;
-    font-size: 0.88rem; letter-spacing: 0.08em;
-    text-decoration: none; padding: 15px 34px;
-    border-radius: 2px;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .btn-ghost:hover { border-color: #38b2ac; color: #38b2ac; }
+    .hero {
+      background: linear-gradient(155deg, #07192e 0%, #1e3a5f 50%, #12396b 100%);
+      position: relative; overflow: hidden;
+      padding: 96px 36px 86px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 30% 60%, rgba(255,255,255,0.04) 0%, transparent 50%),
+                        radial-gradient(circle at 75% 25%, rgba(232,119,46,0.05) 0%, transparent 50%);
+    }
+    .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
+    .hero-trident { font-size: 2.5rem; margin-bottom: 16px; }
+    .hero h1 { color: #fff; font-family: 'Cinzel', serif; font-size: clamp(2rem, 4.8vw, 3.4rem); font-weight: 700; letter-spacing: 0.06em; line-height: 1.2; margin-bottom: 14px; }
+    .hero h1 em { color: #e8772e; font-style: normal; }
+    .hero-tagline { color: rgba(255,255,255,0.7); font-size: 1.1rem; font-style: italic; margin-bottom: 36px; font-family: 'Cinzel', serif; letter-spacing: 0.04em; }
+    .hero-cta {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      padding: 15px 44px; border-radius: 4px;
+      font-weight: 700; font-size: 1.05rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.45);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
 
-  /* TRUST STRIP */
-  .trust-strip {
-    background: #0d2240;
-    border-top: 2px solid rgba(56,178,172,0.3);
-    border-bottom: 2px solid rgba(56,178,172,0.3);
-    padding: 0 32px;
-    display: flex; justify-content: center; flex-wrap: wrap;
-  }
-  .trust-item {
-    padding: 18px 28px;
-    display: flex; align-items: center; gap: 12px;
-    border-right: 1px solid rgba(255,255,255,0.06);
-    font-size: 0.83rem; font-weight: 700;
-    color: rgba(255,255,255,0.82);
-    letter-spacing: 0.04em; text-transform: uppercase;
-  }
-  .trust-item:last-child { border-right: none; }
-  .t-icon { color: #38b2ac; font-size: 1.1rem; }
+    .stats {
+      background: #e8772e;
+      display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-item {
+      flex: 1 1 150px; text-align: center;
+      padding: 22px 18px;
+      border-right: 1px solid rgba(255,255,255,0.22);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Cinzel', serif; font-size: 1.6rem; font-weight: 700; color: #fff; line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.85); font-weight: 700; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
 
-  /* SERVICES */
-  .services {
-    padding: 80px 32px;
-    background: #f7f9fb;
-    text-align: center;
-  }
-  .services-inner { max-width: 1000px; margin: 0 auto; }
-  .section-pre {
-    font-family: 'Cinzel', serif;
-    font-size: 0.72rem; letter-spacing: 0.22em;
-    text-transform: uppercase; color: #38b2ac;
-    margin-bottom: 12px;
-  }
-  .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.7rem, 3.5vw, 2.5rem);
-    font-weight: 700; color: #1e3a5f;
-    margin-bottom: 52px;
-    letter-spacing: 0.04em;
-  }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 22px;
-  }
-  .service-card {
-    background: #fff;
-    border: 1px solid #dce8f0;
-    border-radius: 4px;
-    padding: 36px 22px;
-    text-align: center;
-    transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
-  }
-  .service-card:hover {
-    box-shadow: 0 8px 32px rgba(30,58,95,0.12);
-    transform: translateY(-3px);
-    border-color: #38b2ac;
-  }
-  .service-glyph {
-    font-size: 2rem; display: block; margin-bottom: 14px;
-  }
-  .service-card h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 0.9rem; font-weight: 600;
-    color: #1e3a5f; letter-spacing: 0.04em;
-  }
+    .services { padding: 76px 36px; background: #f5f7fb; }
+    .section-label { text-align: center; font-family: 'Cinzel', serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
+    .section-title { text-align: center; font-family: 'Cinzel', serif; font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 700; color: #1e3a5f; margin-bottom: 50px; letter-spacing: 0.04em; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 22px; max-width: 900px; margin: 0 auto; }
+    .service-card {
+      background: #fff; border-radius: 6px;
+      padding: 30px 20px; text-align: center;
+      box-shadow: 0 2px 12px rgba(30,58,95,0.07);
+      border-bottom: 4px solid #e8772e;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(30,58,95,0.12); }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 { font-family: 'Cinzel', serif; font-size: 0.9rem; font-weight: 600; color: #1e3a5f; letter-spacing: 0.04em; }
 
-  /* ABOUT */
-  .about {
-    background: linear-gradient(160deg, #0d1f35 0%, #1e3a5f 60%, #1a3a5c 100%);
-    padding: 80px 32px;
-  }
-  .about-inner {
-    max-width: 960px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
-    align-items: start;
-  }
-  .about-text .section-pre { text-align: left; }
-  .about-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 700; color: #fff;
-    margin-bottom: 20px; line-height: 1.3;
-    letter-spacing: 0.03em;
-  }
-  .about-title em { color: #38b2ac; font-style: italic; }
-  .about-text p {
-    color: rgba(255,255,255,0.75);
-    line-height: 1.85; font-size: 0.97rem;
-    font-weight: 300; margin-bottom: 16px;
-  }
-  .legend-card {
-    background: rgba(56,178,172,0.06);
-    border: 1px solid rgba(56,178,172,0.2);
-    border-radius: 4px;
-    padding: 32px;
-  }
-  .legend-card-title {
-    font-family: 'Cinzel', serif;
-    font-size: 0.75rem; letter-spacing: 0.18em;
-    text-transform: uppercase; color: #38b2ac;
-    margin-bottom: 24px;
-  }
-  .legend-row {
-    display: flex; gap: 14px; align-items: flex-start;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(56,178,172,0.1);
-    font-size: 0.9rem;
-  }
-  .legend-row:last-child { border-bottom: none; }
-  .legend-label {
-    min-width: 70px; font-family: 'Cinzel', serif;
-    font-size: 0.7rem; letter-spacing: 0.1em;
-    color: rgba(56,178,172,0.7); margin-top: 2px;
-  }
-  .legend-val { color: rgba(255,255,255,0.88); font-weight: 400; }
-  .legend-val a { color: #e8772e; text-decoration: none; font-weight: 700; font-size: 1rem; }
+    .about { padding: 76px 36px; background: #fff; }
+    .about-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .about-text p { font-size: 0.96rem; line-height: 1.8; color: #445; margin-bottom: 16px; }
+    .info-grid { display: flex; flex-direction: column; gap: 14px; }
+    .info-item { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; background: #f5f7fb; border-radius: 4px; }
+    .info-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .info-item strong { display: block; font-family: 'Cinzel', serif; font-size: 0.78rem; font-weight: 600; color: #1e3a5f; letter-spacing: 0.06em; margin-bottom: 2px; }
+    .info-item span { font-size: 0.9rem; color: #556; }
+    @media (max-width: 640px) { .about-inner { grid-template-columns: 1fr; } }
 
-  /* PHONE CTA */
-  .phone-cta {
-    background: linear-gradient(135deg, #061525 0%, #0d2240 100%);
-    padding: 80px 32px;
-    text-align: center;
-    position: relative; overflow: hidden;
-  }
-  .phone-cta::before {
-    content: 'ATLANTIS';
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Cinzel', serif;
-    font-size: 12vw; font-weight: 900;
-    color: rgba(56,178,172,0.04);
-    white-space: nowrap; pointer-events: none;
-    letter-spacing: 0.15em;
-  }
-  .phone-cta-inner { position: relative; }
-  .phone-cta h2 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-    font-weight: 700; color: #fff;
-    margin-bottom: 8px; letter-spacing: 0.04em;
-  }
-  .phone-cta h2 span { color: #38b2ac; }
-  .phone-cta p {
-    color: rgba(255,255,255,0.65); font-size: 1.05rem;
-    margin-bottom: 40px; font-weight: 300;
-  }
-  .phone-number-large {
-    display: inline-flex; align-items: center; gap: 16px;
-    background: #e8772e; color: #fff;
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    font-weight: 700; text-decoration: none;
-    padding: 22px 52px; border-radius: 2px;
-    letter-spacing: 0.04em;
-    box-shadow: 0 6px 32px rgba(232,119,46,0.35);
-    transition: background 0.2s, transform 0.15s;
-  }
-  .phone-number-large:hover { background: #cf651e; transform: translateY(-2px); }
+    .cta-section {
+      background: linear-gradient(155deg, #07192e, #1e3a5f);
+      padding: 76px 36px; text-align: center;
+    }
+    .cta-section h2 { color: #fff; font-family: 'Cinzel', serif; font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 700; letter-spacing: 0.06em; margin-bottom: 10px; }
+    .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 24px; font-style: italic; }
+    .cta-phone { font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 5.5vw, 3.2rem); font-weight: 700; color: #e8772e; display: block; margin-bottom: 28px; text-decoration: none; letter-spacing: 0.04em; }
+    .cta-phone:hover { color: #f0944a; }
+    .cta-btn {
+      display: inline-block; background: #e8772e; color: #fff;
+      padding: 17px 48px; border-radius: 4px;
+      font-weight: 700; font-size: 1.05rem; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #cf6420; }
 
-  /* FOOTER */
-  footer {
-    background: #040e1a;
-    padding: 28px;
-    text-align: center;
-    color: rgba(255,255,255,0.35);
-    font-size: 0.82rem;
-    border-top: 1px solid rgba(56,178,172,0.15);
-  }
-  footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
-  footer a:hover { color: #38b2ac; }
-
-  @media (max-width: 768px) {
-    .about-inner { grid-template-columns: 1fr; gap: 32px; }
-    .trust-item { padding: 14px 16px; }
-  }
-</style>
+    footer {
+      background: #060f1c; color: rgba(255,255,255,0.42);
+      text-align: center; padding: 22px 36px;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.72); }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="header-brand">
-    <span class="brand-trident">&#9769;</span>
-    <div class="brand-name">Atlantis <span>Heating &amp; Cooling</span></div>
-  </div>
-  <div class="header-cta">
-    <a href="tel:4043781653">
-      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      (404) 378-1653
-    </a>
-  </div>
-</header>
+  <header>
+    <div class="header-name">Atlantis Heating &amp; Cooling</div>
+    <a href="tel:4043781653" class="header-call">&#128222; (404) 378-1653</a>
+  </header>
 
-<section class="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-inner">
-    <div class="hero-badge">Decatur, GA 30030 &bull; 5.0 Stars</div>
-    <span class="hero-crest">&#9769;</span>
-    <div class="hero-subtitle-top">Atlantis Heating &amp; Cooling</div>
-    <h1>Legendary Comfort</h1>
-    <div class="hero-subtitle">In Every Season</div>
-    <p>Where ancient mastery meets modern HVAC expertise. Serving Decatur, GA with five-star heating and cooling solutions that stand the test of time.</p>
-    <div class="hero-actions">
-      <a href="tel:4043781653" class="btn-legend">Call (404) 378-1653</a>
-      <a href="#services" class="btn-ghost">Our Services</a>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-trident">&#127754;</div>
+      <h1>Atlantis <em>Heating</em> &amp; Cooling</h1>
+      <p class="hero-tagline">Legendary Comfort</p>
+      <a href="tel:4043781653" class="hero-cta">Call (404) 378-1653</a>
     </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">5.0&#9733;</div><div class="stat-label">Rating</div></div>
+    <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">Review</div></div>
+    <div class="stat-item"><div class="stat-num">Decatur</div><div class="stat-label">Decatur, GA</div></div>
+    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates</div></div>
   </div>
-</section>
 
-<div class="trust-strip">
-  <div class="trust-item"><span class="t-icon">&#9733;</span> 5.0 Star Rated</div>
-  <div class="trust-item"><span class="t-icon">&#9769;</span> Decatur, GA</div>
-  <div class="trust-item"><span class="t-icon">&#10003;</span> Licensed &amp; Insured</div>
-  <div class="trust-item"><span class="t-icon">&#9830;</span> All Seasons</div>
-  <div class="trust-item"><span class="t-icon">&#127769;</span> Wood Stove</div>
-</div>
-
-<section class="services" id="services">
-  <div class="services-inner">
-    <p class="section-pre">Our Offerings</p>
-    <h2 class="section-title">Services of Legend</h2>
+  <section class="services">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">Legendary HVAC Services</h2>
     <div class="services-grid">
-      <div class="service-card">
-        <span class="service-glyph">&#127777;&#65039;</span>
-        <h3>HVAC</h3>
+      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Service</h3></div>
+      <div class="service-card"><div class="service-icon">&#10052;</div><h3>Heating &amp; Air Conditioning</h3></div>
+      <div class="service-card"><div class="service-icon">&#128293;</div><h3>Wood Stove</h3></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="section-label">About Atlantis</div>
+    <h2 class="section-title">Decatur's Legendary Comfort Team</h2>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>Atlantis Heating &amp; Cooling brings legendary comfort to Decatur, GA homes. From conventional HVAC service to specialty wood stove installations, we deliver expert solutions with a 5-star commitment to quality.</p>
+        <p>Located at 1002 Sycamore Dr in Decatur, we serve the local community with professional heating and cooling service. Call today and experience legendary comfort.</p>
       </div>
-      <div class="service-card">
-        <span class="service-glyph">&#128293;</span>
-        <h3>Wood Stove</h3>
-      </div>
-      <div class="service-card">
-        <span class="service-glyph">&#127961;&#65039;</span>
-        <h3>Heating &amp; Air Conditioning</h3>
-      </div>
-      <div class="service-card">
-        <span class="service-glyph">&#127963;&#65039;</span>
-        <h3>HVAC Companies</h3>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><strong>Phone</strong><span><a href="tel:4043781653" style="color:#e8772e;text-decoration:none;">(404) 378-1653</a></span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128205;</div>
+          <div><strong>Address</strong><span>1002 Sycamore Dr<br>Decatur, GA</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128336;</div>
+          <div><strong>Hours</strong><span>Mon&ndash;Fri: 8am&ndash;6pm</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#9733;</div>
+          <div><strong>Reputation</strong><span>5-star rated HVAC &amp; comfort service</span></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="about" id="about">
-  <div class="about-inner">
-    <div class="about-text">
-      <p class="section-pre">Our Story</p>
-      <h2 class="about-title">Where <em>Legendary</em><br>Comfort Begins</h2>
-      <p>Atlantis Heating &amp; Cooling brings mythic-level dedication to every HVAC job in Decatur. Located at 1002 Sycamore Dr, we've built a five-star reputation on thoroughness, expertise, and service that goes beyond the ordinary.</p>
-      <p>Whether you need a complete HVAC system, wood stove installation, or seasonal maintenance, we approach every project with the craft and commitment that legendary comfort demands.</p>
-    </div>
-    <div class="legend-card">
-      <div class="legend-card-title">Contact the Legend</div>
-      <div class="legend-row">
-        <span class="legend-label">Address</span>
-        <span class="legend-val">1002 Sycamore Dr<br>Decatur, GA 30030</span>
-      </div>
-      <div class="legend-row">
-        <span class="legend-label">Phone</span>
-        <span class="legend-val"><a href="tel:4043781653">(404) 378-1653</a></span>
-      </div>
-      <div class="legend-row">
-        <span class="legend-label">Rating</span>
-        <span class="legend-val">5.0 Stars &bull; 1 Review</span>
-      </div>
-      <div class="legend-row">
-        <span class="legend-label">Specialty</span>
-        <span class="legend-val">HVAC &amp; Wood Stove</span>
-      </div>
-    </div>
-  </div>
-</section>
+  <section class="cta-section">
+    <h2>Legendary Comfort Awaits</h2>
+    <p>Atlantis Heating &amp; Cooling &mdash; 1002 Sycamore Dr, Decatur, GA</p>
+    <a href="tel:4043781653" class="cta-phone">(404) 378-1653</a>
+    <a href="tel:4043781653" class="cta-btn">Call Atlantis Today</a>
+  </section>
 
-<section class="phone-cta">
-  <div class="phone-cta-inner">
-    <h2>Call the <span>Legends</span></h2>
-    <p>Legendary comfort is one call away. Reach Atlantis Heating &amp; Cooling today.</p>
-    <a href="tel:4043781653" class="phone-number-large">
-      <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      (404) 378-1653
-    </a>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 Atlantis Heating &amp; Cooling &bull; 1002 Sycamore Dr, Decatur, GA 30030</p>
-  <p style="margin-top:8px;">Website by <a href="#">WebCare Digital</a></p>
-</footer>
+  <footer>
+    <p><strong>Atlantis Heating &amp; Cooling</strong> &mdash; 1002 Sycamore Dr, Decatur, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
+  </footer>
 
 </body>
 </html>

@@ -1,195 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>True Patriot Mechanical — Atlanta, GA HVAC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Open Sans', sans-serif; color: #1e3a5f; background: #fff; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>True Patriot Mechanical | HVAC Atlanta, GA</title>
+<meta name="description" content="True Patriot Mechanical provides trusted residential and commercial HVAC repair and AC service in Atlanta, GA. American-made service you can count on. Call (678) 498-6726.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1e3a5f;
+    --navy-dark: #0e1f35;
+    --red: #c0392b;
+    --red-bright: #e74c3c;
+    --orange: #e8772e;
+    --white: #ffffff;
+    --off-white: #f5f5f0;
+    --light: #edf2f7;
+    --text: #1a2434;
+    --text-light: #556070;
+    --gold: #d4a843;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--white); }
 
-    header {
-      position: sticky; top: 0; z-index: 100;
-      background: #1e3a5f;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 14px 40px;
-      box-shadow: 0 3px 16px rgba(0,0,0,0.3);
-    }
-    .header-name { color: #fff; font-family: 'Oswald', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
-    .header-call {
-      background: #e8772e; color: #fff;
-      padding: 10px 24px; border-radius: 4px;
-      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.06em;
-      text-decoration: none; white-space: nowrap;
-      transition: background 0.2s;
-    }
-    .header-call:hover { background: #cf6420; }
+  .stripes {
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--red) 0, var(--red) 33.33%,
+      var(--white) 33.33%, var(--white) 66.66%,
+      var(--navy) 66.66%, var(--navy) 100%
+    );
+  }
 
-    .hero {
-      background: linear-gradient(160deg, #0a1929 0%, #1e3a5f 50%, #1a4f7a 100%);
-      position: relative; overflow: hidden;
-      padding: 110px 40px 100px;
-      text-align: center;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.015) 20px, rgba(255,255,255,0.015) 40px);
-    }
-    .hero-content { position: relative; max-width: 720px; margin: 0 auto; }
-    .hero-icon { font-size: 3rem; margin-bottom: 16px; }
-    .hero h1 { color: #fff; font-family: 'Oswald', sans-serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.1; margin-bottom: 18px; }
-    .hero h1 span { color: #e8772e; }
-    .hero-tagline { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 40px; }
-    .hero-cta {
-      display: inline-block;
-      background: #e8772e; color: #fff;
-      padding: 16px 44px; border-radius: 4px;
-      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.15rem; letter-spacing: 0.08em; text-transform: uppercase;
-      text-decoration: none;
-      box-shadow: 0 6px 24px rgba(232,119,46,0.45);
-      transition: background 0.2s, transform 0.15s;
-    }
-    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
+  /* HEADER */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--navy-dark);
+    padding: 0 5%;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.35);
+  }
+  .logo-group { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .logo-shield {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: var(--red);
+    clip-path: polygon(50% 0%, 100% 15%, 100% 60%, 50% 100%, 0% 60%, 0% 15%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+  }
+  .logo-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.55rem; color: var(--white); letter-spacing: 0.06em; line-height: 1; }
+  .logo-sub { font-size: 0.62rem; color: rgba(255,255,255,0.5); letter-spacing: 0.14em; text-transform: uppercase; font-family: 'Open Sans', sans-serif; }
+  .header-right { display: flex; align-items: center; gap: 14px; }
+  .hdr-badge {
+    font-size: 0.68rem; font-weight: 700; color: var(--gold);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    display: none;
+  }
+  @media(min-width:560px){ .hdr-badge { display: block; } }
+  .btn-hdr {
+    background: var(--orange); color: var(--white);
+    padding: 10px 22px; border-radius: 2px;
+    text-decoration: none; font-size: 0.92rem; font-weight: 700;
+    letter-spacing: 0.04em; transition: background 0.2s; white-space: nowrap;
+  }
+  .btn-hdr:hover { background: #c9601a; }
 
-    .stats {
-      background: #e8772e;
-      display: flex; flex-wrap: wrap; justify-content: center;
-    }
-    .stat-item {
-      flex: 1 1 160px; text-align: center;
-      padding: 24px 20px;
-      border-right: 1px solid rgba(255,255,255,0.25);
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-num { font-family: 'Oswald', sans-serif; font-size: 1.9rem; font-weight: 700; color: #fff; line-height: 1; }
-    .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.85); font-weight: 600; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.1em; }
+  /* HERO */
+  .hero {
+    position: relative; min-height: 88vh;
+    display: flex; align-items: center;
+    background: url('https://s3-media0.fl.yelpcdn.com/bphoto/UrhMawcaNtJ4FWmXrU4rkg/l.jpg') center 30% / cover no-repeat;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(14,31,53,0.96) 40%, rgba(14,31,53,0.55) 100%);
+  }
+  .hero-content {
+    position: relative; z-index: 1;
+    padding: 80px 5%; max-width: 660px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 2px solid var(--gold); color: var(--gold);
+    padding: 5px 16px; border-radius: 2px;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; margin-bottom: 24px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 400;
+    color: var(--white); line-height: 0.95; letter-spacing: 0.04em;
+    margin-bottom: 22px; text-transform: uppercase;
+  }
+  .hero h1 .red-line { color: var(--red-bright); display: block; }
+  .hero h1 .orange-accent { color: var(--orange); }
+  .hero p {
+    font-size: 1.05rem; color: rgba(255,255,255,0.8);
+    line-height: 1.65; margin-bottom: 36px; font-weight: 300;
+    max-width: 500px;
+  }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-patriot {
+    background: var(--orange); color: var(--white);
+    padding: 16px 36px; border-radius: 2px;
+    text-decoration: none; font-size: 0.97rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    transition: background 0.2s;
+  }
+  .btn-patriot:hover { background: #c9601a; }
+  .btn-patriot-outline {
+    background: transparent; color: var(--white);
+    padding: 15px 34px; border-radius: 2px;
+    text-decoration: none; font-size: 0.97rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    border: 2px solid rgba(255,255,255,0.45);
+    transition: border-color 0.2s;
+  }
+  .btn-patriot-outline:hover { border-color: var(--white); }
 
-    .services { padding: 80px 40px; background: #f5f7fa; }
-    .section-eyebrow { text-align: center; font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
-    .section-title { text-align: center; font-family: 'Oswald', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; color: #1e3a5f; margin-bottom: 52px; text-transform: uppercase; letter-spacing: 0.04em; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 960px; margin: 0 auto; }
-    .service-card {
-      background: #fff; border-radius: 6px;
-      padding: 36px 24px; text-align: center;
-      box-shadow: 0 2px 12px rgba(30,58,95,0.07);
-      border-left: 5px solid #e8772e;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(30,58,95,0.12); }
-    .service-icon { font-size: 2rem; margin-bottom: 14px; }
-    .service-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600; color: #1e3a5f; text-transform: uppercase; letter-spacing: 0.04em; }
+  /* TRUST STRIP */
+  .trust-strip {
+    background: var(--red);
+    display: flex; flex-wrap: wrap; justify-content: center;
+  }
+  .trust-item {
+    flex: 1; min-width: 120px;
+    padding: 20px 10px; text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.2);
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem; color: var(--white); letter-spacing: 0.04em;
+  }
+  .trust-label { font-size: 0.67rem; color: rgba(255,255,255,0.82); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 3px; font-weight: 600; }
 
-    .about { padding: 80px 40px; background: #fff; }
-    .about-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-    .about-text p { font-size: 0.97rem; line-height: 1.8; color: #455; margin-bottom: 16px; }
-    .info-grid { display: flex; flex-direction: column; gap: 18px; }
-    .info-item { display: flex; gap: 14px; align-items: flex-start; padding: 16px; background: #f5f7fa; border-radius: 6px; }
-    .info-icon { font-size: 1.3rem; flex-shrink: 0; }
-    .info-item strong { display: block; font-family: 'Oswald', sans-serif; font-weight: 600; color: #1e3a5f; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
-    .info-item span { font-size: 0.9rem; color: #555; }
-    @media (max-width: 620px) { .about-inner { grid-template-columns: 1fr; } }
+  /* SECTIONS */
+  section { padding: 84px 5%; }
+  .eyebrow {
+    font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--orange); font-weight: 700; margin-bottom: 10px;
+  }
+  h2.s-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 400;
+    color: var(--navy); letter-spacing: 0.04em; line-height: 1;
+    margin-bottom: 14px; text-transform: uppercase;
+  }
+  .s-lead { font-size: 0.97rem; color: var(--text-light); line-height: 1.72; max-width: 560px; font-weight: 300; }
+  .s-hdr { margin-bottom: 48px; }
 
-    .cta-section {
-      background: linear-gradient(160deg, #0a1929, #1e3a5f);
-      padding: 80px 40px; text-align: center;
-    }
-    .cta-section h2 { color: #fff; font-family: 'Oswald', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
-    .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
-    .cta-phone { font-family: 'Oswald', sans-serif; font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 700; color: #e8772e; display: block; margin-bottom: 28px; text-decoration: none; letter-spacing: 0.04em; }
-    .cta-phone:hover { color: #f0944a; }
-    .cta-btn {
-      display: inline-block; background: #e8772e; color: #fff;
-      padding: 18px 52px; border-radius: 4px;
-      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.08em;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(232,119,46,0.4);
-      transition: background 0.2s;
-    }
-    .cta-btn:hover { background: #cf6420; }
+  /* SERVICES */
+  .services-bg { background: var(--light); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 18px;
+  }
+  .service-card {
+    background: var(--white); padding: 28px 24px;
+    border-radius: 2px;
+    border-top: 4px solid var(--navy);
+    box-shadow: 0 2px 10px rgba(30,58,95,0.06);
+    transition: border-top-color 0.2s, transform 0.2s;
+  }
+  .service-card:hover { border-top-color: var(--orange); transform: translateY(-3px); }
+  .svc-icon { font-size: 2rem; margin-bottom: 12px; }
+  .service-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; font-weight: 400; color: var(--navy); letter-spacing: 0.05em; margin-bottom: 8px; text-transform: uppercase; }
+  .service-card p { font-size: 0.87rem; color: var(--text-light); line-height: 1.62; font-weight: 300; }
 
-    footer {
-      background: #070e18; color: rgba(255,255,255,0.45);
-      text-align: center; padding: 24px 40px;
-      font-size: 0.82rem;
-    }
-    footer strong { color: rgba(255,255,255,0.75); }
-  </style>
+  /* GALLERY */
+  .gallery-bg { background: var(--navy-dark); }
+  .gallery-bg .eyebrow { color: var(--gold); }
+  .gallery-bg h2.s-title { color: var(--white); }
+  .gallery-bg .s-lead { color: rgba(255,255,255,0.55); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .gallery-grid img { width: 100%; height: 210px; object-fit: cover; display: block; filter: saturate(0.85); transition: filter 0.25s; }
+  .gallery-grid img:hover { filter: saturate(1.1); }
+  .gallery-grid img.wide { grid-column: span 3; height: 260px; }
+  @media(max-width:620px){
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid img.wide { grid-column: span 2; height: 200px; }
+    .gallery-grid img { height: 160px; }
+  }
+
+  /* ABOUT */
+  .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  @media(max-width:730px){ .about-layout { grid-template-columns: 1fr; gap: 36px; } }
+  .about-img-wrap { position: relative; }
+  .about-img { width: 100%; display: block; border-radius: 2px; aspect-ratio: 4/3; object-fit: cover; }
+  .flag-bar {
+    height: 8px;
+    background: linear-gradient(90deg, var(--red) 33%, var(--white) 33%, var(--white) 66%, var(--navy) 66%);
+    margin-top: -2px;
+  }
+  .about-text .eyebrow { color: var(--red); }
+  .about-text h2 { margin-bottom: 16px; }
+  .about-text p { font-size: 0.96rem; color: var(--text-light); line-height: 1.75; margin-bottom: 14px; font-weight: 300; }
+  .about-text p:last-of-type { margin-bottom: 26px; }
+  .star-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .star-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--navy); font-weight: 600; }
+  .star-list li::before { content: '★'; color: var(--gold); flex-shrink: 0; }
+
+  /* CTA */
+  .cta-section {
+    background: var(--navy-dark);
+    text-align: center; padding: 100px 5%;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 6px;
+    background: repeating-linear-gradient(90deg, var(--red) 0, var(--red) 33.33%, var(--white) 33.33%, var(--white) 66.66%, var(--orange) 66.66%, var(--orange) 100%);
+  }
+  .cta-section .eyebrow { color: var(--gold); }
+  .cta-section h2.s-title { color: var(--white); }
+  .cta-section > p { font-size: 1rem; color: rgba(255,255,255,0.68); max-width: 450px; margin: 0 auto 40px; line-height: 1.65; font-weight: 300; }
+  .phone-big {
+    display: inline-block; background: var(--orange); color: var(--white);
+    padding: 22px 58px; border-radius: 2px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: 0.06em;
+    transition: background 0.2s;
+    box-shadow: 0 6px 24px rgba(232,119,46,0.4);
+  }
+  .phone-big:hover { background: #c9601a; }
+  .cta-sub { margin-top: 16px; font-size: 0.8rem; color: rgba(255,255,255,0.38); letter-spacing: 0.1em; text-transform: uppercase; }
+
+  /* FOOTER */
+  footer {
+    background: #060e18;
+    padding: 30px 5%;
+    display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--white); letter-spacing: 0.06em; }
+  .footer-logo span { color: var(--orange); }
+  .footer-nav { display: flex; gap: 20px; }
+  .footer-nav a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+  .footer-nav a:hover { color: var(--orange); }
+  .footer-credit { font-size: 0.72rem; color: rgba(255,255,255,0.28); }
+</style>
 </head>
 <body>
 
-  <header>
-    <div class="header-name">True Patriot Mechanical</div>
-    <a href="tel:6784986726" class="header-call">&#128222; (678) 498-6726</a>
-  </header>
+<div class="stripes"></div>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-icon">&#127482;&#127480;</div>
-      <h1>True <span>Patriot</span> Mechanical</h1>
-      <p class="hero-tagline">Professional HVAC Service for Atlanta Homes &amp; Businesses</p>
-      <a href="tel:6784986726" class="hero-cta">Call Now &mdash; (678) 498-6726</a>
+<header>
+  <a class="logo-group" href="#">
+    <div class="logo-shield">🦅</div>
+    <div>
+      <div class="logo-name">True Patriot Mechanical</div>
+      <div class="logo-sub">Atlanta, GA · Residential &amp; Commercial</div>
     </div>
-  </section>
-
-  <div class="stats">
-    <div class="stat-item"><div class="stat-num">5.0&#9733;</div><div class="stat-label">Star Rating</div></div>
-    <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">5-Star Reviews</div></div>
-    <div class="stat-item"><div class="stat-num">Atlanta</div><div class="stat-label">Atlanta, GA</div></div>
-    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates</div></div>
+  </a>
+  <div class="header-right">
+    <span class="hdr-badge">★★★★★ 5.0 Rated</span>
+    <a class="btn-hdr" href="tel:6784986726">(678) 498-6726</a>
   </div>
+</header>
 
-  <section class="services">
-    <div class="section-eyebrow">What We Offer</div>
-    <h2 class="section-title">Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Repair</h3></div>
-      <div class="service-card"><div class="service-icon">&#128293;</div><h3>Heating &amp; Air Conditioning</h3></div>
-      <div class="service-card"><div class="service-icon">&#127968;</div><h3>Residential HVAC</h3></div>
-      <div class="service-card"><div class="service-icon">&#127970;</div><h3>Commercial HVAC</h3></div>
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🇺🇸 Atlanta, GA · American-Made Service</div>
+    <h1>American-Made<span class="red-line">Service You</span><span class="orange-accent">Can Trust.</span></h1>
+    <p>True Patriot Mechanical brings pride, precision, and patriotism to every HVAC job — residential or commercial. When you call us, the work gets done right.</p>
+    <div class="hero-ctas">
+      <a class="btn-patriot" href="tel:6784986726">Call (678) 498-6726</a>
+      <a class="btn-patriot-outline" href="#services">View Services</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="about">
-    <div class="section-eyebrow">About Us</div>
-    <h2 class="section-title">Atlanta's Trusted HVAC Pros</h2>
-    <div class="about-inner">
-      <div class="about-text">
-        <p>True Patriot Mechanical brings dedication, integrity, and expert craftsmanship to every HVAC job in Atlanta. We serve both residential and commercial clients with the same level of commitment and professionalism.</p>
-        <p>From heating repairs on cold Georgia nights to AC service during the summer heat, our team delivers reliable solutions with upfront pricing and zero surprises.</p>
-      </div>
-      <div class="info-grid">
-        <div class="info-item">
-          <div class="info-icon">&#128222;</div>
-          <div><strong>Phone</strong><span><a href="tel:6784986726" style="color:#e8772e;text-decoration:none;">(678) 498-6726</a></span></div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon">&#128205;</div>
-          <div><strong>Location</strong><span>Atlanta, GA</span></div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon">&#128336;</div>
-          <div><strong>Hours</strong><span>Mon&ndash;Fri: 8am&ndash;6pm<br>Sat: By Appointment</span></div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon">&#127970;</div>
-          <div><strong>Service Types</strong><span>Residential &amp; Commercial</span></div>
-        </div>
-      </div>
+<div class="trust-strip">
+  <div class="trust-item">
+    <span class="trust-num">5.0★</span>
+    <span class="trust-label">Yelp Rating</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">Res &amp; Com</span>
+    <span class="trust-label">Service Types</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">ATL</span>
+    <span class="trust-label">Atlanta, GA</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">Free</span>
+    <span class="trust-label">Estimates</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">USA</span>
+    <span class="trust-label">Veteran Values</span>
+  </div>
+</div>
+
+<section class="services-bg" id="services">
+  <div class="s-hdr">
+    <p class="eyebrow">Our Services</p>
+    <h2 class="s-title">Duty-Bound to Deliver</h2>
+    <p class="s-lead">Whether it's a repair call at 7 AM or a commercial installation — we bring the same work ethic to every job.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="svc-icon">🔧</div>
+      <h3>HVAC Repair</h3>
+      <p>Comprehensive heating and cooling repairs for all systems. Diagnosed correctly, fixed right the first time.</p>
     </div>
-  </section>
+    <div class="service-card">
+      <div class="svc-icon">🌡️</div>
+      <h3>Heating &amp; Air Conditioning</h3>
+      <p>Full-service heating and cooling — from tune-ups to complete system replacements.</p>
+    </div>
+    <div class="service-card">
+      <div class="svc-icon">❄️</div>
+      <h3>AC Repair</h3>
+      <p>Atlanta heat demands a reliable AC. We respond fast and restore your cooling without delay.</p>
+    </div>
+    <div class="service-card">
+      <div class="svc-icon">🏢</div>
+      <h3>Residential &amp; Commercial</h3>
+      <p>From single-family homes to commercial properties — we scale our expertise to meet your needs.</p>
+    </div>
+  </div>
+</section>
 
-  <section class="cta-section">
-    <h2>Call Us Today</h2>
-    <p>Fast response across Atlanta, GA for all heating and cooling needs</p>
-    <a href="tel:6784986726" class="cta-phone">(678) 498-6726</a>
-    <a href="tel:6784986726" class="cta-btn">Get Your Free Estimate</a>
-  </section>
+<section class="gallery-bg" id="gallery">
+  <div class="s-hdr">
+    <p class="eyebrow">Our Work</p>
+    <h2 class="s-title">Mission Accomplished</h2>
+    <p class="s-lead">Every completed job is proof of our commitment to quality. No shortcuts — no excuses.</p>
+  </div>
+  <div class="gallery-grid">
+    <img class="wide" src="https://s3-media0.fl.yelpcdn.com/bphoto/TnOQeQQJON1HpAYnVObESQ/l.jpg" alt="True Patriot HVAC work">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/OvlUMN9eV0WtMmI-SyHZHw/l.jpg" alt="HVAC repair Atlanta">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/q0J8tP-tLbgPMlXrORTOCw/l.jpg" alt="AC service Atlanta">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/5cJXErJQ-YVagVixc6fCww/l.jpg" alt="Heating repair Atlanta">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/sSfF-3-0aOsEe-CCIBx16Q/l.jpg" alt="Commercial HVAC Atlanta">
+  </div>
+</section>
 
-  <footer>
-    <p><strong>True Patriot Mechanical</strong> &mdash; Atlanta, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
-  </footer>
+<section id="about">
+  <div class="about-layout">
+    <div class="about-img-wrap">
+      <img class="about-img" src="https://s3-media0.fl.yelpcdn.com/bphoto/UrhMawcaNtJ4FWmXrU4rkg/l.jpg" alt="True Patriot Mechanical team">
+      <div class="flag-bar"></div>
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">About True Patriot</p>
+      <h2 class="s-title">Built on Duty &amp; Pride</h2>
+      <p>True Patriot Mechanical carries the values of service, integrity, and craftsmanship into every home and business we work in. We don't cut corners — because you deserve better.</p>
+      <p>Serving Atlanta with residential and commercial HVAC expertise, we've built our 5-star reputation on honest work done with real skill. When you call True Patriot, help is on the way.</p>
+      <ul class="star-list">
+        <li>Licensed &amp; insured for residential and commercial</li>
+        <li>5.0-star rated on Yelp</li>
+        <li>Honest, transparent pricing</li>
+        <li>All major HVAC brands serviced</li>
+        <li>Serving Atlanta and surrounding areas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <p class="eyebrow">Call to Duty</p>
+  <h2 class="s-title">Ready to Serve Your Home</h2>
+  <p>Trusted HVAC service — residential and commercial. Call True Patriot Mechanical and get the job done right.</p>
+  <a class="phone-big" href="tel:6784986726">(678) 498-6726</a>
+  <p class="cta-sub">Atlanta, GA · Licensed &amp; Insured · Res &amp; Commercial</p>
+</section>
+
+<footer>
+  <div class="footer-logo">True Patriot <span>Mechanical</span></div>
+  <nav class="footer-nav">
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="tel:6784986726">Call</a>
+  </nav>
+  <div class="footer-credit">Website by WebCare Digital</div>
+</footer>
 
 </body>
 </html>

@@ -1,382 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AllAbout AC Repair | Atlanta, GA | Residential &amp; Commercial HVAC</title>
-<meta name="description" content="AllAbout AC Repair — everything you need for AC repair in Atlanta, GA 30346. Residential, commercial, emergency HVAC services. Call (706) 522-7043.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Barlow', sans-serif; color: #1c2535; background: #fff; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AllAbout AC Repair — Atlanta, GA HVAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Barlow', sans-serif; color: #1e3a5f; background: #fff; }
 
-  /* STICKY HEADER */
-  header {
-    position: sticky; top: 0; z-index: 1000;
-    background: #1e3a5f;
-    padding: 0 32px;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 64px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  }
-  .header-logo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.5rem; font-weight: 800;
-    color: #fff; letter-spacing: 0.02em;
-  }
-  .header-logo span { color: #e8772e; }
-  .header-cta a {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: #e8772e; color: #fff;
-    font-weight: 700; font-size: 0.95rem;
-    text-decoration: none; padding: 10px 24px;
-    border-radius: 4px;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .header-cta a:hover { background: #cf651e; transform: scale(1.02); }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 36px; height: 60px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.26);
+    }
+    .header-name { color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
+    .header-call {
+      background: #e8772e; color: #fff;
+      padding: 9px 22px; border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.06em; text-transform: uppercase;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-call:hover { background: #cf6420; }
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(150deg, #0c1e33 0%, #1e3a5f 40%, #2c5282 65%, #1a3456 100%);
-    padding: 96px 32px 88px;
-    position: relative; overflow: hidden;
-  }
-  .hero-decor {
-    position: absolute; right: 0; top: 0; bottom: 0; width: 45%;
-    background: linear-gradient(270deg, rgba(232,119,46,0.08) 0%, transparent 100%);
-    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
-  }
-  .hero-inner { max-width: 680px; position: relative; }
-  .hero-rating {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.85);
-    font-size: 0.8rem; font-weight: 600;
-    padding: 6px 16px; border-radius: 4px;
-    margin-bottom: 22px; letter-spacing: 0.04em;
-  }
-  .hero-rating .star { color: #e8772e; }
-  .hero h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(2.8rem, 6vw, 4.2rem);
-    font-weight: 800; color: #fff;
-    line-height: 1.05; margin-bottom: 18px;
-    letter-spacing: 0.01em;
-  }
-  .hero h1 em { color: #e8772e; font-style: normal; }
-  .hero p {
-    font-size: 1.1rem; color: rgba(255,255,255,0.78);
-    max-width: 560px; line-height: 1.7; margin-bottom: 40px;
-    font-weight: 500;
-  }
-  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn-main {
-    background: #e8772e; color: #fff;
-    font-weight: 700; font-size: 1rem;
-    text-decoration: none; padding: 15px 36px;
-    border-radius: 4px;
-    box-shadow: 0 4px 20px rgba(232,119,46,0.4);
-    transition: background 0.2s;
-  }
-  .btn-main:hover { background: #cf651e; }
-  .btn-alt {
-    background: transparent; color: rgba(255,255,255,0.9);
-    border: 2px solid rgba(255,255,255,0.25);
-    font-weight: 600; font-size: 0.95rem;
-    text-decoration: none; padding: 13px 30px;
-    border-radius: 4px;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .btn-alt:hover { border-color: #e8772e; color: #e8772e; }
+    .hero {
+      background: linear-gradient(145deg, #081727 0%, #1e3a5f 50%, #1a3e64 100%);
+      position: relative; overflow: hidden;
+      padding: 96px 36px 86px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(-60deg, transparent, transparent 35px, rgba(255,255,255,0.02) 35px, rgba(255,255,255,0.02) 36px);
+    }
+    .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
+    .hero-kicker { color: #e8772e; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 10px; }
+    .hero h1 { color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1; margin-bottom: 16px; }
+    .hero-tagline { color: rgba(255,255,255,0.7); font-size: 1.1rem; font-weight: 500; margin-bottom: 36px; }
+    .hero-cta {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      padding: 14px 42px; border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.15rem; letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.45);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
 
-  /* TRUST STRIP */
-  .trust-strip {
-    background: #13273f;
-    padding: 0;
-    display: flex; justify-content: center; flex-wrap: wrap;
-    border-top: 4px solid #e8772e;
-  }
-  .trust-item {
-    padding: 18px 32px;
-    display: flex; align-items: center; gap: 12px;
-    color: rgba(255,255,255,0.85);
-    font-size: 0.87rem; font-weight: 600;
-    border-right: 1px solid rgba(255,255,255,0.07);
-    letter-spacing: 0.03em;
-  }
-  .trust-item:last-child { border-right: none; }
-  .trust-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.5rem; font-weight: 800; color: #e8772e;
-    line-height: 1;
-  }
+    .stats {
+      background: #e8772e;
+      display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-item {
+      flex: 1 1 150px; text-align: center;
+      padding: 22px 18px;
+      border-right: 1px solid rgba(255,255,255,0.22);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 1.9rem; font-weight: 700; color: #fff; line-height: 1; letter-spacing: 0.04em; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.85); font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
 
-  /* SERVICES */
-  .services {
-    padding: 80px 32px;
-    background: #fff;
-  }
-  .services-inner { max-width: 1100px; margin: 0 auto; }
-  .services-header { margin-bottom: 48px; }
-  .section-kicker {
-    font-size: 0.75rem; font-weight: 700;
-    letter-spacing: 0.16em; text-transform: uppercase;
-    color: #e8772e; margin-bottom: 10px;
-  }
-  .section-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 800; color: #1e3a5f;
-    line-height: 1.1;
-  }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-  }
-  .service-card {
-    background: #f7f9fc;
-    border: 1px solid #e0e8f0;
-    border-radius: 8px;
-    padding: 28px 20px;
-    display: flex; flex-direction: column; align-items: flex-start;
-    gap: 14px;
-    transition: background 0.2s, border-color 0.2s, transform 0.15s;
-  }
-  .service-card:hover {
-    background: #1e3a5f;
-    border-color: #1e3a5f;
-    transform: translateY(-2px);
-  }
-  .service-card:hover h3 { color: #fff; }
-  .service-card:hover .service-icon-wrap { background: #e8772e; color: #fff; }
-  .service-icon-wrap {
-    width: 44px; height: 44px;
-    background: #1e3a5f; color: #e8772e;
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.3rem;
-    transition: background 0.2s, color 0.2s;
-  }
-  .service-card h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.05rem; font-weight: 700;
-    color: #1e3a5f; letter-spacing: 0.02em;
-    transition: color 0.2s;
-  }
+    .services { padding: 76px 36px; background: #f4f6f9; }
+    .section-label { text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
+    .section-title { text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: #1e3a5f; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 20px; max-width: 980px; margin: 0 auto; }
+    .service-card {
+      background: #fff; border-radius: 4px;
+      padding: 28px 18px; text-align: center;
+      box-shadow: 0 2px 10px rgba(30,58,95,0.07);
+      border-top: 4px solid #e8772e;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(30,58,95,0.12); }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1e3a5f; text-transform: uppercase; letter-spacing: 0.05em; }
 
-  /* ABOUT */
-  .about {
-    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-    padding: 80px 32px;
-  }
-  .about-inner {
-    max-width: 1000px; margin: 0 auto;
-    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px;
-    align-items: start;
-  }
-  .about-text .section-kicker { text-align: left; }
-  .about-heading {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-    font-weight: 800; color: #fff;
-    margin-bottom: 20px; line-height: 1.15;
-    letter-spacing: 0.01em;
-  }
-  .about-heading em { color: #e8772e; font-style: normal; }
-  .about-text p {
-    color: rgba(255,255,255,0.78);
-    line-height: 1.8; font-size: 0.97rem;
-    margin-bottom: 16px;
-  }
-  .info-panel {
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .info-panel-head {
-    background: rgba(232,119,46,0.9);
-    padding: 14px 22px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.85rem; font-weight: 700;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: #fff;
-  }
-  .info-row {
-    padding: 16px 22px;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: 0.9rem;
-  }
-  .info-row:last-child { border-bottom: none; }
-  .info-row .key { color: rgba(255,255,255,0.55); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
-  .info-row .val { color: #fff; font-weight: 600; text-align: right; }
-  .info-row .val a { color: #e8772e; text-decoration: none; }
+    .about { padding: 76px 36px; background: #fff; }
+    .about-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .about-text p { font-size: 0.97rem; line-height: 1.78; color: #445; margin-bottom: 16px; }
+    .info-grid { display: flex; flex-direction: column; gap: 14px; }
+    .info-item { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; background: #f4f6f9; border-radius: 4px; }
+    .info-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .info-item strong { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; color: #1e3a5f; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+    .info-item span { font-size: 0.9rem; color: #556; }
+    @media (max-width: 640px) { .about-inner { grid-template-columns: 1fr; } }
 
-  /* PHONE CTA */
-  .phone-cta {
-    background: #e8772e;
-    padding: 72px 32px;
-    text-align: center;
-  }
-  .phone-cta h2 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800; color: #fff;
-    margin-bottom: 10px; letter-spacing: 0.02em;
-  }
-  .phone-cta p {
-    color: rgba(255,255,255,0.9); font-size: 1.1rem;
-    margin-bottom: 36px; font-weight: 500;
-  }
-  .phone-number-large {
-    display: inline-flex; align-items: center; gap: 16px;
-    background: #1e3a5f; color: #fff;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(2rem, 4.5vw, 3rem);
-    font-weight: 800; text-decoration: none;
-    padding: 22px 52px; border-radius: 6px;
-    letter-spacing: 0.02em;
-    box-shadow: 0 6px 28px rgba(0,0,0,0.2);
-    transition: background 0.2s, transform 0.15s;
-  }
-  .phone-number-large:hover { background: #13273f; transform: translateY(-2px); }
+    .cta-section {
+      background: linear-gradient(145deg, #081727, #1e3a5f);
+      padding: 76px 36px; text-align: center;
+    }
+    .cta-section h2 { color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+    .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+    .cta-phone { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.2rem, 6.5vw, 4rem); font-weight: 700; color: #e8772e; display: block; margin-bottom: 28px; text-decoration: none; letter-spacing: 0.06em; }
+    .cta-phone:hover { color: #f0944a; }
+    .cta-btn {
+      display: inline-block; background: #e8772e; color: #fff;
+      padding: 16px 48px; border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.1em;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #cf6420; }
 
-  /* FOOTER */
-  footer {
-    background: #0c1e33;
-    padding: 28px 32px;
-    text-align: center;
-    color: rgba(255,255,255,0.4);
-    font-size: 0.83rem;
-  }
-  footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
-  footer a:hover { color: #e8772e; }
-
-  @media (max-width: 768px) {
-    .about-inner { grid-template-columns: 1fr; gap: 32px; }
-    .trust-item { padding: 14px 18px; }
-  }
-</style>
+    footer {
+      background: #060f1c; color: rgba(255,255,255,0.42);
+      text-align: center; padding: 22px 36px;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.72); }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="header-logo">AllAbout <span>AC Repair</span></div>
-  <div class="header-cta">
-    <a href="tel:7065227043">
-      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      (706) 522-7043
-    </a>
+  <header>
+    <div class="header-name">AllAbout AC Repair</div>
+    <a href="tel:7065227043" class="header-call">&#128222; (706) 522-7043</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-kicker">&#128205; Atlanta, GA &mdash; HVAC Specialists</div>
+      <h1>AllAbout AC Repair</h1>
+      <p class="hero-tagline">Residential, Commercial &amp; Emergency HVAC Service</p>
+      <a href="tel:7065227043" class="hero-cta">Call (706) 522-7043</a>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">Atlanta</div><div class="stat-label">Atlanta, GA</div></div>
+    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates</div></div>
+    <div class="stat-item"><div class="stat-num">Res &amp; Com</div><div class="stat-label">Residential &amp; Commercial</div></div>
+    <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Emergency Service</div></div>
   </div>
-</header>
 
-<section class="hero">
-  <div class="hero-decor"></div>
-  <div class="hero-inner">
-    <div class="hero-rating">
-      <span class="star">★★★★★</span>
-      Atlanta, GA 30346
-    </div>
-    <h1>Everything You Need<br>for <em>AC Repair</em></h1>
-    <p>From emergency calls to commercial installations, AllAbout AC Repair is Atlanta's all-in-one HVAC resource. Residential, commercial, and emergency — we do it all.</p>
-    <div class="hero-actions">
-      <a href="tel:7065227043" class="btn-main">Call (706) 522-7043</a>
-      <a href="#services" class="btn-alt">View Services</a>
-    </div>
-  </div>
-</section>
-
-<div class="trust-strip">
-  <div class="trust-item"><div class="trust-num">24/7</div>Emergency Service</div>
-  <div class="trust-item"><div class="trust-num">100%</div>Licensed &amp; Insured</div>
-  <div class="trust-item"><div class="trust-num">⭐</div>Top Rated</div>
-  <div class="trust-item"><div class="trust-num">ATL</div>Atlanta Metro</div>
-</div>
-
-<section class="services" id="services">
-  <div class="services-inner">
-    <div class="services-header">
-      <p class="section-kicker">Services</p>
-      <h2 class="section-title">Comprehensive HVAC Solutions</h2>
-    </div>
+  <section class="services">
+    <div class="section-label">Services</div>
+    <h2 class="section-title">Full-Spectrum HVAC</h2>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon-wrap">🌡️</div>
-        <h3>HVAC</h3>
+      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Service</h3></div>
+      <div class="service-card"><div class="service-icon">&#127970;</div><h3>Commercial Services</h3></div>
+      <div class="service-card"><div class="service-icon">&#128680;</div><h3>Emergency Services</h3></div>
+      <div class="service-card"><div class="service-icon">&#127968;</div><h3>Residential Services</h3></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="section-label">About Us</div>
+    <h2 class="section-title">All About Getting It Right</h2>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>AllAbout AC Repair is Atlanta's comprehensive HVAC service provider. We handle residential and commercial HVAC work, including emergency calls when your system can't wait.</p>
+        <p>From routine maintenance to full system service, AllAbout AC Repair brings professionalism and expertise to every job. Call today for a free estimate.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon-wrap">🏢</div>
-        <h3>Commercial Services</h3>
-      </div>
-      <div class="service-card">
-        <div class="service-icon-wrap">⚡</div>
-        <h3>Emergency Services</h3>
-      </div>
-      <div class="service-card">
-        <div class="service-icon-wrap">🔥</div>
-        <h3>Heater Installation</h3>
-      </div>
-      <div class="service-card">
-        <div class="service-icon-wrap">🏠</div>
-        <h3>Residential Services</h3>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><strong>Phone</strong><span><a href="tel:7065227043" style="color:#e8772e;text-decoration:none;">(706) 522-7043</a></span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128205;</div>
+          <div><strong>Location</strong><span>Atlanta, GA &amp; Surrounding Areas</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128680;</div>
+          <div><strong>Emergency</strong><span>Emergency HVAC service available</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#10003;</div>
+          <div><strong>Free Estimates</strong><span>Residential &amp; commercial quotes</span></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="about" id="about">
-  <div class="about-inner">
-    <div class="about-text">
-      <p class="section-kicker">Who We Are</p>
-      <h2 class="about-heading">The Complete<br><em>HVAC Solution</em><br>for Atlanta</h2>
-      <p>AllAbout AC Repair lives up to the name. We handle the full spectrum of HVAC needs — residential comfort systems, commercial installations, emergency breakdowns, and heater installations.</p>
-      <p>Serving Atlanta, GA 30346, our technicians are licensed, insured, and ready to respond. When your comfort is on the line, we bring everything you need.</p>
-    </div>
-    <div class="info-panel">
-      <div class="info-panel-head">Contact Information</div>
-      <div class="info-row">
-        <span class="key">Location</span>
-        <span class="val">Atlanta, GA 30346</span>
-      </div>
-      <div class="info-row">
-        <span class="key">Phone</span>
-        <span class="val"><a href="tel:7065227043">(706) 522-7043</a></span>
-      </div>
-      <div class="info-row">
-        <span class="key">Emergency</span>
-        <span class="val">24/7 Available</span>
-      </div>
-      <div class="info-row">
-        <span class="key">Services</span>
-        <span class="val">Residential &amp; Commercial</span>
-      </div>
-      <div class="info-row">
-        <span class="key">Certified</span>
-        <span class="val">Licensed &amp; Insured</span>
-      </div>
-    </div>
-  </div>
-</section>
+  <section class="cta-section">
+    <h2>All About Your Comfort</h2>
+    <p>AllAbout AC Repair &mdash; residential, commercial, and emergency HVAC in Atlanta</p>
+    <a href="tel:7065227043" class="cta-phone">(706) 522-7043</a>
+    <a href="tel:7065227043" class="cta-btn">Call AllAbout Today</a>
+  </section>
 
-<section class="phone-cta">
-  <h2>Call AllAbout AC Repair Today</h2>
-  <p>Your all-in-one Atlanta HVAC solution — residential, commercial, emergency.</p>
-  <a href="tel:7065227043" class="phone-number-large">
-    <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-    (706) 522-7043
-  </a>
-</section>
-
-<footer>
-  <p>&copy; 2025 AllAbout AC Repair &bull; Atlanta, GA 30346</p>
-  <p style="margin-top:8px;">Website by <a href="#">WebCare Digital</a></p>
-</footer>
+  <footer>
+    <p><strong>AllAbout AC Repair</strong> &mdash; Atlanta, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
+  </footer>
 
 </body>
 </html>

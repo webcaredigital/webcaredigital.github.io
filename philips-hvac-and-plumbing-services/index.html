@@ -1,528 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Philips HVAC &amp; Plumbing Services | Atlanta, GA</title>
-<meta name="description" content="Philips HVAC and Plumbing Services — one call for HVAC repair, plumbing, drain cleaning, and more in Atlanta, GA. Call (678) 910-1094.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --navy: #1e3a5f;
-    --navy-dark: #0c1e33;
-    --navy-mid: #243f65;
-    --navy-2: #1a3252;
-    --orange: #e8772e;
-    --orange-dark: #c85f18;
-    --orange-light: #f29050;
-    --plumbing: #2a7fc1;
-    --white: #ffffff;
-    --gray-50: #f7f9fc;
-    --gray-100: #edf1f7;
-    --gray-200: #d8e0ec;
-    --gray-600: #4d5e72;
-    --gray-800: #1e293b;
-    --font-cond: 'Barlow Condensed', sans-serif;
-    --font: 'Barlow', sans-serif;
-    --radius: 8px;
-    --radius-lg: 14px;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font); color: var(--gray-800); background: var(--white); line-height: 1.65; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philips HVAC and Plumbing Services — Atlanta, GA HVAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Barlow', sans-serif; color: #1e3a5f; background: #fff; }
 
-  /* HEADER */
-  header {
-    position: sticky; top: 0; z-index: 100;
-    background: var(--navy);
-    box-shadow: 0 2px 14px rgba(0,0,0,0.28);
-  }
-  .header-inner {
-    max-width: 1160px; margin: 0 auto; padding: 0 28px;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 72px;
-  }
-  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .logo-badge {
-    display: flex; align-items: center; gap: 0;
-    border-radius: var(--radius); overflow: hidden; flex-shrink: 0;
-  }
-  .logo-badge .hvac-side {
-    background: var(--orange); color: var(--white); padding: 6px 10px;
-    font-family: var(--font-cond); font-size: 14px; font-weight: 800; letter-spacing: 0.04em;
-  }
-  .logo-badge .plumb-side {
-    background: var(--plumbing); color: var(--white); padding: 6px 10px;
-    font-family: var(--font-cond); font-size: 14px; font-weight: 800; letter-spacing: 0.04em;
-  }
-  .logo-name {
-    font-family: var(--font-cond); font-size: 20px; font-weight: 800;
-    color: var(--white); letter-spacing: 0.02em;
-  }
-  .logo-sub {
-    display: block; font-family: var(--font); font-size: 11px; color: rgba(255,255,255,0.55); font-weight: 400; letter-spacing: 0.04em;
-  }
-  .header-cta {
-    display: flex; align-items: center; gap: 9px;
-    background: var(--orange); color: var(--white);
-    padding: 11px 22px; border-radius: var(--radius);
-    text-decoration: none; font-family: var(--font-cond); font-weight: 700; font-size: 18px;
-    letter-spacing: 0.03em;
-    transition: background 0.2s;
-  }
-  .header-cta:hover { background: var(--orange-dark); }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 36px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.24);
+    }
+    .header-name { color: #fff; font-size: 1.1rem; font-weight: 700; }
+    .header-call {
+      background: #e8772e; color: #fff;
+      padding: 10px 22px; border-radius: 4px;
+      font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-call:hover { background: #cf6420; }
 
-  /* HERO */
-  .hero {
-    background:
-      repeating-linear-gradient(
-        135deg,
-        rgba(255,255,255,0.02) 0px,
-        rgba(255,255,255,0.02) 1px,
-        transparent 1px,
-        transparent 40px
-      ),
-      linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-2) 100%);
-    padding: 0 28px;
-    min-height: 560px;
-    display: flex; align-items: center;
-    color: var(--white);
-    position: relative; overflow: hidden;
-  }
-  /* Split bar accent */
-  .hero::before {
-    content: "";
-    position: absolute; top: 0; right: 0; bottom: 0; width: 6px;
-    background: linear-gradient(to bottom, var(--orange) 50%, var(--plumbing) 50%);
-  }
-  .hero-inner {
-    max-width: 1160px; margin: 0 auto; padding: 80px 0;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-    width: 100%;
-  }
-  .hero-text { }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-    color: rgba(255,255,255,0.8); padding: 5px 14px; border-radius: 4px;
-    font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-  .hero h1 {
-    font-family: var(--font-cond); font-size: clamp(38px, 5vw, 64px); font-weight: 900;
-    line-height: 1.05; margin-bottom: 18px; letter-spacing: 0.01em;
-  }
-  .hero h1 .a { color: var(--orange-light); }
-  .hero h1 .b { color: #6db8e8; }
-  .hero-sub {
-    font-size: 17px; color: rgba(255,255,255,0.74); max-width: 440px;
-    margin-bottom: 34px; line-height: 1.7; font-weight: 300;
-  }
-  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn-orange {
-    background: var(--orange); color: var(--white);
-    padding: 15px 30px; border-radius: var(--radius);
-    font-family: var(--font-cond); font-size: 18px; font-weight: 700;
-    text-decoration: none; transition: background 0.2s, transform 0.15s;
-    display: inline-flex; align-items: center; gap: 8px;
-    letter-spacing: 0.02em;
-  }
-  .btn-orange:hover { background: var(--orange-dark); transform: translateY(-1px); }
-  .btn-blue {
-    background: var(--plumbing); color: var(--white);
-    padding: 15px 30px; border-radius: var(--radius);
-    font-family: var(--font-cond); font-size: 18px; font-weight: 700;
-    text-decoration: none; transition: background 0.2s, transform 0.15s;
-    display: inline-flex; align-items: center; gap: 8px;
-    letter-spacing: 0.02em;
-  }
-  .btn-blue:hover { background: #1d6dad; transform: translateY(-1px); }
-  /* Dual card side */
-  .hero-cards { display: flex; flex-direction: column; gap: 14px; }
-  .hero-service-card {
-    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14);
-    border-radius: var(--radius-lg); padding: 22px 24px;
-    display: flex; align-items: center; gap: 16px;
-    backdrop-filter: blur(6px);
-  }
-  .hero-service-card.orange-accent { border-left: 3px solid var(--orange); }
-  .hero-service-card.blue-accent { border-left: 3px solid var(--plumbing); }
-  .hsc-icon { font-size: 32px; flex-shrink: 0; }
-  .hsc-title { font-family: var(--font-cond); font-size: 18px; font-weight: 700; color: var(--white); }
-  .hsc-desc { font-size: 13px; color: rgba(255,255,255,0.62); }
+    .hero {
+      background: linear-gradient(148deg, #0a1d34 0%, #1e3a5f 50%, #1d4268 100%);
+      position: relative; overflow: hidden;
+      padding: 96px 36px 86px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(255,255,255,0.025) 50px);
+    }
+    .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
+    .hero-loc { color: rgba(255,255,255,0.5); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px; }
+    .hero h1 { color: #fff; font-size: clamp(2rem, 4.8vw, 3.2rem); font-weight: 700; line-height: 1.15; margin-bottom: 14px; }
+    .hero-tagline { color: rgba(255,255,255,0.7); font-size: 1.05rem; font-weight: 500; margin-bottom: 36px; }
+    .hero-cta {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      padding: 15px 42px; border-radius: 4px;
+      font-weight: 700; font-size: 1.05rem;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(232,119,46,0.4);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
 
-  /* TRUST STRIP */
-  .trust-strip {
-    background: var(--navy-dark); padding: 18px 28px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .trust-inner {
-    max-width: 1160px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: center;
-    flex-wrap: wrap; gap: 32px;
-  }
-  .trust-item {
-    display: flex; align-items: center; gap: 9px;
-    font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.82);
-    font-family: var(--font-cond); letter-spacing: 0.03em;
-  }
-  .trust-item .ti { font-size: 18px; }
-  .trust-item .t-accent { color: var(--orange-light); }
+    .stats {
+      background: #e8772e;
+      display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-item {
+      flex: 1 1 150px; text-align: center;
+      padding: 22px 18px;
+      border-right: 1px solid rgba(255,255,255,0.2);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 1.7rem; font-weight: 700; color: #fff; line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.85); font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
 
-  /* SECTIONS */
-  section.padded { padding: 80px 28px; }
-  .section-inner { max-width: 1160px; margin: 0 auto; }
-  .section-label {
-    font-family: var(--font-cond); font-size: 12px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange);
-    margin-bottom: 8px;
-  }
-  .section-title {
-    font-family: var(--font-cond); font-size: clamp(28px, 3.5vw, 44px); font-weight: 800;
-    color: var(--navy); letter-spacing: 0.01em; line-height: 1.1; margin-bottom: 14px;
-  }
-  .section-desc { font-size: 16px; color: var(--gray-600); max-width: 540px; line-height: 1.72; }
+    .services { padding: 76px 36px; background: #f4f7fa; }
+    .section-label { text-align: center; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
+    .section-title { text-align: center; font-size: clamp(1.7rem, 3.2vw, 2.3rem); font-weight: 700; color: #1e3a5f; margin-bottom: 50px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 22px; max-width: 960px; margin: 0 auto; }
+    .service-card {
+      background: #fff; border-radius: 6px;
+      padding: 30px 20px; text-align: center;
+      box-shadow: 0 2px 10px rgba(30,58,95,0.07);
+      position: relative; overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #1e3a5f, #e8772e); }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(30,58,95,0.12); }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 { font-size: 0.95rem; font-weight: 600; color: #1e3a5f; }
 
-  /* SERVICES */
-  .services { background: var(--gray-50); }
-  .services-header { text-align: center; margin-bottom: 50px; }
-  .services-header .section-desc { margin: 0 auto; }
-  /* Dual-category layout */
-  .services-dual { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .services-category { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--gray-200); }
-  .cat-header {
-    padding: 22px 28px; display: flex; align-items: center; gap: 12px;
-  }
-  .cat-header.hvac { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); }
-  .cat-header.plumb { background: linear-gradient(135deg, var(--plumbing) 0%, #1d6dad 100%); }
-  .cat-icon { font-size: 26px; }
-  .cat-title { font-family: var(--font-cond); font-size: 20px; font-weight: 800; color: var(--white); letter-spacing: 0.03em; }
-  .cat-services { padding: 20px 28px 28px; display: flex; flex-direction: column; gap: 16px; }
-  .srv-row {
-    display: flex; align-items: flex-start; gap: 12px;
-    padding-bottom: 16px; border-bottom: 1px solid var(--gray-100);
-  }
-  .srv-row:last-child { border-bottom: none; padding-bottom: 0; }
-  .srv-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--orange); flex-shrink: 0; margin-top: 6px; }
-  .srv-dot.blue { background: var(--plumbing); }
-  .srv-row h4 { font-weight: 700; font-size: 15px; color: var(--navy); margin-bottom: 3px; }
-  .srv-row p { font-size: 13px; color: var(--gray-600); line-height: 1.55; }
+    .about { padding: 76px 36px; background: #fff; }
+    .about-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .about-text p { font-size: 0.97rem; line-height: 1.78; color: #445; margin-bottom: 16px; }
+    .info-grid { display: flex; flex-direction: column; gap: 14px; }
+    .info-item { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border: 1px solid #e5eaf2; border-radius: 6px; }
+    .info-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .info-item strong { display: block; font-size: 0.75rem; font-weight: 600; color: #1e3a5f; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2px; }
+    .info-item span { font-size: 0.9rem; color: #556; }
+    @media (max-width: 640px) { .about-inner { grid-template-columns: 1fr; } }
 
-  /* ABOUT */
-  .about { background: var(--white); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .about-panel {
-    background: linear-gradient(145deg, var(--navy) 0%, var(--navy-dark) 100%);
-    border-radius: var(--radius-lg); padding: 44px 36px; color: var(--white);
-    position: relative; overflow: hidden;
-  }
-  .about-panel::after {
-    content: "P";
-    position: absolute; bottom: -30px; right: -10px;
-    font-family: var(--font-cond); font-size: 130px; font-weight: 900;
-    color: rgba(255,255,255,0.04); pointer-events: none; line-height: 1;
-  }
-  .split-stat { display: flex; gap: 14px; margin-bottom: 28px; }
-  .split-stat-item {
-    flex: 1; background: rgba(255,255,255,0.07); border-radius: var(--radius);
-    padding: 18px; text-align: center;
-  }
-  .split-stat-item .sn { font-family: var(--font-cond); font-size: 26px; font-weight: 800; line-height: 1; }
-  .split-stat-item .sl { font-size: 11px; color: rgba(255,255,255,0.6); font-weight: 600; margin-top: 4px; letter-spacing: 0.04em; }
-  .split-stat-item.hvac .sn { color: var(--orange-light); }
-  .split-stat-item.plumb .sn { color: #6db8e8; }
-  .panel-text { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.7; }
-  .about-content .section-desc { margin-bottom: 22px; }
-  .about-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-  .about-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--gray-600); }
-  .about-list li .dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+    .cta-section {
+      background: linear-gradient(148deg, #0a1d34, #1e3a5f);
+      padding: 76px 36px; text-align: center;
+    }
+    .cta-section h2 { color: #fff; font-size: clamp(1.7rem, 3.2vw, 2.3rem); font-weight: 700; margin-bottom: 10px; }
+    .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+    .cta-phone { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 700; color: #e8772e; display: block; margin-bottom: 28px; text-decoration: none; }
+    .cta-phone:hover { color: #f0944a; }
+    .cta-btn {
+      display: inline-block; background: #e8772e; color: #fff;
+      padding: 17px 48px; border-radius: 4px;
+      font-weight: 700; font-size: 1.05rem; text-decoration: none;
+      box-shadow: 0 4px 18px rgba(232,119,46,0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #cf6420; }
 
-  /* CTA BAND */
-  .cta-band {
-    background:
-      repeating-linear-gradient(
-        135deg,
-        rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px,
-        transparent 1px, transparent 40px
-      ),
-      linear-gradient(160deg, var(--orange) 0%, var(--orange-dark) 50%, #b04c0e 100%);
-    padding: 80px 28px; text-align: center; color: var(--white);
-  }
-  .cta-band h2 {
-    font-family: var(--font-cond); font-size: clamp(30px, 4.5vw, 52px); font-weight: 900;
-    margin-bottom: 12px; letter-spacing: 0.01em;
-  }
-  .cta-band p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 34px; font-weight: 300; }
-  .phone-big {
-    display: inline-flex; align-items: center; gap: 14px;
-    background: var(--navy); color: var(--white);
-    padding: 20px 46px; border-radius: var(--radius);
-    font-family: var(--font-cond); font-size: clamp(22px, 3.5vw, 36px); font-weight: 800;
-    text-decoration: none; letter-spacing: 0.02em;
-    transition: background 0.2s, transform 0.15s;
-    box-shadow: 0 6px 30px rgba(0,0,0,0.3);
-  }
-  .phone-big:hover { background: #0a1a2e; transform: translateY(-2px); }
-
-  /* CONTACT */
-  .contact { background: var(--gray-50); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
-  .contact-info h3 { font-family: var(--font-cond); font-size: 24px; font-weight: 800; color: var(--navy); letter-spacing: 0.02em; margin-bottom: 22px; }
-  .contact-details { display: flex; flex-direction: column; gap: 16px; }
-  .contact-row { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--gray-600); }
-  .c-icon { width: 36px; height: 36px; background: var(--gray-100); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
-  .contact-row a { color: var(--navy); font-weight: 700; text-decoration: none; }
-  .contact-row a:hover { color: var(--orange); }
-  .service-card-cta {
-    background: var(--white); border: 1px solid var(--gray-200);
-    border-radius: var(--radius-lg); padding: 30px;
-  }
-  .service-card-cta h4 { font-family: var(--font-cond); font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
-  .service-card-cta p { font-size: 14px; color: var(--gray-600); margin-bottom: 20px; line-height: 1.65; }
-  .dual-btns { display: flex; gap: 10px; }
-  .dual-btns a {
-    flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
-    padding: 12px 16px; border-radius: var(--radius);
-    font-family: var(--font-cond); font-size: 16px; font-weight: 700; letter-spacing: 0.02em;
-    text-decoration: none; transition: opacity 0.2s;
-  }
-  .dual-btns a:hover { opacity: 0.88; }
-  .dual-btns .hvac-btn { background: var(--orange); color: var(--white); }
-  .dual-btns .plumb-btn { background: var(--plumbing); color: var(--white); }
-
-  /* FOOTER */
-  footer {
-    background: var(--navy-dark); color: rgba(255,255,255,0.5);
-    padding: 26px 28px; font-size: 13px;
-  }
-  .footer-inner {
-    max-width: 1160px; margin: 0 auto;
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 10px;
-  }
-  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
-  footer a:hover { color: var(--white); }
-
-  @media (max-width: 900px) {
-    .hero-inner, .about-grid, .services-dual, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
-    .hero { min-height: auto; padding: 60px 20px; }
-    .hero-cards { display: none; }
-  }
-</style>
+    footer {
+      background: #060f1c; color: rgba(255,255,255,0.42);
+      text-align: center; padding: 22px 36px;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.72); }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <a class="logo" href="#">
-      <div class="logo-badge">
-        <span class="hvac-side">HVAC</span>
-        <span class="plumb-side">PLUMBING</span>
-      </div>
-      <div>
-        <div class="logo-name">Philips Services</div>
-        <span class="logo-sub">Atlanta, GA &bull; One Call Does It All</span>
-      </div>
-    </a>
-    <a class="header-cta" href="tel:6789101094">📞 (678) 910-1094</a>
-  </div>
-</header>
+  <header>
+    <div class="header-name">Philips HVAC and Plumbing Services</div>
+    <a href="tel:6789101094" class="header-call">&#128222; (678) 910-1094</a>
+  </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-badge">📍 Atlanta, GA 30341</div>
-      <h1>One Call.<br><span class="a">HVAC</span> &amp; <span class="b">Plumbing.</span></h1>
-      <p class="hero-sub">Philips HVAC and Plumbing Services — your single source for heating, cooling, and plumbing needs throughout Atlanta.</p>
-      <div class="hero-actions">
-        <a class="btn-orange" href="tel:6789101094">📞 (678) 910-1094</a>
-        <a class="btn-blue" href="#services">All Services ↓</a>
-      </div>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-loc">&#128205; Atlanta, GA</div>
+      <h1>Philips HVAC and Plumbing Services</h1>
+      <p class="hero-tagline">Expert HVAC &amp; Plumbing for Atlanta Homes</p>
+      <a href="tel:6789101094" class="hero-cta">Call (678) 910-1094</a>
     </div>
-    <div class="hero-cards">
-      <div class="hero-service-card orange-accent">
-        <div class="hsc-icon">❄️</div>
-        <div>
-          <div class="hsc-title">HVAC Services</div>
-          <div class="hsc-desc">Repair, maintenance, AC installation, duct work &amp; more</div>
-        </div>
-      </div>
-      <div class="hero-service-card blue-accent">
-        <div class="hsc-icon">🔧</div>
-        <div>
-          <div class="hsc-title">Plumbing Services</div>
-          <div class="hsc-desc">Drain cleaning, toilet installation, plumbing repairs</div>
-        </div>
-      </div>
-      <div class="hero-service-card orange-accent">
-        <div class="hsc-icon">⚡</div>
-        <div>
-          <div class="hsc-title">Fast Response</div>
-          <div class="hsc-desc">Prompt scheduling and same-day service available</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<div class="trust-strip">
-  <div class="trust-inner">
-    <div class="trust-item"><span class="ti">❄️</span><span><span class="t-accent">HVAC</span> Repair &amp; Install</span></div>
-    <div class="trust-item"><span class="ti">🔧</span><span><span class="t-accent">Plumbing</span> &amp; Drains</span></div>
-    <div class="trust-item"><span class="ti">🛡️</span><span>Licensed &amp; <span class="t-accent">Insured</span></span></div>
-    <div class="trust-item"><span class="ti">📍</span><span>Serving <span class="t-accent">Atlanta Metro</span></span></div>
-    <div class="trust-item"><span class="ti">📞</span><span><span class="t-accent">One Call</span> — Two Trades</span></div>
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">Atlanta</div><div class="stat-label">Atlanta, GA</div></div>
+    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates</div></div>
+    <div class="stat-item"><div class="stat-num">HVAC</div><div class="stat-label">&amp; Plumbing</div></div>
+    <div class="stat-item"><div class="stat-num">Pro</div><div class="stat-label">Certified Team</div></div>
   </div>
-</div>
 
-<section class="padded services" id="services">
-  <div class="section-inner">
-    <div class="services-header">
-      <div class="section-label">What We Offer</div>
-      <h2 class="section-title">HVAC &amp; Plumbing Services</h2>
-      <p class="section-desc">Two trades, one trusted team. We handle everything your home or business needs — heating, cooling, and all plumbing systems.</p>
+  <section class="services">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">HVAC &amp; Plumbing Solutions</h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Repair</h3></div>
+      <div class="service-card"><div class="service-icon">&#128166;</div><h3>Plumbing</h3></div>
+      <div class="service-card"><div class="service-icon">&#128167;</div><h3>Drain Cleaning</h3></div>
+      <div class="service-card"><div class="service-icon">&#128295;</div><h3>System Maintenance</h3></div>
     </div>
-    <div class="services-dual">
-      <div class="services-category">
-        <div class="cat-header hvac">
-          <span class="cat-icon">❄️</span>
-          <span class="cat-title">HVAC Services</span>
-        </div>
-        <div class="cat-services">
-          <div class="srv-row">
-            <div class="srv-dot"></div>
-            <div><h4>HVAC Repair</h4><p>Diagnostics and repair for all heating and cooling systems — all makes and models.</p></div>
-          </div>
-          <div class="srv-row">
-            <div class="srv-dot"></div>
-            <div><h4>System Maintenance</h4><p>Seasonal tune-ups to keep your HVAC running efficiently and extend equipment life.</p></div>
-          </div>
-          <div class="srv-row">
-            <div class="srv-dot"></div>
-            <div><h4>AC Installation</h4><p>New air conditioning installation — right-sized and properly configured for your space.</p></div>
-          </div>
-          <div class="srv-row">
-            <div class="srv-dot"></div>
-            <div><h4>Air Duct Installation</h4><p>Ductwork design, installation, and replacement for optimal airflow and efficiency.</p></div>
-          </div>
-        </div>
+  </section>
+
+  <section class="about">
+    <div class="section-label">About Us</div>
+    <h2 class="section-title">Atlanta's HVAC &amp; Plumbing Experts</h2>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>Philips HVAC and Plumbing Services is Atlanta's go-to for comprehensive home services. We handle HVAC repairs, system maintenance, plumbing work, and drain cleaning &mdash; all under one roof.</p>
+        <p>Our certified technicians bring professionalism and efficiency to every job. Whether it's an emergency repair or scheduled maintenance, call Philips for dependable service.</p>
       </div>
-      <div class="services-category">
-        <div class="cat-header plumb">
-          <span class="cat-icon">🔧</span>
-          <span class="cat-title">Plumbing Services</span>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><strong>Phone</strong><span><a href="tel:6789101094" style="color:#e8772e;text-decoration:none;">(678) 910-1094</a></span></div>
         </div>
-        <div class="cat-services">
-          <div class="srv-row">
-            <div class="srv-dot blue"></div>
-            <div><h4>General Plumbing</h4><p>Leak repairs, pipe work, and all general plumbing needs for homes and businesses.</p></div>
-          </div>
-          <div class="srv-row">
-            <div class="srv-dot blue"></div>
-            <div><h4>Drain Cleaning</h4><p>Professional drain cleaning to clear clogs and keep your drains flowing freely.</p></div>
-          </div>
-          <div class="srv-row">
-            <div class="srv-dot blue"></div>
-            <div><h4>Toilet Installation</h4><p>New toilet installation, replacement, and repair — done right and water-tight.</p></div>
-          </div>
-          <div class="srv-row">
-            <div class="srv-dot blue"></div>
-            <div><h4>More Plumbing</h4><p>Fixture installation, water line repair, and other plumbing service needs.</p></div>
-          </div>
+        <div class="info-item">
+          <div class="info-icon">&#128205;</div>
+          <div><strong>Location</strong><span>Atlanta, GA</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128336;</div>
+          <div><strong>Hours</strong><span>Mon&ndash;Fri: 8am&ndash;6pm</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128295;</div>
+          <div><strong>Specialties</strong><span>HVAC, Plumbing &amp; Drain Services</span></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="padded about" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-panel">
-        <div style="font-size:13px; color:rgba(255,255,255,0.55); margin-bottom:6px; font-family:var(--font-cond); letter-spacing:0.1em; text-transform:uppercase;">Philips HVAC &amp; Plumbing</div>
-        <div style="font-family:var(--font-cond); font-size:22px; font-weight:800; margin-bottom:22px;">Atlanta, GA — The Dual-Trade Difference</div>
-        <div class="split-stat">
-          <div class="split-stat-item hvac">
-            <div class="sn">HVAC</div>
-            <div class="sl">Repair &amp; Install</div>
-          </div>
-          <div class="split-stat-item plumb">
-            <div class="sn">Plumb</div>
-            <div class="sl">All Services</div>
-          </div>
-          <div class="split-stat-item hvac">
-            <div class="sn">1</div>
-            <div class="sl">Call</div>
-          </div>
-        </div>
-        <p class="panel-text">Stop managing two separate contractors. Philips handles both your HVAC and plumbing — one company, one call, one trusted team. Serving Atlanta, GA 30341 and surrounding areas.</p>
-      </div>
-      <div class="about-content">
-        <div class="section-label">About Us</div>
-        <h2 class="section-title">Atlanta's HVAC &amp; Plumbing Pros</h2>
-        <p class="section-desc">Philips HVAC and Plumbing Services was built to simplify home and commercial maintenance. Instead of calling different contractors for your AC and your drain — call us once and we handle it all.</p>
-        <ul class="about-list">
-          <li><div class="dot"></div>Licensed for both HVAC and plumbing work</li>
-          <li><div class="dot"></div>Residential and commercial service capability</li>
-          <li><div class="dot"></div>New installations, repairs, and maintenance</li>
-          <li><div class="dot"></div>Drain cleaning and full plumbing services</li>
-          <li><div class="dot"></div>AC and heating system installations</li>
-          <li><div class="dot"></div>Serving Atlanta metro area</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+  <section class="cta-section">
+    <h2>Call Philips Today</h2>
+    <p>Atlanta HVAC &amp; plumbing service you can count on</p>
+    <a href="tel:6789101094" class="cta-phone">(678) 910-1094</a>
+    <a href="tel:6789101094" class="cta-btn">Get a Free Estimate</a>
+  </section>
 
-<div class="cta-band" id="contact">
-  <h2>ONE CALL. HVAC &amp; PLUMBING.</h2>
-  <p>Stop juggling contractors. Call Philips and get it all handled — fast, professional, guaranteed.</p>
-  <a class="phone-big" href="tel:6789101094">📞 (678) 910-1094</a>
-</div>
-
-<section class="padded contact">
-  <div class="section-inner">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="section-label">Reach Us</div>
-        <h3>Contact Philips HVAC &amp; Plumbing</h3>
-        <div class="contact-details">
-          <div class="contact-row">
-            <div class="c-icon">📞</div>
-            <div><a href="tel:6789101094">(678) 910-1094</a><br><span style="font-size:13px;color:#aaa;">HVAC and plumbing inquiries</span></div>
-          </div>
-          <div class="contact-row">
-            <div class="c-icon">📍</div>
-            <div>Atlanta, GA 30341<br><span style="font-size:13px;color:#aaa;">Serving Metro Atlanta</span></div>
-          </div>
-          <div class="contact-row">
-            <div class="c-icon">🔧</div>
-            <div>HVAC &bull; Plumbing &bull; Drain Cleaning<br><span style="font-size:13px;color:#aaa;">All services under one roof</span></div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="service-card-cta">
-          <h4>Need HVAC or Plumbing Service?</h4>
-          <p>One call gets you both. Philips HVAC and Plumbing Services handles all your home comfort and plumbing needs in a single visit when possible.</p>
-          <div class="dual-btns">
-            <a class="hvac-btn" href="tel:6789101094">❄️ Call for HVAC</a>
-            <a class="plumb-btn" href="tel:6789101094">🔧 Call for Plumbing</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <div>&copy; 2025 Philips HVAC and Plumbing Services &mdash; Atlanta, GA 30341</div>
-    <div>Website by <a href="#">WebCare Digital</a></div>
-  </div>
-</footer>
+  <footer>
+    <p><strong>Philips HVAC and Plumbing Services</strong> &mdash; Atlanta, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
+  </footer>
 
 </body>
 </html>
