@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J & Cooling — Atlanta HVAC Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1e3a5f; --navy-d: #0f1f35; --teal: #0e7490; --orange: #e8772e; --orange-l: #f5924a;
+      --bg: #f0f4f8; --white: #fff; --text: #1a2332; --mid: #4a5568; --rule: #e2e8f0;
+    }
+    body { font-family: 'Lato', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+
+    header { position: sticky; top: 0; z-index: 100; background: var(--navy-d); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 64px; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+    .logo { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 900; color: #fff; }
+    .logo span { color: var(--orange); }
+    .hcta { display: inline-flex; align-items: center; gap: 7px; background: var(--orange); color: #fff; text-decoration: none; font-weight: 700; font-size: 0.88rem; padding: 10px 20px; border-radius: 40px; transition: background 0.2s; white-space: nowrap; }
+    .hcta:hover { background: var(--orange-l); }
+
+    .hero { position: relative; height: min(85vh, 640px); display: flex; align-items: flex-end; padding: 0 5% 60px; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: url('https://s3-media0.fl.yelpcdn.com/bphoto/2Tah9Mod9ChnVbrzs3IrAg/l.jpg') center/cover; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(15,31,53,0.95) 0%, rgba(15,31,53,0.6) 50%, rgba(15,31,53,0.2) 100%); }
+    .hero-content { position: relative; z-index: 1; max-width: 600px; }
+    .rating-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 0.82rem; font-weight: 700; padding: 6px 16px; border-radius: 40px; margin-bottom: 20px; }
+    .rating-pill .star { color: #fbbf24; }
+    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 900; color: #fff; line-height: 1; margin-bottom: 16px; }
+    .hero h1 .accent { color: var(--orange); }
+    .hero p { font-size: 1rem; color: rgba(255,255,255,0.75); font-weight: 300; max-width: 440px; margin-bottom: 30px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-p { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: #fff; text-decoration: none; font-weight: 700; font-size: 0.95rem; padding: 13px 26px; border-radius: 40px; transition: background 0.2s, transform 0.15s; }
+    .btn-p:hover { background: var(--orange-l); transform: translateY(-1px); }
+    .btn-s { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 13px 26px; border-radius: 40px; transition: background 0.2s; }
+    .btn-s:hover { background: rgba(255,255,255,0.18); }
+
+    .stats { background: var(--teal); display: flex; }
+    .stat { flex: 1; padding: 24px 16px; text-align: center; border-right: 1px solid rgba(255,255,255,0.1); }
+    .stat:last-child { border: none; }
+    .sn { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 900; color: #fff; line-height: 1; }
+    .sl-s { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 4px; }
+
+    section { padding: 72px 5%; }
+    .lbl { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; display: block; }
+    h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--navy); line-height: 1.1; margin-bottom: 44px; }
+    h2 em { color: var(--orange); font-style: normal; }
+
+    .svc-wrap { background: #fff; }
+    .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .sc { background: var(--bg); border-radius: 12px; padding: 28px 22px; border-left: 4px solid var(--teal); transition: transform 0.2s, box-shadow 0.2s; }
+    .sc:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(14,116,144,0.12); }
+    .si { font-size: 1.8rem; margin-bottom: 12px; }
+    .sn2 { font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+    .sd { font-size: 0.84rem; color: var(--mid); line-height: 1.55; }
+
+    .gal-wrap { background: var(--navy); }
+    .gal-wrap .lbl { color: rgba(255,255,255,0.45); }
+    .gal-wrap h2 { color: #fff; }
+    .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 220px 220px; gap: 4px; border-radius: 8px; overflow: hidden; }
+    .gi { overflow: hidden; }
+    .gi:first-child { grid-row: span 2; }
+    .gi img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .gi:hover img { transform: scale(1.06); }
+
+    .abt-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .abt-img { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; }
+    .abt-img img { width: 100%; height: 100%; object-fit: cover; }
+    .abt-text p { font-size: 1rem; color: var(--mid); line-height: 1.75; margin-bottom: 20px; }
+    .info-list { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 8px; }
+    .info-row { display: flex; gap: 12px; font-size: 0.88rem; }
+    .info-label { font-weight: 700; color: var(--navy); min-width: 70px; }
+    .info-val { color: var(--mid); }
+
+    .cta-s { background: var(--navy); text-align: center; padding: 80px 5%; position: relative; overflow: hidden; }
+    .cta-s::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, rgba(14,116,144,0.3) 0%, transparent 60%); }
+    .cta-s h2 { color: #fff; position: relative; margin-bottom: 10px; }
+    .cta-phone { display: block; font-family: 'Montserrat', sans-serif; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: var(--orange); text-decoration: none; margin: 20px 0 30px; position: relative; transition: color 0.2s; }
+    .cta-phone:hover { color: var(--orange-l); }
+    .cta-sub { color: rgba(255,255,255,0.6); margin-bottom: 32px; position: relative; }
+    .btn-o { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: #fff; text-decoration: none; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 40px; position: relative; transition: background 0.2s; }
+    .btn-o:hover { background: var(--orange-l); }
+
+    footer { background: var(--navy-d); padding: 22px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .fl { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 800; color: rgba(255,255,255,0.55); }
+    .fc { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+    .fc a { color: rgba(255,255,255,0.4); text-decoration: none; }
+
+    @media(max-width:768px) {
+      .stats { display: grid; grid-template-columns: 1fr 1fr; }
+      .gal-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4,160px); }
+      .gi:first-child { grid-row: span 1; }
+      .abt-inner { grid-template-columns: 1fr; gap: 32px; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">J &amp; <span>Cooling</span></div>
+  <a href="tel:4047201835" class="hcta">📞 (404) 720-1835</a>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="rating-pill"><span class="star">★★★★½</span> 4.5 · 70 Reviews</div>
+    <h1>Keep Your <span class="accent">Cool</span><br>All Year Long</h1>
+    <p>Professional HVAC repair and installation throughout Atlanta. Fast response, expert technicians, fair prices.</p>
+    <div class="hero-btns">
+      <a href="tel:4047201835" class="btn-p">📞 Call Now</a>
+      <a href="#services" class="btn-s">Our Services ↓</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="sn">4.5★</div><div class="sl-s">Yelp Rating</div></div>
+  <div class="stat"><div class="sn">70</div><div class="sl-s">Reviews</div></div>
+  <div class="stat"><div class="sn">Fast</div><div class="sl-s">Response</div></div>
+  <div class="stat"><div class="sn">Free</div><div class="sl-s">Estimates</div></div>
+</div>
+
+<section class="svc-wrap" id="services">
+  <span class="lbl">What We Offer</span>
+  <h2>Expert <em>HVAC</em> Service</h2>
+  <div class="svc-grid">
+    <div class="sc"><div class="si">❄️</div><div class="sn2">AC Repair</div><p class="sd">Quick diagnosis and repair of all air conditioning systems. Same-day service available.</p></div>
+    <div class="sc"><div class="si">🔥</div><div class="sn2">Heating Repair</div><p class="sd">Furnace and heat pump repair to keep Atlanta homes warm all winter.</p></div>
+    <div class="sc"><div class="si">🔧</div><div class="sn2">HVAC Installation</div><p class="sd">New system installs with quality equipment. We handle all makes and models.</p></div>
+    <div class="sc"><div class="si">🌀</div><div class="sn2">AC Tune-Up</div><p class="sd">Seasonal maintenance and tune-ups to prevent breakdowns and extend system life.</p></div>
+    <div class="sc"><div class="si">🌡️</div><div class="sn2">Duct Services</div><p class="sd">Duct repair, cleaning, and replacement for optimal airflow and efficiency.</p></div>
+  </div>
+</section>
+
+<section class="gal-wrap">
+  <span class="lbl">Our Work</span>
+  <h2>Quality Work in <em>Atlanta</em></h2>
+  <div class="gal-grid">
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/e-jPeXmNnTyLockJSBn1Jw/l.jpg" alt="J & Cooling work" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/N_qtWZa2w64vNsi5AqW6bA/l.jpg" alt="HVAC" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/ZmuW7GdYxpG6b2Sso9HpEQ/l.jpg" alt="AC service" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/pkk2rNM1T9dEcCl6pZSpGg/l.jpg" alt="HVAC repair" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/tAoOoJQ4R0tPPWRzRTNFPw/l.jpg" alt="Atlanta HVAC" loading="lazy"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="abt-inner">
+    <div class="abt-img"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/2Tah9Mod9ChnVbrzs3IrAg/l.jpg" alt="J & Cooling"></div>
+    <div class="abt-text">
+      <span class="lbl">About J &amp; Cooling</span>
+      <h2>Atlanta <em>HVAC</em><br>Professionals</h2>
+      <p>J & Cooling LLC provides professional heating and air conditioning services throughout Atlanta, GA. With a 4.5-star Yelp rating backed by 70 reviews, we've built our reputation on honest work, fair pricing, and customer satisfaction.</p>
+      <p>Whether you need emergency AC repair in the middle of summer or a new heating system installed, we're here to help.</p>
+      <div class="info-list">
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val">(404) 720-1835</span></div>
+        <div class="info-row"><span class="info-label">Location</span><span class="info-val">Atlanta, GA 30311</span></div>
+        <div class="info-row"><span class="info-label">Service</span><span class="info-val">Metro Atlanta Area</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-s" id="contact">
+  <h2>Ready When You Are</h2>
+  <a href="tel:4047201835" class="cta-phone">(404) 720-1835</a>
+  <p class="cta-sub">Call now for fast, professional HVAC service in Atlanta.</p>
+  <a href="tel:4047201835" class="btn-o">📞 Call for Free Estimate</a>
+</section>
+
+<footer>
+  <div class="fl">J &amp; Cooling LLC · Atlanta, GA</div>
+  <div class="fc">Website by <a href="https://webcaredigital.com">WebCare Digital</a></div>
+</footer>
+</body>
+</html>

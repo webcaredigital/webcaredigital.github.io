@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arnold E Little Heating & Air — Stone Mountain, GA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1e3a5f; --navy-d: #0f1e2f; --red: #c0392b; --orange: #e8772e; --orange-l: #f5924a;
+      --bg: #f5f7fa; --white: #fff; --text: #1a2332; --mid: #4a5568; --rule: #dde3ec;
+    }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--bg); line-height: 1.65; }
+
+    header { position: sticky; top: 0; z-index: 100; background: var(--navy-d); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 64px; }
+    .logo { display: flex; flex-direction: column; }
+    .logo-name { font-family: 'Oswald', sans-serif; font-size: 1.15rem; font-weight: 700; color: #fff; letter-spacing: 0.03em; text-transform: uppercase; }
+    .logo-sub { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); }
+    .hcta { display: inline-flex; align-items: center; gap: 7px; background: var(--orange); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.88rem; padding: 10px 20px; border-radius: 4px; transition: background 0.2s; white-space: nowrap; }
+    .hcta:hover { background: var(--orange-l); }
+
+    .hero { position: relative; height: min(88vh, 660px); display: flex; align-items: center; padding: 0 5%; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: url('https://s3-media0.fl.yelpcdn.com/bphoto/wQT0UgkYkVFIzBf-Kr8O5Q/l.jpg') center/cover; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15,30,47,0.95) 0%, rgba(15,30,47,0.7) 50%, rgba(15,30,47,0.25) 100%); }
+    .hero-content { position: relative; z-index: 1; max-width: 560px; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+    .ht-line { width: 32px; height: 2px; background: var(--orange); }
+    .ht-text { font-family: 'Oswald', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); }
+    .hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2.6rem, 5.5vw, 4rem); font-weight: 700; color: #fff; line-height: 1.05; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 18px; }
+    .hero h1 span { color: var(--orange); }
+    .hero p { font-size: 0.98rem; color: rgba(255,255,255,0.72); font-weight: 300; max-width: 420px; margin-bottom: 32px; line-height: 1.7; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-p { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 13px 26px; border-radius: 4px; transition: background 0.2s, transform 0.15s; }
+    .btn-p:hover { background: var(--orange-l); transform: translateY(-1px); }
+    .btn-s { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1.5px solid rgba(255,255,255,0.4); color: #fff; text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 13px 26px; border-radius: 4px; transition: border-color 0.2s; }
+    .btn-s:hover { border-color: #fff; }
+
+    .stats-bar { background: var(--navy); display: flex; align-items: stretch; }
+    .stat { flex: 1; padding: 22px 16px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+    .stat:last-child { border: none; }
+    .sn { font-family: 'Oswald', sans-serif; font-size: 2rem; font-weight: 700; color: var(--orange); line-height: 1; }
+    .sl { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+    section { padding: 72px 5%; }
+    .lbl { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; display: block; }
+    h2 { font-family: 'Oswald', sans-serif; font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--navy); line-height: 1.1; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 44px; }
+    h2 em { color: var(--orange); font-style: normal; }
+
+    .svc-wrap { background: var(--white); }
+    .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); overflow: hidden; border-radius: 6px; }
+    .sc { background: var(--white); padding: 28px 22px; transition: background 0.2s; }
+    .sc:hover { background: var(--bg); }
+    .si { width: 44px; height: 44px; background: rgba(232,119,46,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 14px; }
+    .sn2 { font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 8px; }
+    .sd { font-size: 0.83rem; color: var(--mid); line-height: 1.6; }
+
+    .gal-wrap { background: var(--bg); }
+    .gal-masonry { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .gi { overflow: hidden; border-radius: 6px; }
+    .gi:nth-child(1) { grid-column: span 2; height: 280px; }
+    .gi:nth-child(2), .gi:nth-child(3) { height: 280px; }
+    .gi:nth-child(4), .gi:nth-child(5), .gi:nth-child(6) { height: 200px; grid-column: span 1; }
+    .gi img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .gi:hover img { transform: scale(1.05); }
+
+    .abt-wrap { background: var(--white); }
+    .abt-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
+    .abt-text p { font-size: 1rem; color: var(--mid); line-height: 1.8; margin-bottom: 20px; }
+    .info-list { margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--rule); }
+    .info-item { display: flex; gap: 12px; margin-bottom: 12px; font-size: 0.88rem; }
+    .ii-label { font-weight: 600; color: var(--navy); min-width: 90px; }
+    .ii-val { color: var(--mid); }
+    .abt-photo { border-radius: 6px; overflow: hidden; aspect-ratio: 4/3; }
+    .abt-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    .cta-s { background: linear-gradient(135deg, var(--navy-d) 0%, var(--navy) 100%); text-align: center; padding: 80px 5%; position: relative; overflow: hidden; }
+    .cta-s::before { content: 'HVAC'; position: absolute; font-family: 'Oswald', sans-serif; font-size: 18rem; font-weight: 700; color: rgba(255,255,255,0.02); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; letter-spacing: 0.1em; }
+    .cta-s h2 { color: #fff; margin-bottom: 8px; position: relative; }
+    .cta-phone { display: block; font-family: 'Oswald', sans-serif; font-size: clamp(2.6rem, 5.5vw, 4.4rem); font-weight: 700; color: var(--orange); text-decoration: none; margin: 22px 0 28px; position: relative; letter-spacing: 0.02em; transition: color 0.2s; }
+    .cta-phone:hover { color: var(--orange-l); }
+    .cta-sub { color: rgba(255,255,255,0.55); margin-bottom: 32px; position: relative; font-size: 0.95rem; }
+    .btn-o { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: #fff; text-decoration: none; font-weight: 600; font-size: 1rem; padding: 14px 30px; border-radius: 4px; position: relative; transition: background 0.2s; }
+    .btn-o:hover { background: var(--orange-l); }
+
+    footer { background: var(--navy-d); padding: 22px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .fl { font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.04em; }
+    .fc { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+    .fc a { color: rgba(255,255,255,0.4); text-decoration: none; }
+
+    @media(max-width:768px) {
+      .stats-bar { display: grid; grid-template-columns: 1fr 1fr; }
+      .stat { border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .gal-masonry { grid-template-columns: 1fr 1fr; }
+      .gi:nth-child(1) { grid-column: span 2; height: 220px; }
+      .gi:nth-child(4), .gi:nth-child(5), .gi:nth-child(6) { height: 160px; }
+      .abt-inner { grid-template-columns: 1fr; gap: 36px; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="logo-name">Arnold E Little</span>
+    <span class="logo-sub">Heating &amp; Air Conditioning</span>
+  </div>
+  <a href="tel:4047133826" class="hcta">📞 (404) 713-3826</a>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <div class="ht-line"></div>
+      <span class="ht-text">Stone Mountain, GA · 4.3★ · 16 Reviews</span>
+    </div>
+    <h1>Trusted<br><span>Heating &amp; Air</span><br>Since Day One</h1>
+    <p>Dependable HVAC service for Stone Mountain and Metro Atlanta homeowners. Expert repairs, installations, and maintenance.</p>
+    <div class="hero-btns">
+      <a href="tel:4047133826" class="btn-p">📞 Call for Free Estimate</a>
+      <a href="#services" class="btn-s">Our Services ↓</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat"><div class="sn">4.3★</div><div class="sl">Yelp Rating</div></div>
+  <div class="stat"><div class="sn">16</div><div class="sl">Reviews</div></div>
+  <div class="stat"><div class="sn">GA</div><div class="sl">Stone Mountain</div></div>
+  <div class="stat"><div class="sn">Free</div><div class="sl">Estimates</div></div>
+</div>
+
+<section class="svc-wrap" id="services">
+  <span class="lbl">What We Do</span>
+  <h2>Expert <em>HVAC</em> Services</h2>
+  <div class="svc-grid">
+    <div class="sc"><div class="si">❄️</div><div class="sn2">AC Repair</div><p class="sd">Fast air conditioner repair in Stone Mountain and surrounding areas. All makes and models.</p></div>
+    <div class="sc"><div class="si">🔥</div><div class="sn2">Heating Repair</div><p class="sd">Furnace and heat pump repairs to keep your family warm during Georgia winters.</p></div>
+    <div class="sc"><div class="si">🆕</div><div class="sn2">System Installation</div><p class="sd">New HVAC system installation with energy-efficient equipment and professional setup.</p></div>
+    <div class="sc"><div class="si">🔬</div><div class="sn2">Mini Split</div><p class="sd">Ductless mini-split installation and service — ideal for room additions or older homes.</p></div>
+    <div class="sc"><div class="si">🔧</div><div class="sn2">Maintenance</div><p class="sd">Annual tune-ups and preventive maintenance to extend system life and reduce energy costs.</p></div>
+  </div>
+</section>
+
+<section class="gal-wrap">
+  <span class="lbl">Our Work</span>
+  <h2>Stone Mountain &amp; <em>Metro Atlanta</em></h2>
+  <div class="gal-masonry">
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/cS9nyD3Y7WBTRq7bISaX-g/l.jpg" alt="Arnold E Little HVAC" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/CSgRq7GMBRUXVq74cKxhJQ/l.jpg" alt="HVAC work" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/918ZwYVkEo-MuG1kdaBaPjw/l.jpg" alt="Air conditioning" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/ENzsNWXJYn6z8Kb0Nkf_Mg/l.jpg" alt="Heating" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/ZR8OmfafNdCkXxpHGhsAKw/l.jpg" alt="HVAC service" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/gQ_PfPEhpeT2shP6NsJfVA/l.jpg" alt="Atlanta HVAC" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="abt-wrap" id="about">
+  <div class="abt-inner">
+    <div class="abt-text">
+      <span class="lbl">About Us</span>
+      <h2>Your <em>Local</em><br>HVAC Expert</h2>
+      <p>Arnold E Little Heating & Air Conditioning has been serving Stone Mountain and the surrounding Metro Atlanta area with professional HVAC service. Our 4.3-star rating on Yelp reflects our commitment to doing the job right the first time.</p>
+      <p>We service all makes and models, from standard central air systems to ductless mini-splits. Whether it's a repair, tune-up, or full replacement, we'll give you an honest assessment and fair price.</p>
+      <div class="info-list">
+        <div class="info-item"><span class="ii-label">Phone</span><span class="ii-val">(404) 713-3826</span></div>
+        <div class="info-item"><span class="ii-label">Location</span><span class="ii-val">Stone Mountain, GA 30083</span></div>
+        <div class="info-item"><span class="ii-label">Service Area</span><span class="ii-val">Stone Mountain, Decatur, &amp; Metro Atlanta</span></div>
+      </div>
+    </div>
+    <div class="abt-photo">
+      <img src="https://s3-media0.fl.yelpcdn.com/bphoto/h3RyYgznyPoEM-KJX44-ZQ/l.jpg" alt="Arnold E Little">
+    </div>
+  </div>
+</section>
+
+<section class="cta-s" id="contact">
+  <h2>CALL FOR SERVICE</h2>
+  <a href="tel:4047133826" class="cta-phone">(404) 713-3826</a>
+  <p class="cta-sub">Fast, dependable HVAC service in Stone Mountain and Metro Atlanta. Free estimates.</p>
+  <a href="tel:4047133826" class="btn-o">📞 Call Now</a>
+</section>
+
+<footer>
+  <div class="fl">Arnold E Little Heating &amp; Air · Stone Mountain, GA</div>
+  <div class="fc">Website by <a href="https://webcaredigital.com">WebCare Digital</a></div>
+</footer>
+</body>
+</html>

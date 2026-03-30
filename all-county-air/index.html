@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All County Air Conditioning — Atlanta HVAC Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1e3a5f; --navy-d: #122540; --orange: #e8772e; --orange-l: #f5924a;
+      --cream: #f7f9fc; --white: #fff; --text: #1a2332; --mid: #4a5568; --light: #8896a8;
+      --rule: #e2e8f0;
+    }
+    body { font-family: 'Barlow', sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
+
+    /* HEADER */
+    header { position: sticky; top: 0; z-index: 100; background: var(--navy); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 64px; box-shadow: 0 2px 16px rgba(0,0,0,0.25); }
+    .logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; color: #fff; letter-spacing: 0.02em; }
+    .logo span { color: var(--orange); }
+    .hcta { display: inline-flex; align-items: center; gap: 7px; background: var(--orange); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.88rem; padding: 10px 20px; border-radius: 3px; transition: background 0.2s; white-space: nowrap; }
+    .hcta:hover { background: var(--orange-l); }
+
+    /* HERO */
+    .hero { position: relative; height: min(88vh, 660px); display: flex; align-items: center; padding: 0 5%; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: url('https://s3-media0.fl.yelpcdn.com/bphoto/oWaSUD3puA1Z2XxndR34gA/l.jpg') center/cover; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(18,37,64,0.92) 0%, rgba(18,37,64,0.65) 55%, rgba(18,37,64,0.3) 100%); }
+    .hero-content { position: relative; z-index: 1; max-width: 580px; }
+    .badge { display: inline-block; border: 1.5px solid var(--orange); color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 14px; border-radius: 2px; margin-bottom: 22px; }
+    .hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.8rem, 6vw, 4.4rem); font-weight: 900; color: #fff; line-height: 0.95; letter-spacing: 0.01em; text-transform: uppercase; margin-bottom: 18px; }
+    .hero h1 span { color: var(--orange); display: block; }
+    .hero p { font-size: 1rem; color: rgba(255,255,255,0.78); font-weight: 300; margin-bottom: 32px; max-width: 420px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-p { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 13px 26px; border-radius: 3px; transition: background 0.2s, transform 0.15s; }
+    .btn-p:hover { background: var(--orange-l); transform: translateY(-1px); }
+    .btn-s { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1.5px solid rgba(255,255,255,0.4); color: #fff; text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 13px 26px; border-radius: 3px; transition: border-color 0.2s; }
+    .btn-s:hover { border-color: #fff; }
+
+    /* STATS */
+    .stats { background: var(--navy-d); display: flex; }
+    .stat { flex: 1; padding: 26px 16px; text-align: center; border-right: 1px solid rgba(255,255,255,0.07); }
+    .stat:last-child { border: none; }
+    .stat-n { font-family: 'Barlow Condensed', sans-serif; font-size: 2.1rem; font-weight: 900; color: var(--orange); line-height: 1; }
+    .stat-l { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 4px; }
+
+    /* SECTIONS */
+    section { padding: 72px 5%; }
+    .sl { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; display: block; }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--navy); line-height: 1.05; text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 44px; }
+    h2 em { color: var(--orange); font-style: normal; }
+
+    /* SERVICES */
+    .svc-wrap { background: #fff; }
+    .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+    .svc-card { background: #fff; padding: 28px 24px; transition: background 0.2s; }
+    .svc-card:hover { background: var(--cream); }
+    .svc-icon { font-size: 1.6rem; margin-bottom: 12px; }
+    .svc-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 8px; }
+    .svc-desc { font-size: 0.85rem; color: var(--mid); line-height: 1.55; }
+
+    /* GALLERY */
+    .gal-wrap { background: var(--navy); }
+    .gal-wrap .sl { color: rgba(255,255,255,0.5); }
+    .gal-wrap h2 { color: #fff; }
+    .gal-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 220px 220px; gap: 3px; }
+    .gi { overflow: hidden; }
+    .gi:first-child { grid-column: span 2; grid-row: span 2; }
+    .gi img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .gi:hover img { transform: scale(1.05); }
+
+    /* ABOUT */
+    .abt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .abt-img { border-radius: 4px; overflow: hidden; aspect-ratio: 4/3; }
+    .abt-img img { width: 100%; height: 100%; object-fit: cover; }
+    .abt-text p { font-size: 1rem; color: var(--mid); line-height: 1.75; margin-bottom: 20px; }
+    .hrs { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule); display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; }
+    .hd { font-weight: 600; font-size: 0.85rem; color: var(--navy); }
+    .ht { font-size: 0.85rem; color: var(--mid); }
+
+    /* CTA */
+    .cta-s { background: var(--orange); text-align: center; padding: 72px 5%; }
+    .cta-s h2 { color: #fff; font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 8px; }
+    .cta-phone { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 900; color: #fff; text-decoration: none; margin: 20px 0 28px; letter-spacing: 0.02em; transition: opacity 0.2s; }
+    .cta-phone:hover { opacity: 0.85; }
+    .cta-sub { color: rgba(255,255,255,0.8); margin-bottom: 32px; font-size: 0.95rem; }
+    .btn-w { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--orange); text-decoration: none; font-weight: 700; font-size: 1rem; padding: 14px 30px; border-radius: 3px; transition: opacity 0.2s; }
+    .btn-w:hover { opacity: 0.9; }
+
+    footer { background: var(--navy-d); padding: 22px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .fl { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em; }
+    .fc { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+    .fc a { color: rgba(255,255,255,0.4); text-decoration: none; }
+
+    @media(max-width:768px) {
+      .stats { display: grid; grid-template-columns: 1fr 1fr; }
+      .stat { border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .gal-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4,160px); }
+      .gi:first-child { grid-column: span 2; grid-row: span 1; }
+      .abt-grid { grid-template-columns: 1fr; gap: 36px; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">All County <span>Air</span></div>
+  <a href="tel:4046363998" class="hcta">📞 (404) 636-3998</a>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="badge">Atlanta, GA · 4.6★ · 101 Reviews</div>
+    <h1>Atlanta's<br><span>AC &amp; Heating</span><br>Experts</h1>
+    <p>Reliable heating and air conditioning service throughout Metro Atlanta. Fast response, fair prices, quality work.</p>
+    <div class="hero-btns">
+      <a href="tel:4046363998" class="btn-p">📞 Call for Free Estimate</a>
+      <a href="#services" class="btn-s">View Services ↓</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="stat-n">4.6★</div><div class="stat-l">Yelp Rating</div></div>
+  <div class="stat"><div class="stat-n">101</div><div class="stat-l">Reviews</div></div>
+  <div class="stat"><div class="stat-n">24/7</div><div class="stat-l">Available</div></div>
+  <div class="stat"><div class="stat-n">Free</div><div class="stat-l">Estimates</div></div>
+</div>
+
+<section class="svc-wrap" id="services">
+  <span class="sl">Services</span>
+  <h2>Complete <em>HVAC</em> Solutions</h2>
+  <div class="svc-grid">
+    <div class="svc-card"><div class="svc-icon">❄️</div><div class="svc-name">AC Repair</div><p class="svc-desc">Fast, reliable air conditioner repairs. We diagnose and fix all makes and models.</p></div>
+    <div class="svc-card"><div class="svc-icon">🆕</div><div class="svc-name">AC Installation</div><p class="svc-desc">New system installs with energy-efficient equipment. Free estimates on all replacements.</p></div>
+    <div class="svc-card"><div class="svc-icon">🔥</div><div class="svc-name">Heating Repair</div><p class="svc-desc">Furnace and heat pump repairs to keep your home warm all winter long.</p></div>
+    <div class="svc-card"><div class="svc-icon">🌀</div><div class="svc-name">HVAC Maintenance</div><p class="svc-desc">Seasonal tune-ups and preventive maintenance plans to extend system life.</p></div>
+    <div class="svc-card"><div class="svc-icon">🧊</div><div class="svc-name">Refrigeration</div><p class="svc-desc">Commercial and residential refrigeration service throughout Metro Atlanta.</p></div>
+  </div>
+</section>
+
+<section class="gal-wrap">
+  <span class="sl">Our Work</span>
+  <h2>Serving <em>Metro Atlanta</em></h2>
+  <div class="gal-grid">
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/ah-z6WtGzjJYRl9l1wWgJA/l.jpg" alt="All County Air" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/BIhqPl5cQSaJZ7evITIAig/l.jpg" alt="HVAC work" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/bTiEO7f8B5k21_xKjHIkdg/l.jpg" alt="Air conditioning" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/btyte8thPlA3oGehEIQUXQ/l.jpg" alt="HVAC service" loading="lazy"></div>
+    <div class="gi"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/ZmflUvx4yu8gUVzJROb5tg/l.jpg" alt="Atlanta HVAC" loading="lazy"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="abt-grid">
+    <div class="abt-img"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/oWaSUD3puA1Z2XxndR34gA/l.jpg" alt="All County Air Conditioning"></div>
+    <div class="abt-text">
+      <span class="sl">About Us</span>
+      <h2>Local.<br><em>Trusted.</em><br>Reliable.</h2>
+      <p>All County Air Conditioning, Heating and Refrigeration has been serving Atlanta homeowners with professional HVAC service for years. With a 4.6-star rating and over 101 reviews, our customers trust us to keep their homes comfortable year-round.</p>
+      <p>From emergency repairs to planned replacements, we handle every job with care and professionalism.</p>
+      <div class="hrs">
+        <span class="hd">Service Area</span><span class="ht">Metro Atlanta, GA</span>
+        <span class="hd">Phone</span><span class="ht">(404) 636-3998</span>
+        <span class="hd">Address</span><span class="ht">1752 Clairmont Way NE, Atlanta, GA 30329</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-s" id="contact">
+  <h2>READY TO SCHEDULE?</h2>
+  <a href="tel:4046363998" class="cta-phone">(404) 636-3998</a>
+  <p class="cta-sub">Call now for fast, professional HVAC service throughout Metro Atlanta.</p>
+  <a href="tel:4046363998" class="btn-w">📞 Call Now — Free Estimate</a>
+</section>
+
+<footer>
+  <div class="fl">All County Air Conditioning · Atlanta, GA</div>
+  <div class="fc">Website by <a href="https://webcaredigital.com">WebCare Digital</a></div>
+</footer>
+</body>
+</html>
