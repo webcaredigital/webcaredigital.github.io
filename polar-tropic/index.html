@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polar Tropic Home Services | HVAC Repair Mableton, GA</title>
+<meta name="description" content="Polar Tropic Home Services provides HVAC repair, AC repair, heating, and emergency services in Mableton, GA. Call (404) 434-5193.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1e3a5f;
+    --navy-mid: #254d7a;
+    --orange: #e8772e;
+    --teal: #1a8f8c;
+    --bright: #00c9b1;
+    --pale: #e8f7f6;
+    --text: #1a2634;
+    --text-light: #506070;
+    --white: #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Raleway', sans-serif; color: var(--text); background: var(--white); }
+
+  /* HEADER */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--navy);
+    padding: 0 5%;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.3);
+  }
+  .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-icon {
+    width: 40px; height: 40px;
+    background: var(--orange); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; flex-shrink: 0;
+  }
+  .logo-text { display: flex; flex-direction: column; }
+  .logo-name { font-size: 1.1rem; font-weight: 900; color: var(--white); letter-spacing: -0.01em; }
+  .logo-tagline { font-size: 0.65rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.12em; text-transform: uppercase; }
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  .header-right .emergency {
+    font-size: 0.72rem; font-weight: 700; color: var(--orange);
+    letter-spacing: 0.1em; text-transform: uppercase;
+    display: none;
+  }
+  @media(min-width:580px){ .header-right .emergency { display: block; } }
+  .btn-hdr {
+    background: var(--orange); color: var(--white);
+    padding: 10px 22px; border-radius: 40px;
+    text-decoration: none; font-size: 0.95rem; font-weight: 700;
+    transition: background 0.2s; white-space: nowrap;
+  }
+  .btn-hdr:hover { background: #c9601a; }
+
+  /* HERO */
+  .hero {
+    position: relative; min-height: 90vh;
+    display: flex; align-items: center;
+    background: url('https://s3-media0.fl.yelpcdn.com/bphoto/UuyiTsiCDPZBPaijJ6Fjzg/l.jpg') center center / cover no-repeat;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(30,58,95,0.92) 0%, rgba(26,143,140,0.6) 60%, rgba(30,58,95,0.4) 100%);
+  }
+  /* tropical diagonal shape */
+  .hero::after {
+    content: ''; position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 80px;
+    background: var(--white);
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+  .hero-content {
+    position: relative; z-index: 1;
+    padding: 80px 5%; max-width: 680px;
+  }
+  .hero-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 2px solid var(--bright); color: var(--bright);
+    padding: 5px 16px; border-radius: 40px;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 6vw, 4.2rem); font-weight: 900;
+    color: var(--white); line-height: 1.05; letter-spacing: -0.03em;
+    margin-bottom: 22px; text-transform: uppercase;
+  }
+  .hero h1 .line2 { color: var(--orange); display: block; }
+  .hero p {
+    font-size: 1.1rem; color: rgba(255,255,255,0.83);
+    line-height: 1.65; margin-bottom: 38px; font-weight: 300;
+    max-width: 480px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-hero-main {
+    background: var(--orange); color: var(--white);
+    padding: 17px 38px; border-radius: 40px;
+    text-decoration: none; font-size: 1rem; font-weight: 700;
+    letter-spacing: 0.03em; transition: background 0.2s;
+  }
+  .btn-hero-main:hover { background: #c9601a; }
+  .btn-hero-ghost {
+    background: rgba(255,255,255,0.12); color: var(--white);
+    padding: 16px 36px; border-radius: 40px;
+    text-decoration: none; font-size: 1rem; font-weight: 600;
+    border: 2px solid rgba(255,255,255,0.45);
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+  }
+  .btn-hero-ghost:hover { background: rgba(255,255,255,0.2); }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: var(--orange);
+    display: flex; flex-wrap: wrap; justify-content: center;
+  }
+  .trust-item {
+    flex: 1; min-width: 130px;
+    padding: 20px 16px; text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.3);
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-num { font-size: 1.8rem; font-weight: 900; color: var(--white); }
+  .trust-label { font-size: 0.68rem; color: rgba(255,255,255,0.85); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 3px; }
+
+  /* SECTIONS */
+  section { padding: 88px 5%; }
+  .eyebrow {
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--orange); font-weight: 700; margin-bottom: 12px;
+  }
+  h2.title {
+    font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900;
+    color: var(--navy); letter-spacing: -0.03em; line-height: 1.1;
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  .lead-text { font-size: 1rem; color: var(--text-light); line-height: 1.7; max-width: 600px; font-weight: 300; }
+  .sec-header { margin-bottom: 52px; }
+
+  /* SERVICES */
+  .services-bg { background: var(--pale); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+  }
+  .service-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 30px 24px;
+    position: relative; overflow: hidden;
+    box-shadow: 0 2px 10px rgba(30,58,95,0.07);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(30,58,95,0.13); }
+  .service-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--navy), var(--orange));
+  }
+  .service-emoji { font-size: 2.4rem; margin-bottom: 14px; display: block; }
+  .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .service-card p { font-size: 0.88rem; color: var(--text-light); line-height: 1.6; font-weight: 300; }
+
+  /* GALLERY */
+  .gallery-bg { background: var(--navy); }
+  .gallery-bg .eyebrow { color: var(--bright); }
+  .gallery-bg h2.title { color: var(--white); }
+  .gallery-bg .lead-text { color: rgba(255,255,255,0.6); }
+  .gallery-mosaic {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 220px 220px;
+    gap: 10px;
+  }
+  .gallery-mosaic img {
+    width: 100%; height: 100%; object-fit: cover;
+    border-radius: 8px; display: block;
+    transition: opacity 0.25s, transform 0.25s;
+  }
+  .gallery-mosaic img:hover { opacity: 0.9; transform: scale(1.01); }
+  .gallery-mosaic .tall { grid-row: span 2; }
+  @media(max-width:660px){
+    .gallery-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gallery-mosaic .tall { grid-row: span 1; }
+    .gallery-mosaic img { height: 160px; }
+  }
+
+  /* ABOUT */
+  .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  @media(max-width:740px){ .about-layout { grid-template-columns: 1fr; gap: 36px; } }
+  .about-img {
+    width: 100%; border-radius: 12px; display: block;
+    aspect-ratio: 1; object-fit: cover;
+    box-shadow: 0 16px 40px rgba(30,58,95,0.18);
+  }
+  .about-body h2 { margin-bottom: 18px; }
+  .about-body p { font-size: 0.97rem; color: var(--text-light); line-height: 1.78; margin-bottom: 14px; font-weight: 300; }
+  .about-body p:last-of-type { margin-bottom: 28px; }
+  .pill-list { display: flex; flex-wrap: wrap; gap: 10px; }
+  .pill {
+    background: var(--pale); color: var(--navy);
+    padding: 7px 18px; border-radius: 40px;
+    font-size: 0.8rem; font-weight: 700;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .pill:hover { border-color: var(--orange); }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(150deg, var(--navy-mid) 0%, var(--navy) 50%, #0f1e32 100%);
+    text-align: center; padding: 110px 5%;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: 'STAY COOL';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14rem; font-weight: 900; letter-spacing: -0.05em;
+    color: rgba(255,255,255,0.025);
+    white-space: nowrap; pointer-events: none; z-index: 0;
+  }
+  .cta-inner { position: relative; z-index: 1; }
+  .cta-section .eyebrow { color: var(--bright); }
+  .cta-section h2.title { color: var(--white); }
+  .cta-section p { font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 460px; margin: 0 auto 42px; line-height: 1.65; font-weight: 300; }
+  .cta-big-phone {
+    display: inline-block;
+    background: var(--orange); color: var(--white);
+    padding: 22px 60px; border-radius: 40px;
+    text-decoration: none; font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 900; letter-spacing: -0.01em;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 8px 28px rgba(232,119,46,0.4);
+  }
+  .cta-big-phone:hover { background: #c9601a; transform: translateY(-2px); }
+  .cta-note { margin-top: 18px; font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+
+  /* FOOTER */
+  footer {
+    background: #0a1520;
+    padding: 34px 5%;
+    display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: space-between; gap: 14px;
+  }
+  .footer-logo { font-size: 0.95rem; font-weight: 900; color: var(--white); text-transform: uppercase; letter-spacing: 0.04em; }
+  .footer-logo span { color: var(--orange); }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.8rem; font-weight: 500; }
+  .footer-links a:hover { color: var(--orange); }
+  .footer-credit { font-size: 0.74rem; color: rgba(255,255,255,0.3); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo-wrap" href="#">
+    <div class="logo-icon">❄️</div>
+    <div class="logo-text">
+      <span class="logo-name">Polar Tropic</span>
+      <span class="logo-tagline">Home Services · Mableton, GA</span>
+    </div>
+  </a>
+  <div class="header-right">
+    <span class="emergency">24/7 Emergency Available</span>
+    <a class="btn-hdr" href="tel:4044345193">(404) 434-5193</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-pill">★★★★★ 5.0 on Yelp</div>
+    <h1>Stay Cool.<span class="line2">Stay Comfortable.</span></h1>
+    <p>Polar Tropic brings bold, reliable HVAC service to Mableton and greater Atlanta — from emergency calls to full system installs.</p>
+    <div class="hero-actions">
+      <a class="btn-hero-main" href="tel:4044345193">Call (404) 434-5193</a>
+      <a class="btn-hero-ghost" href="#services">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item">
+    <span class="trust-num">5.0★</span>
+    <span class="trust-label">Yelp Rating</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">24/7</span>
+    <span class="trust-label">Emergency</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">5+</span>
+    <span class="trust-label">Services</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">GA</span>
+    <span class="trust-label">Mableton Based</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">Free</span>
+    <span class="trust-label">Estimates</span>
+  </div>
+</div>
+
+<section class="services-bg" id="services">
+  <div class="sec-header">
+    <p class="eyebrow">What We Offer</p>
+    <h2 class="title">Complete HVAC Coverage</h2>
+    <p class="lead-text">Whether you need a quick fix or a full system overhaul, Polar Tropic has the skills and equipment to handle it all.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-emoji">🔧</span>
+      <h3>HVAC Repair</h3>
+      <p>Fast, precise repairs for all heating and cooling systems. We diagnose and fix the real problem.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-emoji">❄️</span>
+      <h3>AC Repair</h3>
+      <p>From refrigerant issues to electrical faults, we restore your cooling system quickly and correctly.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-emoji">🔥</span>
+      <h3>Heating</h3>
+      <p>Furnace, heat pump, and heating system repairs to keep you warm through Georgia winters.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-emoji">🛡️</span>
+      <h3>HVAC Maintenance</h3>
+      <p>Preventive tune-ups that extend system life, reduce energy bills, and prevent costly breakdowns.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-emoji">🚨</span>
+      <h3>Emergency Services</h3>
+      <p>System down at the worst time? We're available for emergency calls — because comfort can't wait.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-bg" id="gallery">
+  <div class="sec-header">
+    <p class="eyebrow">Photo Gallery</p>
+    <h2 class="title">The Work Speaks</h2>
+    <p class="lead-text">See the Polar Tropic standard — clean installs, thorough repairs, satisfied customers.</p>
+  </div>
+  <div class="gallery-mosaic">
+    <img class="tall" src="https://s3-media0.fl.yelpcdn.com/bphoto/IjDOnZOMX3-JUcC0sGfLlw/l.jpg" alt="HVAC service Mableton">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/pZAjMUcc8xdQBQcfGKuF1g/l.jpg" alt="AC repair Mableton">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/p_gr1pNZAv_M3sdcsS0yRw/l.jpg" alt="Heating service GA">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/QdNdBQDJG5c9qE5R9Su-zA/l.jpg" alt="HVAC maintenance Georgia">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/3bxnOSKwjcFAmQQk7Fiybw/l.jpg" alt="Emergency HVAC Mableton">
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-layout">
+    <img class="about-img" src="https://s3-media0.fl.yelpcdn.com/bphoto/UuyiTsiCDPZBPaijJ6Fjzg/l.jpg" alt="Polar Tropic team">
+    <div class="about-body">
+      <p class="eyebrow">About Us</p>
+      <h2 class="title">Bold Service. Real Results.</h2>
+      <p>Polar Tropic Home Services is Mableton's go-to HVAC team — built for customers who expect more than a quick fix. We treat every home like our own.</p>
+      <p>From minor repairs to emergency callouts, we show up prepared, work clean, and leave you with a system that performs. Our 5-star reputation is earned one job at a time.</p>
+      <div class="pill-list">
+        <span class="pill">Licensed &amp; Insured</span>
+        <span class="pill">5.0★ Rated</span>
+        <span class="pill">Emergency Ready</span>
+        <span class="pill">All Brands</span>
+        <span class="pill">Mableton, GA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="cta-inner">
+    <p class="eyebrow">Get In Touch</p>
+    <h2 class="title">Your Comfort Starts Here</h2>
+    <p>Call Polar Tropic today for fast, professional HVAC service in Mableton and the Atlanta area.</p>
+    <a class="cta-big-phone" href="tel:4044345193">(404) 434-5193</a>
+    <p class="cta-note">Mableton, GA 30126 · Emergency Service Available</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Polar <span>Tropic</span> Home Services</div>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="tel:4044345193">Call</a>
+  </div>
+  <div class="footer-credit">Website by WebCare Digital</div>
+</footer>
+
+</body>
+</html>

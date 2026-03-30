@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All My Sons General Construction | HVAC, Plumbing &amp; More — College Park, GA</title>
+<meta name="description" content="All My Sons General Construction serves College Park, GA 30337 with HVAC, plumbing, handyman, drywall, commercial, and emergency services. Call (678) 847-3164.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1e3a5f;
+    --navy-dark: #141f30;
+    --navy-mid: #1e3050;
+    --navy-light: #264d78;
+    --orange: #e8772e;
+    --orange-dark: #c85c14;
+    --orange-muted: #d9682a;
+    --steel: #3d5068;
+    --white: #ffffff;
+    --off-white: #f3f5f8;
+    --border: #dce3ec;
+    --gray: #64748b;
+    --gray-dark: #3a4a5c;
+    --text: #1a2438;
+    --heading-font: 'Roboto Slab', serif;
+    --body-font: 'Roboto', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body-font); color: var(--text); background: var(--white); }
+
+  /* HEADER */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--navy-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(16px, 4vw, 56px);
+    height: 72px;
+    border-bottom: 4px solid var(--orange);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .logo-mark {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .logo-bar {
+    width: 6px;
+    height: 36px;
+    background: var(--orange);
+    border-radius: 3px;
+  }
+  .logo-copy { display: flex; flex-direction: column; }
+  .logo-top { font-family: var(--heading-font); font-size: 1.1rem; font-weight: 700; color: var(--white); line-height: 1.15; }
+  .logo-btm { font-family: var(--body-font); font-size: 0.6rem; font-weight: 400; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 1px; }
+  .header-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 11px 22px;
+    border-radius: 3px;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .header-cta a:hover { background: var(--orange-dark); }
+  .header-cta svg { width: 15px; height: 15px; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy-mid) 50%, var(--steel) 100%);
+    overflow: hidden;
+  }
+  /* Industrial grid overlay */
+  .hero-texture {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 48px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 48px);
+  }
+  .hero-stripe {
+    position: absolute;
+    top: 0; bottom: 0;
+    right: 0;
+    width: 8px;
+    background: repeating-linear-gradient(180deg, var(--orange) 0px, var(--orange) 24px, transparent 24px, transparent 32px);
+    opacity: 0.6;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: clamp(52px, 9vw, 100px) clamp(24px, 6vw, 72px);
+    max-width: 700px;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    font-family: var(--body-font);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.18;
+    margin-bottom: 18px;
+  }
+  .hero h1 span { color: var(--orange); }
+  .hero p {
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.68);
+    line-height: 1.72;
+    margin-bottom: 36px;
+    font-weight: 300;
+    max-width: 520px;
+  }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-solid {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 30px;
+    border-radius: 3px;
+    transition: background 0.2s;
+  }
+  .btn-solid:hover { background: var(--orange-dark); }
+  .btn-border {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid rgba(255,255,255,0.35);
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 14px 28px;
+    border-radius: 3px;
+    transition: border-color 0.2s;
+  }
+  .btn-border:hover { border-color: rgba(255,255,255,0.75); }
+
+  /* TRUST */
+  .trust-strip {
+    background: var(--orange);
+    padding: 18px clamp(20px, 5vw, 64px);
+  }
+  .trust-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 32px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+  .trust-items li {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--white);
+    font-family: var(--body-font);
+    font-weight: 700;
+    font-size: 0.87rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .trust-items li::before { content: '▶'; font-size: 0.45rem; }
+
+  /* SECTION */
+  .section { padding: clamp(52px, 8vw, 90px) clamp(20px, 5vw, 64px); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-kicker {
+    font-family: var(--body-font);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-kicker::before { content: ''; display: block; width: 20px; height: 2px; background: var(--orange); }
+  .section-title {
+    font-family: var(--heading-font);
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .section-desc {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 580px;
+    font-weight: 300;
+  }
+  .section-head { margin-bottom: 44px; }
+
+  /* SERVICES */
+  .svc-bg { background: var(--off-white); }
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 16px;
+  }
+  .svc-tile {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 28px 22px;
+    border-radius: 4px;
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .svc-tile::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--orange);
+    border-radius: 4px 0 0 4px;
+  }
+  .svc-tile:hover { box-shadow: 0 6px 24px rgba(30,58,95,0.12); transform: translateY(-2px); }
+  .svc-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--navy);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    margin-left: 8px;
+  }
+  .svc-icon svg { width: 20px; height: 20px; stroke: var(--white); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .svc-tile h3 {
+    font-family: var(--heading-font);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    margin-left: 8px;
+    line-height: 1.3;
+  }
+  .svc-tile p {
+    font-family: var(--body-font);
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.55;
+    margin-left: 8px;
+    font-weight: 400;
+  }
+
+  /* ABOUT */
+  .about-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center; }
+  @media (max-width: 720px) { .about-layout { grid-template-columns: 1fr; gap: 36px; } }
+  .about-panel {
+    background: var(--navy);
+    padding: 42px 36px;
+    border-radius: 4px;
+    border-left: 6px solid var(--orange);
+  }
+  .about-panel h3 {
+    font-family: var(--body-font);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 22px;
+  }
+  .stats-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat-box {
+    background: rgba(255,255,255,0.06);
+    padding: 18px 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+  .stat-big { font-family: var(--heading-font); font-size: 1.8rem; font-weight: 800; color: var(--orange); line-height: 1; margin-bottom: 4px; }
+  .stat-sm { font-family: var(--body-font); font-size: 0.7rem; font-weight: 500; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.07em; }
+  .about-right p { font-size: 0.97rem; color: var(--gray); line-height: 1.78; margin-bottom: 14px; font-weight: 300; }
+  .chk-list { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+  .chk-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gray-dark);
+  }
+  .chk-list li::before {
+    content: '✓';
+    width: 22px;
+    height: 22px;
+    background: var(--orange);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 800;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%);
+    padding: clamp(60px, 10vw, 100px) clamp(20px, 5vw, 64px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 40px);
+  }
+  .cta-section > * { position: relative; z-index: 1; }
+  .cta-section .section-kicker { justify-content: center; color: #f4a865; }
+  .cta-section .section-kicker::before { background: #f4a865; }
+  .cta-section h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.18;
+    margin-bottom: 14px;
+  }
+  .cta-section h2 span { color: var(--orange); }
+  .cta-section p { color: rgba(255,255,255,0.62); font-size: 1rem; font-weight: 300; margin-bottom: 38px; }
+  .big-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    padding: 22px 48px;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 8px 32px rgba(232,119,46,0.4);
+  }
+  .big-phone:hover { background: var(--orange-dark); transform: translateY(-2px); }
+  .big-phone svg { width: 28px; height: 28px; }
+  .cta-sub { margin-top: 18px; font-size: 0.82rem; color: rgba(255,255,255,0.38); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy-dark);
+    padding: 32px clamp(20px, 5vw, 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    border-top: 4px solid var(--orange);
+  }
+  footer .f-name { font-family: var(--heading-font); font-size: 1rem; font-weight: 700; color: var(--white); }
+  footer p { font-family: var(--body-font); font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.6; }
+  footer a { color: var(--orange); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    .hero-btns { flex-direction: column; }
+    .btn-solid, .btn-border { justify-content: center; }
+    .header-cta a { font-size: 0.8rem; padding: 8px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-mark">
+    <div class="logo-bar"></div>
+    <div class="logo-copy">
+      <span class="logo-top">All My Sons</span>
+      <span class="logo-btm">General Construction · College Park, GA</span>
+    </div>
+  </div>
+  <div class="header-cta">
+    <a href="tel:6788473164">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (678) 847-3164
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-texture"></div>
+  <div class="hero-stripe"></div>
+  <div class="hero-content">
+    <div class="hero-tag">College Park, GA 30337 · Licensed &amp; Insured</div>
+    <h1>Built Strong.<br><span>Done Right.</span><br>All My Sons.</h1>
+    <p>General construction, HVAC, plumbing, and more — one trusted contractor for everything your home or business needs in the greater Atlanta area.</p>
+    <div class="hero-btns">
+      <a href="tel:6788473164" class="btn-solid">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Now: (678) 847-3164
+      </a>
+      <a href="#services" class="btn-border">See Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <ul class="trust-items">
+    <li>Licensed &amp; Insured</li>
+    <li>Emergency Services</li>
+    <li>Commercial &amp; Residential</li>
+    <li>One-Stop Contractor</li>
+    <li>College Park Local</li>
+  </ul>
+</div>
+
+<!-- SERVICES -->
+<section class="section svc-bg" id="services">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-kicker">Services</div>
+      <h2 class="section-title">Everything Under One Roof</h2>
+      <p class="section-desc">From HVAC systems to plumbing, drywall to commercial projects — All My Sons is the contractor you call once for all of it.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>HVAC</h3>
+        <p>Full HVAC installation, repair, and maintenance for residential and commercial properties.</p>
+      </div>
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 7.9 7 5c0 0-2.57 3.34-2.57 7.25C4.43 14.47 5.57 16.3 7 16.3zM12 21c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S12.29 12.9 12 10c0 0-2.57 3.34-2.57 7.25C9.43 19.47 10.57 21 12 21z"/></svg>
+        </div>
+        <h3>Plumbing</h3>
+        <p>Plumbing repair, installation, and emergency services for homes and commercial spaces.</p>
+      </div>
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Handyman</h3>
+        <p>General repair and maintenance tasks handled with care and professionalism.</p>
+      </div>
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+        </div>
+        <h3>Drywall</h3>
+        <p>Professional drywall installation, repair, and finishing for a flawless result.</p>
+      </div>
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 20h20M5 20V8h3M16 20V8h3M9 20v-6h6v6M12 8V4"/></svg>
+        </div>
+        <h3>Commercial Services</h3>
+        <p>Full-service commercial contracting for offices, retail spaces, and multi-unit properties.</p>
+      </div>
+      <div class="svc-tile">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>Emergency Services</h3>
+        <p>24/7 emergency response for urgent plumbing, HVAC, and construction issues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="about-layout">
+      <div class="about-panel">
+        <h3>Our Promise</h3>
+        <div class="stats-2x2">
+          <div class="stat-box">
+            <div class="stat-big">24/7</div>
+            <div class="stat-sm">Emergency Line</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-big">Full</div>
+            <div class="stat-sm">Service</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-big">Com.</div>
+            <div class="stat-sm">Commercial Ready</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-big">Local</div>
+            <div class="stat-sm">College Park</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="section-kicker">Who We Are</div>
+        <h2 class="section-title">Your Full-Service Local Contractor</h2>
+        <p>All My Sons General Construction is a College Park, GA contractor built to handle everything your home or business needs — under one roof, from one team you can trust.</p>
+        <p>Whether it's an HVAC system, a burst pipe, a drywall patch, or a full commercial buildout, we bring the same commitment to quality and reliability to every project we take on.</p>
+        <ul class="chk-list">
+          <li>Licensed, bonded, and fully insured</li>
+          <li>Commercial and residential experience</li>
+          <li>Emergency response available 24/7</li>
+          <li>Honest pricing, professional crews</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="section-kicker">Contact Us</div>
+  <h2>One Call.<br><span>Every Job Covered.</span></h2>
+  <p>Don't juggle multiple contractors. Call All My Sons and get it all done right, the first time.</p>
+  <a href="tel:6788473164" class="big-phone">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    (678) 847-3164
+  </a>
+  <p class="cta-sub">All My Sons General Construction · College Park, GA 30337</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="f-name">All My Sons General Construction</span>
+  <p>College Park, GA 30337 &nbsp;·&nbsp; <a href="tel:6788473164">(678) 847-3164</a></p>
+  <p>HVAC · Plumbing · Handyman · Drywall · Commercial Services · Emergency Services</p>
+  <p style="margin-top:10px; font-size:0.76rem; color:rgba(255,255,255,0.28);">Website by <span style="color:rgba(255,255,255,0.5); font-weight:600;">WebCare Digital</span></p>
+</footer>
+
+</body>
+</html>

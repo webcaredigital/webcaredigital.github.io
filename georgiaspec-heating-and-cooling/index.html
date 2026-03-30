@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeorgiaSpec Heating and Cooling | Jefferson, GA HVAC Specialists</title>
+<meta name="description" content="GeorgiaSpec Heating and Cooling — Jefferson, GA's trusted HVAC specialists. AC repair, heating repair, and full HVAC service. Call (678) 749-7300.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Roboto', sans-serif; color: #2c2c2c; background: #fff; }
+
+  /* STICKY HEADER */
+  header {
+    position: sticky; top: 0; z-index: 1000;
+    background: #1e3a5f;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    padding: 0 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .header-brand {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: #fff; letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+  .header-brand span { color: #e8772e; }
+  .header-cta a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #e8772e; color: #fff;
+    font-family: 'Roboto Slab', serif; font-weight: 700;
+    font-size: 1rem; text-decoration: none;
+    padding: 10px 22px; border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .header-cta a:hover { background: #cf651e; }
+  .header-cta a svg { flex-shrink: 0; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0d2237 0%, #1e3a5f 45%, #2a5080 70%, #1a3350 100%);
+    padding: 90px 24px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.015) 40px,
+      rgba(255,255,255,0.015) 80px
+    );
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(232,119,46,0.15);
+    border: 1px solid rgba(232,119,46,0.4);
+    color: #e8a96a; font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 6px 18px; border-radius: 20px; margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 800; color: #fff;
+    line-height: 1.15; margin-bottom: 18px;
+    position: relative;
+  }
+  .hero h1 em { color: #e8772e; font-style: normal; }
+  .hero p {
+    font-size: 1.15rem; color: rgba(255,255,255,0.82);
+    max-width: 580px; margin: 0 auto 36px;
+    line-height: 1.7;
+  }
+  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: #e8772e; color: #fff;
+    font-family: 'Roboto Slab', serif; font-weight: 700;
+    font-size: 1.1rem; text-decoration: none;
+    padding: 16px 36px; border-radius: 4px;
+    display: inline-block;
+    box-shadow: 0 4px 18px rgba(232,119,46,0.4);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: #cf651e; transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent; color: #fff;
+    border: 2px solid rgba(255,255,255,0.45);
+    font-family: 'Roboto Slab', serif; font-weight: 600;
+    font-size: 1.05rem; text-decoration: none;
+    padding: 14px 32px; border-radius: 4px;
+    display: inline-block;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: #f4f0eb;
+    border-bottom: 3px solid #e8772e;
+    padding: 18px 24px;
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 32px;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.92rem; font-weight: 600; color: #1e3a5f;
+  }
+  .trust-icon {
+    width: 36px; height: 36px;
+    background: #1e3a5f; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #e8772e; font-size: 1rem; flex-shrink: 0;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 72px 24px;
+    background: #fff;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .section-label {
+    text-align: center;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: #e8772e; margin-bottom: 10px;
+  }
+  .section-title {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+    font-weight: 700; color: #1e3a5f;
+    margin-bottom: 48px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: #f9f6f2;
+    border: 1px solid #e8ddd0;
+    border-top: 4px solid #e8772e;
+    border-radius: 6px;
+    padding: 28px 22px;
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+  .service-card:hover { box-shadow: 0 6px 24px rgba(30,58,95,0.12); transform: translateY(-2px); }
+  .service-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, #1e3a5f, #2a5080);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px; color: #e8772e; font-size: 1.4rem;
+  }
+  .service-card h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem; font-weight: 700;
+    color: #1e3a5f;
+  }
+
+  /* ABOUT */
+  .about {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2a5080 100%);
+    padding: 72px 24px;
+  }
+  .about-inner {
+    max-width: 960px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+    align-items: center;
+  }
+  .about-text { color: #fff; }
+  .about-text .section-label { text-align: left; }
+  .about-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700; color: #fff;
+    margin-bottom: 18px; line-height: 1.25;
+  }
+  .about-title em { color: #e8772e; font-style: normal; }
+  .about-text p {
+    color: rgba(255,255,255,0.85);
+    line-height: 1.75; font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .about-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 32px;
+    color: #fff;
+  }
+  .about-card h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: #e8772e; margin-bottom: 20px;
+  }
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    margin-bottom: 16px; font-size: 0.95rem;
+    color: rgba(255,255,255,0.88);
+  }
+  .contact-item strong { color: #fff; }
+
+  /* PHONE CTA */
+  .phone-cta {
+    background: #e8772e;
+    padding: 64px 24px;
+    text-align: center;
+  }
+  .phone-cta h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800; color: #fff;
+    margin-bottom: 12px;
+  }
+  .phone-cta p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem; margin-bottom: 32px;
+  }
+  .phone-number-large {
+    display: inline-flex; align-items: center; gap: 14px;
+    background: #1e3a5f; color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800; text-decoration: none;
+    padding: 20px 48px; border-radius: 6px;
+    letter-spacing: 0.02em;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .phone-number-large:hover { background: #162d4a; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: #0d2237;
+    padding: 28px 24px;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+  }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  footer a:hover { color: #e8772e; }
+
+  @media (max-width: 768px) {
+    .about-inner { grid-template-columns: 1fr; gap: 32px; }
+    .header-brand { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-brand">GeorgiaSpec<br><span>Heating and Cooling</span></div>
+  <div class="header-cta">
+    <a href="tel:6787497300">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      (678) 749-7300
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-badge">Jefferson, GA 30549 &bull; 5.0★ Rated</div>
+  <h1>Georgia's <em>HVAC Specialists</em><br>You Can Count On</h1>
+  <p>Serving Jefferson and surrounding communities with expert heating, cooling, and air conditioning repair. Built Georgia-tough for Georgia weather.</p>
+  <div class="hero-actions">
+    <a href="tel:6787497300" class="btn-primary">Call (678) 749-7300</a>
+    <a href="#services" class="btn-secondary">Our Services</a>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item">
+    <div class="trust-icon">★</div>
+    5.0-Star Rated
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">✓</div>
+    14 Verified Reviews
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">🛠</div>
+    Licensed &amp; Insured
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">📍</div>
+    Jefferson, GA
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">⚡</div>
+    Fast Response
+  </div>
+</div>
+
+<section class="services" id="services">
+  <p class="section-label">What We Do</p>
+  <h2 class="section-title">Complete HVAC Services for Georgia Homes</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>HVAC Repair</h3>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">❄️</div>
+      <h3>AC Repair</h3>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌡️</div>
+      <h3>Heating &amp; Air Conditioning</h3>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔥</div>
+      <h3>Heating Repair</h3>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <h3>HVAC Service</h3>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <p class="section-label">About Us</p>
+      <h2 class="about-title">Proud to Serve<br><em>Georgia's Communities</em></h2>
+      <p>GeorgiaSpec Heating and Cooling is your local HVAC specialist rooted right here in Jefferson, GA. We understand Georgia's climate — the sweltering summers and chilly winters — and we build every solution around your home's real needs.</p>
+      <p>With a perfect 5-star rating, our reputation is built on showing up on time, doing the job right the first time, and treating every customer like a neighbor — because they are.</p>
+    </div>
+    <div class="about-card">
+      <h3>Contact &amp; Location</h3>
+      <div class="contact-item">
+        <span>📍</span>
+        <div><strong>Address</strong><br>249 Double Bridges Rd<br>Jefferson, GA 30549</div>
+      </div>
+      <div class="contact-item">
+        <span>📞</span>
+        <div><strong>Phone</strong><br><a href="tel:6787497300" style="color:#e8772e; font-weight:700; font-size:1.1rem; text-decoration:none;">(678) 749-7300</a></div>
+      </div>
+      <div class="contact-item">
+        <span>★</span>
+        <div><strong>Rating</strong><br>5.0 Stars &bull; 14 Reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="phone-cta">
+  <h2>Ready for Reliable HVAC Service?</h2>
+  <p>Call now — fast, friendly service from Georgia's own HVAC specialists.</p>
+  <a href="tel:6787497300" class="phone-number-large">
+    <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    (678) 749-7300
+  </a>
+</section>
+
+<footer>
+  <p>&copy; 2025 GeorgiaSpec Heating and Cooling &bull; 249 Double Bridges Rd, Jefferson, GA 30549</p>
+  <p style="margin-top:8px;">Website by <a href="#">WebCare Digital</a></p>
+</footer>
+
+</body>
+</html>

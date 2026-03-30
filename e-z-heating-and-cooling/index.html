@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E Z Heating &amp; Cooling | HVAC Services in Powder Springs, GA</title>
+<meta name="description" content="E Z Heating &amp; Cooling provides expert HVAC repair, air duct installation, and commercial HVAC services in Powder Springs, GA. Call (404) 418-2830.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1e3a5f;
+    --navy-dark: #0f1f33;
+    --orange: #e8772e;
+    --orange-dark: #c85f18;
+    --white: #ffffff;
+    --gray-50: #f8f9fa;
+    --gray-100: #f1f3f5;
+    --gray-200: #e9ecef;
+    --gray-600: #495057;
+    --gray-800: #2d3436;
+    --font: 'DM Sans', sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(30,58,95,0.10);
+    --shadow-lg: 0 8px 32px rgba(30,58,95,0.18);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--gray-800); background: var(--white); line-height: 1.6; }
+
+  /* HEADER */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--navy);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  }
+  .header-inner {
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px; text-decoration: none;
+  }
+  .logo-mark {
+    width: 40px; height: 40px; background: var(--orange);
+    border-radius: var(--radius); display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 700; color: var(--white); letter-spacing: -1px;
+    flex-shrink: 0;
+  }
+  .logo-text {
+    display: flex; flex-direction: column; line-height: 1.15;
+  }
+  .logo-name {
+    font-size: 17px; font-weight: 700; color: var(--white); letter-spacing: 0.01em;
+  }
+  .logo-sub {
+    font-size: 11px; color: rgba(255,255,255,0.65); font-weight: 400; letter-spacing: 0.05em;
+  }
+  .header-cta {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--orange); color: var(--white);
+    padding: 10px 20px; border-radius: var(--radius);
+    text-decoration: none; font-weight: 600; font-size: 15px;
+    transition: background 0.2s;
+  }
+  .header-cta:hover { background: var(--orange-dark); }
+  .header-cta .phone-icon { font-size: 17px; }
+
+  /* HERO */
+  .hero {
+    background:
+      repeating-linear-gradient(
+        135deg,
+        rgba(255,255,255,0.025) 0px,
+        rgba(255,255,255,0.025) 1px,
+        transparent 1px,
+        transparent 40px
+      ),
+      linear-gradient(160deg, var(--navy) 0%, #122845 50%, #0a1a2e 100%);
+    padding: 100px 24px 90px;
+    text-align: center;
+    color: var(--white);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(232,119,46,0.18); border: 1px solid rgba(232,119,46,0.45);
+    color: #f4a96c; padding: 5px 14px; border-radius: 40px;
+    font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase; margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 5vw, 60px); font-weight: 700; line-height: 1.1;
+    margin-bottom: 18px; letter-spacing: -0.02em;
+  }
+  .hero h1 span { color: var(--orange); }
+  .hero-sub {
+    font-size: clamp(17px, 2.2vw, 21px); color: rgba(255,255,255,0.78);
+    max-width: 560px; margin: 0 auto 36px; font-weight: 300;
+  }
+  .hero-actions {
+    display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--orange); color: var(--white);
+    padding: 16px 34px; border-radius: var(--radius);
+    font-size: 17px; font-weight: 600; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    padding: 16px 34px; border-radius: var(--radius);
+    font-size: 17px; font-weight: 500; text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.35);
+    transition: border-color 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.7); transform: translateY(-1px); }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);
+    padding: 20px 24px;
+  }
+  .trust-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: center;
+    flex-wrap: wrap; gap: 32px;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 9px;
+    font-size: 14px; font-weight: 500; color: var(--gray-600);
+  }
+  .trust-icon {
+    width: 34px; height: 34px; background: var(--navy);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .trust-item strong { color: var(--navy); font-weight: 600; }
+
+  /* SECTION COMMON */
+  section { padding: 80px 24px; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--orange); margin-bottom: 10px;
+  }
+  .section-title {
+    font-size: clamp(28px, 3.5vw, 42px); font-weight: 700;
+    color: var(--navy); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 16px;
+  }
+  .section-desc {
+    font-size: 17px; color: var(--gray-600); max-width: 580px; line-height: 1.7;
+  }
+
+  /* SERVICES */
+  .services { background: var(--white); }
+  .services-header { text-align: center; margin-bottom: 52px; }
+  .services-header .section-desc { margin: 0 auto; }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
+  }
+  .service-card {
+    background: var(--gray-50); border: 1px solid var(--gray-200);
+    border-radius: 12px; padding: 30px 28px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+  .service-icon {
+    width: 52px; height: 52px; background: linear-gradient(135deg, var(--navy), #2a5080);
+    border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    font-size: 24px; margin-bottom: 18px;
+  }
+  .service-card h3 {
+    font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 8px;
+  }
+  .service-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+
+  /* ABOUT */
+  .about { background: var(--gray-50); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  }
+  .about-visual {
+    background: linear-gradient(135deg, var(--navy) 0%, #0f2540 100%);
+    border-radius: 16px; padding: 50px 40px; color: var(--white); text-align: center;
+  }
+  .stat-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 10px;
+  }
+  .stat-box {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px; padding: 20px 16px; text-align: center;
+  }
+  .stat-num { font-size: 32px; font-weight: 700; color: var(--orange); line-height: 1; }
+  .stat-label { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 5px; font-weight: 400; }
+  .about-content .section-desc { margin-bottom: 24px; }
+  .about-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .about-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 15px; color: var(--gray-600);
+  }
+  .about-list li::before {
+    content: "✓"; color: var(--orange); font-weight: 700; flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* CTA BAND */
+  .cta-band {
+    background:
+      repeating-linear-gradient(
+        135deg,
+        rgba(255,255,255,0.03) 0px,
+        rgba(255,255,255,0.03) 1px,
+        transparent 1px,
+        transparent 40px
+      ),
+      linear-gradient(135deg, var(--navy) 0%, #0a1a2e 100%);
+    padding: 80px 24px; text-align: center; color: var(--white);
+  }
+  .cta-band h2 {
+    font-size: clamp(30px, 4vw, 48px); font-weight: 700; letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+  .cta-band p { font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 36px; }
+  .phone-big {
+    display: inline-flex; align-items: center; gap: 14px;
+    background: var(--orange); color: var(--white);
+    padding: 22px 44px; border-radius: 12px;
+    font-size: clamp(24px, 3.5vw, 36px); font-weight: 700;
+    text-decoration: none; letter-spacing: -0.01em;
+    transition: background 0.2s, transform 0.15s; box-shadow: 0 4px 24px rgba(232,119,46,0.4);
+  }
+  .phone-big:hover { background: var(--orange-dark); transform: translateY(-2px); }
+
+  /* CONTACT */
+  .contact { background: var(--white); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+  }
+  .contact-info h3 {
+    font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 18px;
+  }
+  .contact-details { display: flex; flex-direction: column; gap: 14px; }
+  .contact-row {
+    display: flex; align-items: flex-start; gap: 12px;
+    font-size: 15px; color: var(--gray-600);
+  }
+  .contact-row-icon {
+    width: 36px; height: 36px; background: var(--gray-100);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-size: 17px; flex-shrink: 0;
+  }
+  .contact-row a { color: var(--navy); font-weight: 600; text-decoration: none; }
+  .contact-row a:hover { color: var(--orange); }
+  .review-box {
+    background: var(--gray-50); border: 1px solid var(--gray-200);
+    border-radius: 12px; padding: 28px;
+  }
+  .stars { color: #f4b942; font-size: 20px; letter-spacing: 2px; margin-bottom: 10px; }
+  .review-text {
+    font-size: 16px; color: var(--gray-600); line-height: 1.7;
+    font-style: italic; margin-bottom: 14px;
+  }
+  .review-author { font-size: 14px; font-weight: 600; color: var(--navy); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy-dark); color: rgba(255,255,255,0.55);
+    padding: 28px 24px; text-align: center; font-size: 13px;
+  }
+  footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+  footer a:hover { color: var(--white); }
+  footer .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+    .hero { padding: 70px 20px 60px; }
+    .header-cta span:not(.phone-icon) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#">
+      <div class="logo-mark">EZ</div>
+      <div class="logo-text">
+        <span class="logo-name">E Z Heating &amp; Cooling</span>
+        <span class="logo-sub">Powder Springs, GA</span>
+      </div>
+    </a>
+    <a class="header-cta" href="tel:4044182830">
+      <span class="phone-icon">📞</span>
+      <span>(404) 418-2830</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-badge">Powder Springs, GA 30127</div>
+  <h1>Easy Service.<br><span>Expert Results.</span></h1>
+  <p class="hero-sub">Trusted HVAC repair, installation, and commercial services — done right, on time, every time.</p>
+  <div class="hero-actions">
+    <a class="btn-primary" href="tel:4044182830">📞 Call (404) 418-2830</a>
+    <a class="btn-outline" href="#services">See Our Services</a>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon">⭐</div>
+      <div><strong>5.0★ Rated</strong> on Google</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🔧</div>
+      <div><strong>Licensed</strong> HVAC Contractors</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🏠</div>
+      <div><strong>Residential &amp;</strong> Commercial</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">📍</div>
+      <div>Serving <strong>Powder Springs</strong> &amp; Surrounding Areas</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">⚡</div>
+      <div><strong>Fast</strong> Response Times</div>
+    </div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="services-header">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Complete HVAC Services</h2>
+      <p class="section-desc">From emergency repairs to full system installations, we handle everything your home or business needs to stay comfortable year-round.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>HVAC Repair</h3>
+        <p>Fast, accurate diagnostics and repairs for all makes and models. We get your system back online quickly.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏪</div>
+        <h3>HVAC Supply</h3>
+        <p>Quality parts and equipment sourced for your specific system needs — at competitive prices.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌡️</div>
+        <h3>Heating &amp; Cooling</h3>
+        <p>Complete heating and cooling solutions for year-round comfort in every season Georgia throws at you.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛠️</div>
+        <h3>HVAC Contractors</h3>
+        <p>Licensed contractors for new construction, renovations, and system upgrades — residential and commercial.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💨</div>
+        <h3>Air Duct Installation</h3>
+        <p>Professionally designed and installed duct systems for maximum efficiency and airflow throughout your space.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Commercial HVAC</h3>
+        <p>Scalable commercial HVAC solutions for offices, retail, restaurants, and light industrial applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div style="font-size: 48px; margin-bottom: 18px;">❄️</div>
+        <div style="font-size: 22px; font-weight: 700; margin-bottom: 6px;">E Z Heating &amp; Cooling</div>
+        <div style="font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 32px;">Powder Springs, Georgia</div>
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-num">5.0</div>
+            <div class="stat-label">Star Rating</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">6+</div>
+            <div class="stat-label">Service Types</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Availability</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">HVAC Made Easy in Powder Springs</h2>
+        <p class="section-desc">E Z Heating &amp; Cooling is your trusted local HVAC partner in Powder Springs and the greater west Atlanta area. We believe great service shouldn't be complicated — easy scheduling, transparent pricing, and expert work every time.</p>
+        <ul class="about-list">
+          <li>Licensed and insured HVAC contractors</li>
+          <li>Residential and commercial service capabilities</li>
+          <li>Air duct installation and system design</li>
+          <li>Competitive pricing with no surprise charges</li>
+          <li>5-star rated by our customers</li>
+          <li>Local Powder Springs team you can trust</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band" id="contact">
+  <h2>Ready for Reliable HVAC Service?</h2>
+  <p>Call now for fast scheduling and expert results — no runaround, no hassle.</p>
+  <a class="phone-big" href="tel:4044182830">📞 (404) 418-2830</a>
+</div>
+
+<section class="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Get In Touch</div>
+        <h3>Contact E Z Heating &amp; Cooling</h3>
+        <div class="contact-details">
+          <div class="contact-row">
+            <div class="contact-row-icon">📞</div>
+            <div><a href="tel:4044182830">(404) 418-2830</a><br><span style="font-size:13px;color:#aaa;">Call or text anytime</span></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">📍</div>
+            <div>Powder Springs, GA 30127<br><span style="font-size:13px;color:#aaa;">Serving west Atlanta metro area</span></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">🕐</div>
+            <div>Available for emergency service<br><span style="font-size:13px;color:#aaa;">Call for current availability</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="review-box">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Excellent service from start to finish. They were professional, on time, and fixed our HVAC quickly without any hassle. Highly recommend E Z Heating &amp; Cooling to anyone in the Powder Springs area."</p>
+          <div class="review-author">— Google Reviewer &bull; 5.0★ Rating</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>&copy; 2025 E Z Heating &amp; Cooling &mdash; Powder Springs, GA 30127</div>
+    <div>Website by <a href="#">WebCare Digital</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air Systems Control | HVAC Decatur, GA | Precision Comfort</title>
+<meta name="description" content="Air Systems Control — precision HVAC installation and repair in Decatur, GA. Serving N Druid Hills and greater Atlanta. 5.0★ rated. Call (404) 636-5514.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'IBM Plex Sans', sans-serif; color: #1a2332; background: #fff; }
+
+  /* STICKY HEADER */
+  header {
+    position: sticky; top: 0; z-index: 1000;
+    background: #1e3a5f;
+    padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .header-brand {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .header-icon {
+    width: 36px; height: 36px;
+    background: #e8772e;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; border-radius: 3px;
+  }
+  .header-name {
+    font-size: 1rem; font-weight: 700; color: #fff;
+    letter-spacing: 0.04em; line-height: 1.3;
+  }
+  .header-name small {
+    display: block; font-size: 0.68rem;
+    color: rgba(255,255,255,0.5); font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .header-cta a {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 2px solid #e8772e; color: #e8772e;
+    font-weight: 600; font-size: 0.92rem;
+    text-decoration: none; padding: 9px 22px;
+    border-radius: 3px; letter-spacing: 0.03em;
+    transition: background 0.2s, color 0.2s;
+  }
+  .header-cta a:hover { background: #e8772e; color: #fff; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(170deg, #0e1c2e 0%, #1e3a5f 40%, #1a3555 65%, #112236 100%);
+    padding: 100px 32px 88px;
+    position: relative; overflow: hidden;
+  }
+  /* Technical grid overlay */
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-inner { max-width: 800px; position: relative; }
+  .hero-pre {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-bottom: 20px;
+  }
+  .hero-pre-line {
+    width: 32px; height: 2px; background: #e8772e;
+  }
+  .hero-pre-text {
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #e8772e;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 700; color: #fff;
+    line-height: 1.15; margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em { color: #e8772e; font-style: normal; }
+  .hero p {
+    font-size: 1.05rem; color: rgba(255,255,255,0.72);
+    max-width: 540px; line-height: 1.8; margin-bottom: 40px;
+    font-weight: 400;
+  }
+  .hero-stats {
+    display: flex; gap: 36px; flex-wrap: wrap; margin-bottom: 40px;
+  }
+  .hero-stat { border-left: 2px solid #e8772e; padding-left: 14px; }
+  .hero-stat .val {
+    font-size: 1.6rem; font-weight: 700; color: #fff;
+    line-height: 1;
+  }
+  .hero-stat .lbl {
+    font-size: 0.72rem; font-weight: 600;
+    color: rgba(255,255,255,0.5); letter-spacing: 0.08em;
+    text-transform: uppercase; margin-top: 4px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: #e8772e; color: #fff;
+    font-weight: 600; font-size: 0.95rem;
+    text-decoration: none; padding: 14px 32px;
+    border-radius: 3px;
+    box-shadow: 0 4px 20px rgba(232,119,46,0.35);
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: #cf651e; }
+  .btn-outline {
+    background: transparent; color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(255,255,255,0.25);
+    font-weight: 500; font-size: 0.92rem;
+    text-decoration: none; padding: 14px 30px;
+    border-radius: 3px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: #e8772e; color: #e8772e; }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: #f0f4f8;
+    border-top: 3px solid #e8772e;
+    padding: 0 32px;
+    display: flex; justify-content: center; flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 18px 28px;
+    border-right: 1px solid #dce4ed;
+    font-size: 0.85rem; font-weight: 600; color: #1e3a5f;
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-badge {
+    background: #1e3a5f; color: #fff;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 3px; font-size: 0.9rem;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 80px 32px;
+    background: #fff;
+  }
+  .services-inner { max-width: 1100px; margin: 0 auto; }
+  .section-tag {
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: #e8772e; margin-bottom: 8px;
+  }
+  .section-heading {
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    font-weight: 700; color: #1e3a5f;
+    margin-bottom: 48px; letter-spacing: -0.01em;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+  }
+  .service-card {
+    background: #f8fafb;
+    border: 1px solid #dce4ed;
+    border-radius: 4px;
+    padding: 28px 24px;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  }
+  .service-card:hover {
+    border-color: #e8772e;
+    box-shadow: 0 4px 20px rgba(30,58,95,0.1);
+    transform: translateY(-2px);
+  }
+  .service-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .service-icon-box {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, #1e3a5f, #2a5080);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    color: #e8772e; font-size: 1.1rem;
+  }
+  .service-arrow { color: #e8772e; font-size: 1.2rem; }
+  .service-card h3 {
+    font-size: 0.97rem; font-weight: 700;
+    color: #1a2332; letter-spacing: 0.01em;
+  }
+  .service-card p {
+    font-size: 0.83rem; color: #6b7c93;
+    margin-top: 6px; line-height: 1.6;
+  }
+
+  /* ABOUT */
+  .about {
+    background: linear-gradient(180deg, #1e3a5f 0%, #162d4a 100%);
+    padding: 80px 32px;
+  }
+  .about-inner {
+    max-width: 1000px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px;
+    align-items: center;
+  }
+  .about-text .section-tag { text-align: left; }
+  .about-heading {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700; color: #fff;
+    margin-bottom: 20px; line-height: 1.25;
+  }
+  .about-heading em { color: #e8772e; font-style: normal; }
+  .about-text p {
+    color: rgba(255,255,255,0.78);
+    line-height: 1.8; font-size: 0.97rem; margin-bottom: 16px;
+  }
+  .info-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px; padding: 28px;
+  }
+  .info-card-title {
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: #e8772e; margin-bottom: 20px;
+  }
+  .info-row {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.9rem;
+  }
+  .info-row:last-child { border-bottom: none; }
+  .info-row .label { color: rgba(255,255,255,0.5); font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; min-width: 70px; margin-top: 2px; }
+  .info-row .value { color: #fff; font-weight: 500; }
+  .info-row .value a { color: #e8772e; text-decoration: none; font-weight: 700; }
+
+  /* PHONE CTA */
+  .phone-cta {
+    background: #e8772e;
+    padding: 72px 32px;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .phone-cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .phone-cta-inner { position: relative; }
+  .phone-cta h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 700; color: #fff; margin-bottom: 10px;
+  }
+  .phone-cta p {
+    color: rgba(255,255,255,0.88); font-size: 1.05rem;
+    margin-bottom: 36px;
+  }
+  .phone-number-large {
+    display: inline-flex; align-items: center; gap: 16px;
+    background: #1e3a5f; color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700; text-decoration: none;
+    padding: 20px 48px; border-radius: 4px;
+    box-shadow: 0 6px 28px rgba(0,0,0,0.2);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .phone-number-large:hover { background: #0e1c2e; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: #0e1c2e;
+    padding: 28px 32px;
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.82rem;
+  }
+  footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  footer a:hover { color: #e8772e; }
+
+  @media (max-width: 768px) {
+    .about-inner { grid-template-columns: 1fr; gap: 32px; }
+    .trust-item { padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-brand">
+    <div class="header-icon">&#9881;</div>
+    <div class="header-name">
+      Air Systems Control
+      <small>HVAC Specialists</small>
+    </div>
+  </div>
+  <div class="header-cta">
+    <a href="tel:4046365514">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      (404) 636-5514
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-pre">
+      <div class="hero-pre-line"></div>
+      <span class="hero-pre-text">Decatur, GA 30033 &nbsp;&bull;&nbsp; 5.0 Stars</span>
+    </div>
+    <h1>Precision Control.<br><em>Comfortable Spaces.</em></h1>
+    <p>Air Systems Control delivers expert HVAC installation and repair with an engineer's precision. Serving Decatur and N Druid Hills since day one.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="val">5.0★</div><div class="lbl">Rating</div></div>
+      <div class="hero-stat"><div class="val">6</div><div class="lbl">Reviews</div></div>
+      <div class="hero-stat"><div class="val">100%</div><div class="lbl">Licensed</div></div>
+    </div>
+    <div class="hero-actions">
+      <a href="tel:4046365514" class="btn-primary">Call (404) 636-5514</a>
+      <a href="#services" class="btn-outline">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item"><div class="trust-badge">&#10003;</div> 5.0-Star Rated</div>
+  <div class="trust-item"><div class="trust-badge">&#128205;</div> Decatur, GA</div>
+  <div class="trust-item"><div class="trust-badge">&#9881;</div> Licensed &amp; Insured</div>
+  <div class="trust-item"><div class="trust-badge">&#8987;</div> Fast Turnaround</div>
+  <div class="trust-item"><div class="trust-badge">&#128176;</div> Fair Pricing</div>
+</div>
+
+<section class="services" id="services">
+  <div class="services-inner">
+    <p class="section-tag">Services</p>
+    <h2 class="section-heading">Precision HVAC Solutions</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-header">
+          <div class="service-icon-box">&#128295;</div>
+          <span class="service-arrow">&#8250;</span>
+        </div>
+        <h3>HVAC Repair</h3>
+        <p>Fast diagnostics and repair for all makes and models.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-header">
+          <div class="service-icon-box">&#128296;</div>
+          <span class="service-arrow">&#8250;</span>
+        </div>
+        <h3>HVAC Installation</h3>
+        <p>Precision system installations sized for your space.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-header">
+          <div class="service-icon-box">&#127968;</div>
+          <span class="service-arrow">&#8250;</span>
+        </div>
+        <h3>Kitchen Appliance Stores</h3>
+        <p>Equipment sourcing and appliance integration support.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-header">
+          <div class="service-icon-box">&#127757;</div>
+          <span class="service-arrow">&#8250;</span>
+        </div>
+        <h3>Heating &amp; Air</h3>
+        <p>Complete comfort solutions for every season.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <p class="section-tag">About</p>
+      <h2 class="about-heading">Systems Built to<br><em>Spec. Every Time.</em></h2>
+      <p>Air Systems Control brings technical expertise and disciplined craftsmanship to every HVAC project. Based at 3845 N Druid Hills Rd in Decatur, we treat every installation like an engineering project — planned, precise, and built to last.</p>
+      <p>Our 5-star rating reflects a commitment to getting it right: right size, right installation, right result. No guesswork. No shortcuts.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">Contact Information</div>
+      <div class="info-row">
+        <span class="label">Address</span>
+        <span class="value">3845 N Druid Hills Rd<br>Decatur, GA 30033</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Phone</span>
+        <span class="value"><a href="tel:4046365514">(404) 636-5514</a></span>
+      </div>
+      <div class="info-row">
+        <span class="label">Rating</span>
+        <span class="value">5.0 Stars &bull; 6 Reviews</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Area</span>
+        <span class="value">Decatur &amp; Atlanta Metro</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="phone-cta">
+  <div class="phone-cta-inner">
+    <h2>Schedule Your HVAC Service</h2>
+    <p>Precision control starts with a single call. Reach us today.</p>
+    <a href="tel:4046365514" class="phone-number-large">
+      <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      (404) 636-5514
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Air Systems Control &bull; 3845 N Druid Hills Rd, Decatur, GA 30033</p>
+  <p style="margin-top:8px;">Website by <a href="#">WebCare Digital</a></p>
+</footer>
+
+</body>
+</html>

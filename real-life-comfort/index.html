@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Life Comfort | HVAC Repair & Installation | Atlanta, GA</title>
+<meta name="description" content="Real Life Comfort provides expert HVAC repair, AC installation, heating, boiler, and welding services in Atlanta, GA. Call (678) 431-7101 today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1e3a5f;
+    --orange: #e8772e;
+    --cream: #fdf8f3;
+    --warm-gray: #f5ede3;
+    --text: #2d2d2d;
+    --text-light: #5a5a5a;
+    --white: #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lora', Georgia, serif; color: var(--text); background: var(--white); }
+
+  /* HEADER */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--navy);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  .logo {
+    font-family: 'Lora', serif; font-size: 1.35rem; font-weight: 700;
+    color: var(--white); text-decoration: none; line-height: 1.2;
+  }
+  .logo span { color: var(--orange); }
+  .header-cta {
+    display: flex; align-items: center; gap: 18px;
+  }
+  .header-cta .tagline-small {
+    font-size: 0.85rem; color: rgba(255,255,255,0.7); font-style: italic;
+    display: none;
+  }
+  @media(min-width:600px){ .header-cta .tagline-small { display: block; } }
+  .btn-phone {
+    background: var(--orange); color: var(--white);
+    padding: 10px 22px; border-radius: 3px;
+    text-decoration: none; font-family: 'Lora', serif;
+    font-size: 1rem; font-weight: 700; letter-spacing: 0.01em;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .btn-phone:hover { background: #d4651e; }
+
+  /* HERO */
+  .hero {
+    position: relative; min-height: 88vh;
+    display: flex; align-items: center;
+    background: url('https://s3-media0.fl.yelpcdn.com/bphoto/vr4lRBjMRJIsk-lex0UdRg/l.jpg') center center / cover no-repeat;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(30,58,95,0.88) 45%, rgba(30,58,95,0.45) 100%);
+  }
+  .hero-content {
+    position: relative; z-index: 1;
+    max-width: 620px; padding: 60px 5%;
+  }
+  .hero-eyebrow {
+    font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--orange); font-weight: 600; margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 700;
+    color: var(--white); line-height: 1.18; margin-bottom: 20px;
+  }
+  .hero h1 em { font-style: italic; color: #f9c68a; }
+  .hero p {
+    font-size: 1.15rem; color: rgba(255,255,255,0.88);
+    line-height: 1.7; margin-bottom: 34px; font-style: italic;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--orange); color: var(--white);
+    padding: 16px 34px; border-radius: 3px;
+    text-decoration: none; font-family: 'Lora', serif;
+    font-size: 1.05rem; font-weight: 700;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: #d4651e; }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    padding: 15px 32px; border-radius: 3px;
+    text-decoration: none; font-family: 'Lora', serif;
+    font-size: 1.05rem; font-weight: 600;
+    border: 2px solid rgba(255,255,255,0.6);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--white); color: var(--white); }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: var(--orange);
+    padding: 22px 5%;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0;
+  }
+  .trust-item {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 10px 28px; text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.35);
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-num { font-size: 2rem; font-weight: 700; color: var(--white); font-family: 'Lora', serif; }
+  .trust-label { font-size: 0.78rem; color: rgba(255,255,255,0.9); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+
+  /* SECTION SHARED */
+  section { padding: 80px 5%; }
+  .section-label {
+    font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--orange); font-weight: 600; margin-bottom: 10px;
+  }
+  h2.section-title {
+    font-size: clamp(1.9rem, 3.5vw, 2.7rem); font-weight: 700;
+    color: var(--navy); margin-bottom: 16px; line-height: 1.22;
+  }
+  .section-subtitle {
+    font-size: 1.05rem; color: var(--text-light); line-height: 1.75;
+    max-width: 680px; font-style: italic;
+  }
+  .section-header { margin-bottom: 50px; }
+
+  /* SERVICES */
+  .services-section { background: var(--cream); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: var(--white);
+    border-radius: 4px;
+    padding: 32px 28px;
+    border-top: 4px solid var(--orange);
+    box-shadow: 0 2px 12px rgba(30,58,95,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(30,58,95,0.12); }
+  .service-icon { font-size: 2.2rem; margin-bottom: 14px; }
+  .service-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .service-card p { font-size: 0.92rem; color: var(--text-light); line-height: 1.65; font-style: italic; }
+
+  /* GALLERY */
+  .gallery-section { background: var(--navy); }
+  .gallery-section .section-label { color: #f9c68a; }
+  .gallery-section h2.section-title { color: var(--white); }
+  .gallery-section .section-subtitle { color: rgba(255,255,255,0.7); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 240px 240px;
+    gap: 12px;
+  }
+  .gallery-grid img {
+    width: 100%; height: 100%; object-fit: cover;
+    border-radius: 3px;
+    display: block;
+    transition: opacity 0.2s;
+  }
+  .gallery-grid img:hover { opacity: 0.88; }
+  .gallery-grid .gallery-featured {
+    grid-column: span 1; grid-row: span 2;
+  }
+  @media(max-width:680px){
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gallery-grid .gallery-featured { grid-column: span 2; height: 220px; }
+    .gallery-grid img { height: 150px; }
+  }
+
+  /* ABOUT */
+  .about-section { background: var(--white); }
+  .about-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  }
+  @media(max-width:760px){ .about-inner { grid-template-columns: 1fr; } }
+  .about-img {
+    width: 100%; border-radius: 4px;
+    box-shadow: 8px 8px 0 var(--orange);
+    display: block; aspect-ratio: 4/3; object-fit: cover;
+  }
+  .about-text .section-label { margin-bottom: 8px; }
+  .about-text h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 700; color: var(--navy); margin-bottom: 20px; line-height: 1.25; }
+  .about-text p { font-size: 1rem; color: var(--text-light); line-height: 1.8; margin-bottom: 16px; font-style: italic; }
+  .about-text p:last-of-type { margin-bottom: 28px; }
+  .about-badges { display: flex; flex-wrap: wrap; gap: 12px; }
+  .badge {
+    background: var(--warm-gray); color: var(--navy);
+    padding: 7px 16px; border-radius: 2px;
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.05em;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--navy);
+    padding: 100px 5%;
+    text-align: center;
+  }
+  .cta-section .section-label { color: #f9c68a; }
+  .cta-section h2 {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    color: var(--white); margin-bottom: 16px; font-weight: 700;
+  }
+  .cta-section p {
+    font-size: 1.1rem; color: rgba(255,255,255,0.78);
+    max-width: 520px; margin: 0 auto 44px; line-height: 1.7; font-style: italic;
+  }
+  .cta-phone-large {
+    display: inline-block;
+    background: var(--orange); color: var(--white);
+    padding: 20px 52px; border-radius: 3px;
+    text-decoration: none; font-family: 'Lora', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: background 0.2s;
+    box-shadow: 0 4px 20px rgba(232,119,46,0.4);
+  }
+  .cta-phone-large:hover { background: #d4651e; }
+  .cta-sub {
+    margin-top: 18px;
+    font-size: 0.88rem; color: rgba(255,255,255,0.55);
+    font-style: italic;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #111e2e;
+    padding: 36px 5%;
+    display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: space-between;
+    gap: 16px;
+  }
+  .footer-brand { font-size: 1rem; font-weight: 700; color: var(--white); }
+  .footer-brand span { color: var(--orange); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; }
+  .footer-links a:hover { color: var(--orange); }
+  .footer-credit { font-size: 0.78rem; color: rgba(255,255,255,0.35); font-style: italic; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">Real Life <span>Comfort</span></a>
+  <div class="header-cta">
+    <span class="tagline-small">Your Comfort, Our Priority</span>
+    <a class="btn-phone" href="tel:6784317101">(678) 431-7101</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Atlanta, GA — HVAC Experts</p>
+    <h1>Your Comfort, <em>Our Priority.</em></h1>
+    <p>Trusted heating and cooling services that keep your home feeling just right — every season, every time.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="tel:6784317101">Call (678) 431-7101</a>
+      <a class="btn-secondary" href="#services">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item">
+    <span class="trust-num">5.0★</span>
+    <span class="trust-label">Yelp Rating</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">100%</span>
+    <span class="trust-label">5-Star Reviews</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">5</span>
+    <span class="trust-label">Services Offered</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">ATL</span>
+    <span class="trust-label">Atlanta, GA</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">Fast</span>
+    <span class="trust-label">Response Time</span>
+  </div>
+</div>
+
+<section class="services-section" id="services">
+  <div class="section-header">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-title">Full-Service Heating &amp; Cooling</h2>
+    <p class="section-subtitle">From emergency repairs to new system installations, we bring warmth, cool air, and peace of mind to every home we visit.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>HVAC Repair</h3>
+      <p>Fast, reliable diagnosis and repair for all heating and cooling systems. We restore your comfort quickly.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">❄️</div>
+      <h3>AC Installation</h3>
+      <p>Expert installation of central air and ductless systems, sized right for your home.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔥</div>
+      <h3>Heating Services</h3>
+      <p>Furnace repair, heat pump service, and full heating system replacements to keep you warm all winter.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <h3>Welding Services</h3>
+      <p>Professional welding for HVAC and mechanical applications — done with precision and care.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏭</div>
+      <h3>Boiler Services</h3>
+      <p>Boiler inspection, maintenance, repair, and replacement by certified technicians.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+  <div class="section-header">
+    <p class="section-label">Our Work</p>
+    <h2 class="section-title">Craftsmanship You Can See</h2>
+    <p class="section-subtitle">Every job is done with the care and expertise your home deserves.</p>
+  </div>
+  <div class="gallery-grid">
+    <img class="gallery-featured" src="https://s3-media0.fl.yelpcdn.com/bphoto/EPQ54rQZEzeFApPvFl5Nzg/l.jpg" alt="HVAC work by Real Life Comfort">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/QlcxmK2h-p7ZO7bqADtkTg/l.jpg" alt="AC installation Atlanta">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/LurtOAjGFREP8CPIuhzVag/l.jpg" alt="Heating repair Atlanta">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/70r1_B_uA46FKikoHzGqJg/l.jpg" alt="HVAC service Atlanta">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/hH6U5jYzhi862-pfIZxUVQ/l.jpg" alt="Boiler service Atlanta">
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <img class="about-img" src="https://s3-media0.fl.yelpcdn.com/bphoto/vr4lRBjMRJIsk-lex0UdRg/l.jpg" alt="Real Life Comfort HVAC team">
+    <div class="about-text">
+      <p class="section-label">About Us</p>
+      <h2>Comfort Is More Than Temperature</h2>
+      <p>At Real Life Comfort, we believe your home should be a sanctuary — warm in winter, cool in summer, and worry-free all year long. We bring that philosophy to every service call.</p>
+      <p>Based in Atlanta, GA, our team of certified technicians handles everything from urgent repairs to complete system installations with the kind of craftsmanship and honesty you'd expect from a neighbor.</p>
+      <p>We've earned our 5-star reputation one satisfied customer at a time — and we'd love to add your home to the list.</p>
+      <div class="about-badges">
+        <span class="badge">Licensed &amp; Insured</span>
+        <span class="badge">5.0★ Rated</span>
+        <span class="badge">Atlanta, GA</span>
+        <span class="badge">Free Estimates</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <p class="section-label">Get in Touch</p>
+  <h2>Ready for Real Comfort?</h2>
+  <p>Don't suffer through another hot Atlanta summer or cold winter night. Give us a call — we're ready to help.</p>
+  <a class="cta-phone-large" href="tel:6784317101">(678) 431-7101</a>
+  <p class="cta-sub">Call anytime — we're here when you need us.</p>
+</section>
+
+<footer>
+  <div class="footer-brand">Real Life <span>Comfort</span> | Atlanta, GA</div>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="tel:6784317101">Call Us</a>
+  </div>
+  <div class="footer-credit">Website by WebCare Digital</div>
+</footer>
+
+</body>
+</html>
