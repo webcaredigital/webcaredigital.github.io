@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr Kool HVAC | Marietta, GA HVAC Services | (470) 383-2215</title>
+  <meta name="description" content="Mr Kool HVAC in Marietta, GA. 5-star HVAC repair, maintenance, boiler services, air duct repair, and ductless mini split. Call (470) 383-2215.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; color: #1e3a5f; background: #fff; line-height: 1.5; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6%; height: 70px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.22);
+    }
+    .logo { font-family: 'Bebas Neue', cursive; font-size: 1.6rem; letter-spacing: 0.08em; color: #fff; text-decoration: none; }
+    .logo span { color: #e8772e; }
+    .hp {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #e8772e; color: #fff; padding: 12px 22px; border-radius: 3px;
+      font-family: 'Lato', sans-serif; font-weight: 900; font-size: 0.95rem;
+      text-decoration: none; white-space: nowrap; letter-spacing: 0.04em;
+    }
+    .hp:hover { background: #cf6320; }
+    .hp svg { width: 17px; height: 17px; fill: currentColor; flex-shrink: 0; }
+
+    .hero {
+      background: linear-gradient(135deg, #0e1f35 0%, #1e3a5f 40%, #1a3a6b 80%, #0e1f35 100%);
+      padding: 104px 6% 90px; text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 30%, rgba(232,119,46,0.18) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .hero-stars { margin-bottom: 18px; color: #f5a623; font-size: 1.3rem; letter-spacing: 4px; display: block; }
+    .hero h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: clamp(3rem, 8vw, 6rem); letter-spacing: 0.06em; color: #fff;
+      line-height: 1; margin-bottom: 14px; position: relative; z-index: 1;
+    }
+    .hero h1 em { color: #e8772e; font-style: normal; }
+    .hero-tagline { font-size: clamp(1rem, 2.5vw, 1.25rem); color: rgba(255,255,255,0.75); font-weight: 300; margin-bottom: 10px; letter-spacing: 0.03em; }
+    .hero-loc { font-size: 0.88rem; color: rgba(255,255,255,0.42); margin-bottom: 44px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .btn-main {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: #e8772e; color: #fff; padding: 15px 34px; border-radius: 3px;
+      font-family: 'Lato', sans-serif; font-weight: 900; font-size: 1rem;
+      text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .btn-main:hover { background: #cf6320; }
+    .btn-main svg { width: 19px; height: 19px; fill: currentColor; }
+    .btn-ghost {
+      display: inline-flex; align-items: center;
+      background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.35);
+      padding: 14px 28px; border-radius: 3px;
+      font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.7); }
+
+    .trust { background: #f0f4f9; border-top: 4px solid #e8772e; padding: 26px 6%; }
+    .tr { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 16px 28px; justify-content: center; align-items: center; }
+    .ti { display: flex; align-items: center; gap: 10px; font-size: 0.86rem; font-weight: 900; color: #1e3a5f; letter-spacing: 0.04em; text-transform: uppercase; }
+    .tic { width: 36px; height: 36px; border-radius: 50%; background: #1e3a5f; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .tic svg { width: 18px; height: 18px; fill: #e8772e; }
+
+    .services { padding: 80px 6%; background: #fff; }
+    .sh { text-align: center; margin-bottom: 50px; }
+    .sl { font-family: 'Bebas Neue', cursive; font-size: 1rem; letter-spacing: 0.25em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
+    .stitle { font-family: 'Bebas Neue', cursive; font-size: clamp(2.2rem, 4.5vw, 3.2rem); letter-spacing: 0.04em; color: #1e3a5f; line-height: 1.05; margin-bottom: 12px; }
+    .sd { font-size: 1rem; color: #5a7395; font-weight: 400; max-width: 520px; margin: 0 auto; }
+    .grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 22px; }
+    .card {
+      background: #f0f4f9; border-radius: 4px; padding: 32px 24px;
+      border-top: 4px solid transparent;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { border-color: #e8772e; transform: translateY(-4px); box-shadow: 0 10px 30px rgba(30,58,95,0.1); }
+    .ci { width: 50px; height: 50px; border-radius: 4px; background: #1e3a5f; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .ci svg { width: 24px; height: 24px; fill: #e8772e; }
+    .card h3 { font-family: 'Bebas Neue', cursive; font-size: 1.4rem; letter-spacing: 0.04em; color: #1e3a5f; margin-bottom: 8px; }
+    .card p { font-size: 0.9rem; color: #5a7395; line-height: 1.65; }
+
+    .about { padding: 80px 6%; background: #f0f4f9; }
+    .ab { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .ab-t p { font-size: 0.95rem; color: #5a7395; line-height: 1.75; margin-top: 14px; }
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
+    .s { background: #fff; border-radius: 4px; padding: 20px 16px; border-left: 4px solid #e8772e; }
+    .sn { font-family: 'Bebas Neue', cursive; font-size: 2.2rem; color: #e8772e; letter-spacing: 0.03em; line-height: 1; }
+    .sk { font-size: 0.78rem; font-weight: 900; color: #1e3a5f; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .ab-p {
+      background: linear-gradient(135deg, #1e3a5f 0%, #1a3a6b 100%);
+      border-radius: 8px; padding: 50px 38px; text-align: center;
+    }
+    .ab-p svg { width: 68px; height: 68px; fill: #e8772e; margin: 0 auto 18px; display: block; }
+    .ab-p h3 { font-family: 'Bebas Neue', cursive; font-size: 1.8rem; letter-spacing: 0.05em; color: #fff; margin-bottom: 10px; }
+    .ab-p p { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.65; }
+    .ab-p .rating { font-size: 1.2rem; color: #f5a623; margin-top: 14px; letter-spacing: 3px; }
+
+    .cta { background: linear-gradient(135deg, #0e1f35 0%, #1e3a5f 50%, #1a3a6b 100%); padding: 96px 6%; text-align: center; }
+    .cta .sl { color: rgba(232,119,46,0.8); }
+    .cta .stitle { color: #fff; }
+    .bigph {
+      display: inline-flex; align-items: center; gap: 16px;
+      color: #e8772e; text-decoration: none;
+      font-family: 'Bebas Neue', cursive;
+      font-size: clamp(2.5rem, 7vw, 5rem); letter-spacing: 0.04em;
+      margin: 28px 0 16px;
+    }
+    .bigph:hover { opacity: 0.85; }
+    .bigph svg { width: 50px; height: 50px; fill: currentColor; }
+    .cn { font-size: 0.96rem; color: rgba(255,255,255,0.58); margin-bottom: 34px; }
+    .ca { font-size: 0.84rem; color: rgba(255,255,255,0.34); margin-top: 16px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    footer { background: #0a1624; padding: 32px 6%; text-align: center; }
+    .fn { font-family: 'Bebas Neue', cursive; font-size: 1.5rem; letter-spacing: 0.06em; color: #fff; margin-bottom: 8px; }
+    .fn span { color: #e8772e; }
+    .fi { font-size: 0.82rem; color: rgba(255,255,255,0.38); line-height: 1.85; }
+    .fi a { color: #e8772e; text-decoration: none; }
+    hr.fd { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 15px 0; }
+    .fc { font-size: 0.74rem; color: rgba(255,255,255,0.24); }
+
+    @media (max-width: 740px) {
+      .ab { grid-template-columns: 1fr; }
+      .ab-p { display: none; }
+      header { padding: 0 4%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo">Mr <span>Kool</span> HVAC</a>
+  <a href="tel:4703832215" class="hp">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg>
+    (470) 383-2215
+  </a>
+</header>
+
+<section class="hero">
+  <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+  <h1>Stay <em>Kool</em><br>All Year Long.</h1>
+  <p class="hero-tagline">HVAC repair, maintenance, boiler services, duct repair &amp; ductless mini splits.</p>
+  <p class="hero-loc">Marietta, GA &bull; 5-Star Rated</p>
+  <div class="hero-btns">
+    <a href="tel:4703832215" class="btn-main">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg>
+      Call (470) 383-2215
+    </a>
+    <a href="#services" class="btn-ghost">Our Services</a>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="tr">
+    <div class="ti"><div class="tic"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>5-Star Rated</div>
+    <div class="ti"><div class="tic"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>Licensed &amp; Insured</div>
+    <div class="ti"><div class="tic"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm.01 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>Fast Response</div>
+    <div class="ti"><div class="tic"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>Satisfaction Guaranteed</div>
+    <div class="ti"><div class="tic"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>Marietta Local</div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="sh">
+    <p class="sl">Services</p>
+    <h2 class="stitle">Full HVAC Coverage, Marietta GA</h2>
+    <p class="sd">Five-star service across HVAC repair, maintenance, boilers, duct work, and ductless systems.</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="ci"><svg viewBox="0 0 24 24"><path d="M22 11V3h-7v3H9V3H2v8h7V8h2v10h4v3h7v-8h-7v3h-2V8h2v3h7zM7 9H4V5h3v4zm10 6h3v4h-3v-4zm0-10h3v4h-3V5z"/></svg></div>
+      <h3>HVAC Repair</h3>
+      <p>Fast, accurate repairs for all heating and cooling systems. We diagnose the problem and fix it right the first time.</p>
+    </div>
+    <div class="card">
+      <div class="ci"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-2 .9-2 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div>
+      <h3>HVAC Maintenance</h3>
+      <p>Seasonal tune-ups and preventive maintenance that keep your system running efficiently and catch problems early.</p>
+    </div>
+    <div class="card">
+      <div class="ci"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+      <h3>Boiler Services</h3>
+      <p>Expert boiler repair, maintenance, and installation from technicians who understand hydronic heating systems inside and out.</p>
+    </div>
+    <div class="card">
+      <div class="ci"><svg viewBox="0 0 24 24"><path d="M3 12h2v8H3v-8zm4-4h2v12H7V8zm4-4h2v16h-2V4zm4 6h2v10h-2V10zm4-6h2v16h-2V4z"/></svg></div>
+      <h3>Air Duct Repair</h3>
+      <p>Targeted duct repairs to seal leaks, restore airflow, and eliminate the energy waste of a compromised duct system.</p>
+    </div>
+    <div class="card">
+      <div class="ci"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div>
+      <h3>Ductless Mini Split</h3>
+      <p>Ductless mini split installation and service for flexible, zone-controlled comfort in any room or space.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="ab">
+    <div class="ab-t">
+      <p class="sl">About Mr Kool</p>
+      <h2 class="stitle">Marietta's HVAC Pros</h2>
+      <p>Mr Kool HVAC is Marietta, GA's five-star rated HVAC company. From routine maintenance to complex boiler work, our certified technicians deliver results you can feel — and bills that reflect honest, fair pricing.</p>
+      <p>We stay cool so you can too. That means showing up on time, diagnosing accurately, and never selling you something you don't need.</p>
+      <div class="stats">
+        <div class="s"><div class="sn">5&#9733;</div><div class="sk">Rated Service</div></div>
+        <div class="s"><div class="sn">5+</div><div class="sk">Services Offered</div></div>
+        <div class="s"><div class="sn">GA</div><div class="sk">Marietta Based</div></div>
+        <div class="s"><div class="sn">&#10003;</div><div class="sk">Licensed &amp; Insured</div></div>
+      </div>
+    </div>
+    <div class="ab-p">
+      <svg viewBox="0 0 64 64"><path d="M32 4a28 28 0 1 0 0 56A28 28 0 0 0 32 4zm0 8a20 20 0 1 1 0 40A20 20 0 0 1 32 12zm0 6a14 14 0 1 0 0 28A14 14 0 0 0 32 18zm0 4a10 10 0 1 1 0 20A10 10 0 0 1 32 22zm0 4a6 6 0 1 0 0 12A6 6 0 0 0 32 26z"/></svg>
+      <h3>Mr Kool HVAC</h3>
+      <p>Marietta homeowners trust Mr Kool for five-star HVAC service year-round.</p>
+      <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <p class="sl">Stay Comfortable</p>
+  <h2 class="stitle">Call Mr Kool Today</h2>
+  <a href="tel:4703832215" class="bigph">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg>
+    (470) 383-2215
+  </a>
+  <p class="cn">HVAC Repair &bull; Maintenance &bull; Boiler Services &bull; Air Duct Repair &bull; Ductless Mini Split</p>
+  <a href="tel:4703832215" class="btn-main" style="font-size:1rem; padding:15px 34px;">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg>
+    Schedule Service Now
+  </a>
+  <p class="ca">Marietta, GA</p>
+</section>
+
+<footer>
+  <div class="fn">Mr <span>Kool</span> HVAC</div>
+  <div class="fi">
+    Marietta, GA<br>
+    <a href="tel:4703832215">(470) 383-2215</a>
+  </div>
+  <hr class="fd">
+  <div class="fc">Website by WebCare Digital</div>
+</footer>
+
+</body>
+</html>

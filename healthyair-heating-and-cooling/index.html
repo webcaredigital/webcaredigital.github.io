@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthyair Heating &amp; Cooling — Atlanta, GA HVAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Raleway', sans-serif; color: #1e3a5f; background: #fff; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 36px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.22);
+    }
+    .header-brand { display: flex; align-items: center; gap: 8px; }
+    .header-leaf { color: #5db85d; font-size: 1.2rem; }
+    .header-name { color: #fff; font-size: 1.1rem; font-weight: 700; }
+    .header-call {
+      background: #e8772e; color: #fff;
+      padding: 10px 22px; border-radius: 6px;
+      font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-call:hover { background: #cf6420; }
+
+    .hero {
+      background: linear-gradient(148deg, #0c2035 0%, #1e3a5f 50%, #174a6a 100%);
+      position: relative; overflow: hidden;
+      padding: 98px 36px 88px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(ellipse at 60% 30%, rgba(93,184,93,0.05) 0%, transparent 55%),
+                        radial-gradient(ellipse at 20% 70%, rgba(232,119,46,0.05) 0%, transparent 50%);
+    }
+    .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(93,184,93,0.12); border: 1px solid rgba(93,184,93,0.3);
+      color: #7ecf7e; font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 5px 16px; border-radius: 20px; margin-bottom: 20px;
+    }
+    .hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.3rem); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+    .hero-tagline { color: rgba(255,255,255,0.7); font-size: 1.1rem; font-weight: 500; margin-bottom: 36px; font-style: italic; }
+    .hero-cta {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      padding: 15px 44px; border-radius: 6px;
+      font-weight: 700; font-size: 1.05rem;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(232,119,46,0.4);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
+
+    .stats {
+      background: #e8772e;
+      display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-item {
+      flex: 1 1 150px; text-align: center;
+      padding: 22px 18px;
+      border-right: 1px solid rgba(255,255,255,0.22);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 1.7rem; font-weight: 700; color: #fff; line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.85); font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .services { padding: 76px 36px; background: #f4f8f4; }
+    .section-label { text-align: center; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
+    .section-title { text-align: center; font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 800; color: #1e3a5f; margin-bottom: 50px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 22px; max-width: 900px; margin: 0 auto; }
+    .service-card {
+      background: #fff; border-radius: 10px;
+      padding: 32px 22px; text-align: center;
+      box-shadow: 0 2px 14px rgba(30,58,95,0.07);
+      border-top: 4px solid #1e3a5f;
+      transition: transform 0.2s, box-shadow 0.2s, border-top-color 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 26px rgba(30,58,95,0.12); border-top-color: #e8772e; }
+    .service-icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .service-card h3 { font-size: 0.95rem; font-weight: 700; color: #1e3a5f; }
+
+    .about { padding: 76px 36px; background: #fff; }
+    .about-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .about-text p { font-size: 0.97rem; line-height: 1.78; color: #445; margin-bottom: 16px; }
+    .info-grid { display: flex; flex-direction: column; gap: 14px; }
+    .info-item { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border: 1px solid #e3ede3; border-radius: 8px; }
+    .info-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .info-item strong { display: block; font-size: 0.75rem; font-weight: 700; color: #1e3a5f; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+    .info-item span { font-size: 0.9rem; color: #556; }
+    @media (max-width: 640px) { .about-inner { grid-template-columns: 1fr; } }
+
+    .cta-section {
+      background: linear-gradient(148deg, #0c2035, #1e3a5f);
+      padding: 76px 36px; text-align: center;
+    }
+    .cta-section h2 { color: #fff; font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
+    .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 24px; font-style: italic; }
+    .cta-phone { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 700; color: #e8772e; display: block; margin-bottom: 28px; text-decoration: none; }
+    .cta-phone:hover { color: #f0944a; }
+    .cta-btn {
+      display: inline-block; background: #e8772e; color: #fff;
+      padding: 17px 48px; border-radius: 6px;
+      font-weight: 700; font-size: 1.05rem; text-decoration: none;
+      box-shadow: 0 4px 18px rgba(232,119,46,0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #cf6420; }
+
+    footer {
+      background: #060f1c; color: rgba(255,255,255,0.42);
+      text-align: center; padding: 22px 36px;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.72); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-brand">
+      <div class="header-leaf">&#127807;</div>
+      <div class="header-name">Healthyair Heating &amp; Cooling</div>
+    </div>
+    <a href="tel:7702665247" class="header-call">&#128222; (770) 266-5247</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">&#127807; Atlanta, GA &mdash; Clean Air Specialists</div>
+      <h1>Healthyair Heating &amp; Cooling</h1>
+      <p class="hero-tagline">Breathe Better. Live Comfortably.</p>
+      <a href="tel:7702665247" class="hero-cta">Call (770) 266-5247</a>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">Atlanta</div><div class="stat-label">Atlanta, GA</div></div>
+    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates</div></div>
+    <div class="stat-item"><div class="stat-num">Healthy</div><div class="stat-label">Air Quality Focus</div></div>
+    <div class="stat-item"><div class="stat-num">Pro</div><div class="stat-label">Certified Techs</div></div>
+  </div>
+
+  <section class="services">
+    <div class="section-label">Services</div>
+    <h2 class="section-title">Clean Air. Total Comfort.</h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Repair</h3></div>
+      <div class="service-card"><div class="service-icon">&#127797;</div><h3>Mini Split Systems</h3></div>
+      <div class="service-card"><div class="service-icon">&#10052;</div><h3>Heating &amp; Air Conditioning</h3></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="section-label">About Healthyair</div>
+    <h2 class="section-title">Your Atlanta HVAC Health Experts</h2>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>Healthyair Heating &amp; Cooling is Atlanta's air quality-focused HVAC company. We believe great HVAC isn't just about temperature &mdash; it's about clean, healthy air for your family.</p>
+        <p>Located at 1327 Boyd Ave Unit B in Atlanta, we specialize in HVAC repair, mini split systems, and full heating and air conditioning solutions. Breathe better. Live comfortably.</p>
+      </div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><strong>Phone</strong><span><a href="tel:7702665247" style="color:#e8772e;text-decoration:none;">(770) 266-5247</a></span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128205;</div>
+          <div><strong>Address</strong><span>1327 Boyd Ave Unit B<br>Atlanta, GA</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128336;</div>
+          <div><strong>Hours</strong><span>Mon&ndash;Fri: 8am&ndash;6pm<br>Sat: 9am&ndash;3pm</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#10003;</div>
+          <div><strong>Free Estimates</strong><span>Call for a no-obligation quote</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Breathe Better Today</h2>
+    <p>Breathe Better. Live Comfortably. &mdash; Healthyair Heating &amp; Cooling, Atlanta, GA</p>
+    <a href="tel:7702665247" class="cta-phone">(770) 266-5247</a>
+    <a href="tel:7702665247" class="cta-btn">Call Healthyair Today</a>
+  </section>
+
+  <footer>
+    <p><strong>Healthyair Heating &amp; Cooling</strong> &mdash; 1327 Boyd Ave Unit B, Atlanta, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
+  </footer>
+
+</body>
+</html>

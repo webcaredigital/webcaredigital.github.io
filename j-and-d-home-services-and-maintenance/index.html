@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J &amp; D Home Services and Maintenance — Atlanta, GA HVAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Rubik', sans-serif; color: #1e3a5f; background: #fff; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 36px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.24);
+    }
+    .header-name { color: #fff; font-size: 1.1rem; font-weight: 700; }
+    .header-call {
+      background: #e8772e; color: #fff;
+      padding: 10px 22px; border-radius: 8px;
+      font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-call:hover { background: #cf6420; }
+
+    .hero {
+      background: linear-gradient(148deg, #0c1f35 0%, #1e3a5f 55%, #1b3d65 100%);
+      position: relative; overflow: hidden;
+      padding: 96px 36px 86px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.04) 0%, transparent 50%);
+    }
+    .hero-content { position: relative; max-width: 680px; margin: 0 auto; }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(232,119,46,0.18); color: #e8772e;
+      border: 1px solid rgba(232,119,46,0.35);
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 5px 16px; border-radius: 8px; margin-bottom: 18px;
+    }
+    .hero h1 { color: #fff; font-size: clamp(2rem, 4.8vw, 3.2rem); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+    .hero-tagline { color: rgba(255,255,255,0.7); font-size: 1.05rem; font-weight: 400; margin-bottom: 36px; }
+    .hero-cta {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      padding: 15px 44px; border-radius: 8px;
+      font-weight: 700; font-size: 1.05rem;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(232,119,46,0.4);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
+
+    .stats {
+      background: #e8772e;
+      display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-item {
+      flex: 1 1 150px; text-align: center;
+      padding: 22px 18px;
+      border-right: 1px solid rgba(255,255,255,0.22);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 1.7rem; font-weight: 700; color: #fff; line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.85); font-weight: 500; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .services { padding: 76px 36px; background: #f4f7fa; }
+    .section-label { text-align: center; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
+    .section-title { text-align: center; font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 800; color: #1e3a5f; margin-bottom: 50px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 22px; max-width: 960px; margin: 0 auto; }
+    .service-card {
+      background: #fff; border-radius: 10px;
+      padding: 30px 20px; text-align: center;
+      box-shadow: 0 2px 12px rgba(30,58,95,0.07);
+      border-top: 4px solid #e8772e;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 26px rgba(30,58,95,0.12); }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 { font-size: 0.93rem; font-weight: 600; color: #1e3a5f; }
+
+    .about { padding: 76px 36px; background: #fff; }
+    .about-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .about-text p { font-size: 0.96rem; line-height: 1.78; color: #445; margin-bottom: 16px; }
+    .info-grid { display: flex; flex-direction: column; gap: 14px; }
+    .info-item { display: flex; gap: 12px; align-items: flex-start; padding: 13px 15px; background: #f4f7fa; border-radius: 10px; }
+    .info-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .info-item strong { display: block; font-size: 0.75rem; font-weight: 600; color: #e8772e; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+    .info-item span { font-size: 0.9rem; color: #556; }
+    @media (max-width: 640px) { .about-inner { grid-template-columns: 1fr; } }
+
+    .cta-section {
+      background: linear-gradient(148deg, #0c1f35, #1e3a5f);
+      padding: 76px 36px; text-align: center;
+    }
+    .cta-section h2 { color: #fff; font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
+    .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+    .cta-phone { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 700; color: #e8772e; display: block; margin-bottom: 28px; text-decoration: none; }
+    .cta-phone:hover { color: #f0944a; }
+    .cta-btn {
+      display: inline-block; background: #e8772e; color: #fff;
+      padding: 17px 48px; border-radius: 8px;
+      font-weight: 700; font-size: 1.05rem; text-decoration: none;
+      box-shadow: 0 4px 18px rgba(232,119,46,0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #cf6420; }
+
+    footer {
+      background: #060f1c; color: rgba(255,255,255,0.42);
+      text-align: center; padding: 22px 36px;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.72); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-name">J &amp; D Home Services and Maintenance</div>
+    <a href="tel:6787540574" class="header-call">&#128222; (678) 754-0574</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">Atlanta, GA</div>
+      <h1>J &amp; D Home Services and Maintenance</h1>
+      <p class="hero-tagline">Full-Service HVAC &amp; Emergency Home Services in Atlanta</p>
+      <a href="tel:6787540574" class="hero-cta">Call (678) 754-0574</a>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">Atlanta</div><div class="stat-label">Atlanta, GA</div></div>
+    <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Emergency Service</div></div>
+    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates</div></div>
+    <div class="stat-item"><div class="stat-num">Pro</div><div class="stat-label">Certified Team</div></div>
+  </div>
+
+  <section class="services">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Home Services You Can Trust</h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Service</h3></div>
+      <div class="service-card"><div class="service-icon">&#128168;</div><h3>Air Duct Installation</h3></div>
+      <div class="service-card"><div class="service-icon">&#128680;</div><h3>Emergency Services</h3></div>
+      <div class="service-card"><div class="service-icon">&#128293;</div><h3>Flame Sensor Repair</h3></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="section-label">About J &amp; D</div>
+    <h2 class="section-title">Atlanta's Reliable Home Service Team</h2>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>J &amp; D Home Services and Maintenance is Atlanta's trusted provider for HVAC, air duct installation, and emergency home services. We respond quickly when you need us most.</p>
+        <p>From flame sensor repairs to full duct installations, our team handles it all with professional expertise and fair pricing. Call anytime for fast service in Atlanta and surrounding areas.</p>
+      </div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><strong>Phone</strong><span><a href="tel:6787540574" style="color:#e8772e;text-decoration:none;">(678) 754-0574</a></span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128205;</div>
+          <div><strong>Location</strong><span>Atlanta, GA &amp; Surrounding Areas</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128680;</div>
+          <div><strong>Emergency</strong><span>Emergency services available</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#10003;</div>
+          <div><strong>Free Estimates</strong><span>No-cost quotes on all jobs</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Need Help Now?</h2>
+    <p>J &amp; D Home Services &mdash; Atlanta's responsive home service team</p>
+    <a href="tel:6787540574" class="cta-phone">(678) 754-0574</a>
+    <a href="tel:6787540574" class="cta-btn">Call J &amp; D Today</a>
+  </section>
+
+  <footer>
+    <p><strong>J &amp; D Home Services and Maintenance</strong> &mdash; Atlanta, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
+  </footer>
+
+</body>
+</html>

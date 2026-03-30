@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moreno's Master Ducting — Griffin, GA Air Duct Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Source Sans 3', sans-serif; color: #1e3a5f; background: #fff; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 13px 36px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.26);
+    }
+    .header-name { color: #fff; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; }
+    .header-call {
+      background: #e8772e; color: #fff;
+      padding: 10px 22px; border-radius: 4px;
+      font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-call:hover { background: #cf6420; }
+
+    .hero {
+      background: linear-gradient(155deg, #0a1d32 0%, #1e3a5f 55%, #173357 100%);
+      position: relative; overflow: hidden;
+      padding: 96px 36px 86px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(ellipse at 75% 25%, rgba(232,119,46,0.07) 0%, transparent 55%),
+                        repeating-linear-gradient(135deg, transparent, transparent 30px, rgba(255,255,255,0.015) 30px, rgba(255,255,255,0.015) 31px);
+    }
+    .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
+    .hero-rating { color: #e8772e; font-size: 1.1rem; letter-spacing: 0.1em; margin-bottom: 12px; }
+    .hero h1 { color: #fff; font-family: 'Playfair Display', serif; font-size: clamp(2.1rem, 5vw, 3.5rem); font-weight: 900; font-style: italic; line-height: 1.15; margin-bottom: 14px; }
+    .hero h1 em { color: #e8772e; font-style: italic; }
+    .hero-tagline { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 36px; font-style: italic; }
+    .hero-cta {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      padding: 15px 44px; border-radius: 4px;
+      font-weight: 600; font-size: 1.05rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.45);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
+
+    .stats {
+      background: #e8772e;
+      display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-item {
+      flex: 1 1 150px; text-align: center;
+      padding: 22px 18px;
+      border-right: 1px solid rgba(255,255,255,0.22);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; color: #fff; line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.85); font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .services { padding: 76px 36px; background: #f5f7fb; }
+    .section-label { text-align: center; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
+    .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 3.5vw, 2.5rem); font-weight: 700; color: #1e3a5f; margin-bottom: 50px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 22px; max-width: 960px; margin: 0 auto; }
+    .service-card {
+      background: #fff; border-radius: 6px;
+      padding: 30px 20px; text-align: center;
+      box-shadow: 0 2px 12px rgba(30,58,95,0.07);
+      border-bottom: 3px solid #1e3a5f;
+      transition: transform 0.2s, box-shadow 0.2s, border-bottom-color 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 26px rgba(30,58,95,0.12); border-bottom-color: #e8772e; }
+    .service-icon { font-size: 2rem; margin-bottom: 12px; }
+    .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #1e3a5f; }
+
+    .about { padding: 76px 36px; background: #fff; }
+    .about-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .about-text p { font-size: 0.97rem; line-height: 1.8; color: #445; margin-bottom: 16px; }
+    .info-grid { display: flex; flex-direction: column; gap: 14px; }
+    .info-item { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; background: #f5f7fb; border-radius: 4px; border-left: 3px solid #e8772e; }
+    .info-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .info-item strong { display: block; font-family: 'Playfair Display', serif; font-size: 0.85rem; font-weight: 700; color: #1e3a5f; margin-bottom: 2px; }
+    .info-item span { font-size: 0.9rem; color: #556; }
+    @media (max-width: 640px) { .about-inner { grid-template-columns: 1fr; } }
+
+    .cta-section {
+      background: linear-gradient(155deg, #0a1d32, #1e3a5f);
+      padding: 76px 36px; text-align: center;
+    }
+    .cta-section h2 { color: #fff; font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 3.5vw, 2.5rem); font-weight: 700; font-style: italic; margin-bottom: 10px; }
+    .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+    .cta-phone { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 700; color: #e8772e; display: block; margin-bottom: 28px; text-decoration: none; }
+    .cta-phone:hover { color: #f0944a; }
+    .cta-btn {
+      display: inline-block; background: #e8772e; color: #fff;
+      padding: 17px 48px; border-radius: 4px;
+      font-weight: 600; font-size: 1.05rem; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #cf6420; }
+
+    footer {
+      background: #060f1c; color: rgba(255,255,255,0.42);
+      text-align: center; padding: 22px 36px;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.72); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-name">Moreno's Master Ducting</div>
+    <a href="tel:4707786951" class="header-call">&#128222; (470) 778-6951</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-rating">&#9733;&#9733;&#9733;&#9733;&#9733; &mdash; Griffin, GA</div>
+      <h1>Moreno's <em>Master</em> Ducting</h1>
+      <p class="hero-tagline">Master-Level Duct Work</p>
+      <a href="tel:4707786951" class="hero-cta">Call (470) 778-6951</a>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">5.0&#9733;</div><div class="stat-label">Rating</div></div>
+    <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">Review</div></div>
+    <div class="stat-item"><div class="stat-num">Griffin</div><div class="stat-label">Griffin, GA</div></div>
+    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates</div></div>
+  </div>
+
+  <section class="services">
+    <div class="section-label">Our Expertise</div>
+    <h2 class="section-title">Master Duct Services</h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">&#128295;</div><h3>Air Duct Repair</h3></div>
+      <div class="service-card"><div class="service-icon">&#128168;</div><h3>Air Duct Cleaning</h3></div>
+      <div class="service-card"><div class="service-icon">&#128168;</div><h3>Air Duct Installation</h3></div>
+      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Service</h3></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="section-label">About Us</div>
+    <h2 class="section-title">Griffin's Duct Work Masters</h2>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>Moreno's Master Ducting brings master-level craftsmanship to every duct job in Griffin, GA. We specialize in air duct repair, cleaning, and installation with the precision and expertise that the name implies.</p>
+        <p>When you need duct work done right the first time, Moreno's is the call to make. Our 5-star reputation speaks for itself. Call today for a free estimate.</p>
+      </div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><strong>Phone</strong><span><a href="tel:4707786951" style="color:#e8772e;text-decoration:none;">(470) 778-6951</a></span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128205;</div>
+          <div><strong>Location</strong><span>Griffin, GA &amp; Surrounding Areas</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128336;</div>
+          <div><strong>Hours</strong><span>Mon&ndash;Fri: 8am&ndash;6pm</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#9733;</div>
+          <div><strong>Reputation</strong><span>5-star rated master ducting specialists</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Master-Level Duct Work</h2>
+    <p>Moreno's Master Ducting &mdash; serving Griffin, GA with expert air duct services</p>
+    <a href="tel:4707786951" class="cta-phone">(470) 778-6951</a>
+    <a href="tel:4707786951" class="cta-btn">Call Moreno's Today</a>
+  </section>
+
+  <footer>
+    <p><strong>Moreno's Master Ducting</strong> &mdash; Griffin, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
+  </footer>
+
+</body>
+</html>
