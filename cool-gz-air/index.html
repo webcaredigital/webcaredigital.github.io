@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cool G'z Air | HVAC & Heating Jonesboro, GA</title>
+<meta name="description" content="Cool G'z Air delivers HVAC repair, heating, handyman, and HVAC supply in Jonesboro, GA. Cool air, cold prices, hot service. Call (404) 333-8709.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1e3a5f;
+    --navy-mid: #1a3354;
+    --navy-dark: #0d1d30;
+    --orange: #e8772e;
+    --orange-hot: #ff7b1e;
+    --cyan: #00d4f5;
+    --bg-dark: #0a1526;
+    --bg-panel: #111f33;
+    --text: #1a2634;
+    --text-light: #556070;
+    --white: #ffffff;
+    --light-bg: #f0f5fa;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Archivo', sans-serif; color: var(--text); background: var(--white); }
+
+  /* HEADER */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--bg-dark);
+    padding: 0 5%;
+    height: 70px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 3px solid var(--orange);
+  }
+  .logo-link { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .logo-mark {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.6rem; color: var(--cyan);
+    line-height: 1; filter: drop-shadow(0 0 8px rgba(0,212,245,0.5));
+  }
+  .logo-text { display: flex; flex-direction: column; }
+  .logo-name { font-family: 'Archivo Black', sans-serif; font-size: 1.1rem; color: var(--white); letter-spacing: 0.02em; }
+  .logo-city { font-size: 0.62rem; color: rgba(255,255,255,0.45); letter-spacing: 0.16em; text-transform: uppercase; font-weight: 300; }
+  .header-right { display: flex; align-items: center; gap: 14px; }
+  .hdr-tagline { font-size: 0.78rem; color: var(--cyan); font-style: italic; display: none; font-weight: 400; }
+  @media(min-width:560px){ .hdr-tagline { display: block; } }
+  .btn-hdr {
+    background: var(--orange); color: var(--white);
+    padding: 10px 28px;
+    text-decoration: none; font-family: 'Archivo Black', sans-serif;
+    font-size: 0.9rem; letter-spacing: 0.04em;
+    transition: background 0.15s; white-space: nowrap;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  }
+  .btn-hdr:hover { background: var(--orange-hot); }
+
+  /* HERO */
+  .hero {
+    position: relative; min-height: 88vh;
+    display: flex; align-items: center;
+    background: url('https://s3-media0.fl.yelpcdn.com/bphoto/imsGCpse6w2DgTNw9mFDog/l.jpg') center center / cover no-repeat;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(10,21,38,0.97) 35%, rgba(10,21,38,0.6) 100%);
+  }
+  .hero-geo1 {
+    position: absolute; top: 0; right: 0;
+    width: 0; height: 0;
+    border-left: 200px solid transparent;
+    border-top: 200px solid rgba(232,119,46,0.07);
+    pointer-events: none;
+  }
+  .hero-geo2 {
+    position: absolute; bottom: 0; left: 0;
+    width: 120px; height: 120px;
+    background: rgba(0,212,245,0.05);
+    transform: rotate(45deg) translate(-30%, 30%);
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 1; padding: 80px 5%; max-width: 680px; }
+  .hero-kicker {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,212,245,0.10); border: 1px solid var(--cyan);
+    color: var(--cyan); padding: 5px 20px;
+    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; margin-bottom: 24px;
+    clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+  }
+  .hero h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(2.6rem, 6.5vw, 5rem); font-weight: 400;
+    color: var(--white); line-height: 0.95; letter-spacing: -0.01em;
+    margin-bottom: 22px; text-transform: uppercase;
+  }
+  .hero h1 .cold { color: var(--cyan); }
+  .hero h1 .hot { color: var(--orange); }
+  .hero p {
+    font-size: 1.05rem; color: rgba(255,255,255,0.78);
+    line-height: 1.65; margin-bottom: 36px; font-weight: 300;
+    max-width: 500px;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-main {
+    background: var(--orange); color: var(--white);
+    padding: 16px 40px;
+    text-decoration: none; font-family: 'Archivo Black', sans-serif;
+    font-size: 0.95rem; letter-spacing: 0.04em;
+    transition: background 0.15s;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+  .btn-main:hover { background: var(--orange-hot); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    padding: 15px 34px;
+    text-decoration: none; font-family: 'Archivo Black', sans-serif;
+    font-size: 0.95rem; letter-spacing: 0.04em;
+    border: 2px solid rgba(255,255,255,0.35);
+    transition: border-color 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--cyan); color: var(--cyan); }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: var(--orange);
+    display: flex; flex-wrap: wrap; justify-content: center;
+  }
+  .trust-item {
+    flex: 1; min-width: 120px;
+    padding: 20px 10px; text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.3);
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-num { font-family: 'Archivo Black', sans-serif; font-size: 1.8rem; color: var(--white); }
+  .trust-label { font-size: 0.67rem; color: rgba(255,255,255,0.88); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 4px; }
+
+  /* SECTIONS */
+  section { padding: 84px 5%; }
+  .eyebrow { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--orange); font-weight: 700; margin-bottom: 10px; }
+  h2.stitle {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 400;
+    color: var(--navy); text-transform: uppercase;
+    letter-spacing: -0.01em; line-height: 1; margin-bottom: 14px;
+  }
+  .slead { font-size: 0.97rem; color: var(--text-light); line-height: 1.7; max-width: 580px; font-weight: 300; }
+  .shdr { margin-bottom: 50px; }
+
+  /* SERVICES */
+  .services-bg { background: var(--light-bg); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+  }
+  .service-card {
+    background: var(--white); padding: 28px 22px;
+    position: relative; overflow: hidden;
+    border-bottom: 3px solid var(--orange);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(30,58,95,0.1); }
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: linear-gradient(to bottom, var(--cyan), var(--navy));
+  }
+  .svc-ico { font-size: 2.2rem; margin-bottom: 12px; display: block; }
+  .service-card h3 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.95rem; color: var(--navy);
+    text-transform: uppercase; letter-spacing: 0.03em;
+    margin-bottom: 8px;
+  }
+  .service-card p { font-size: 0.86rem; color: var(--text-light); line-height: 1.62; font-weight: 300; }
+
+  /* GALLERY */
+  .gallery-bg { background: var(--bg-panel); }
+  .gallery-bg .eyebrow { color: var(--cyan); }
+  .gallery-bg h2.stitle { color: var(--white); }
+  .gallery-bg .slead { color: rgba(255,255,255,0.5); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 220px 180px;
+    gap: 8px;
+  }
+  .gallery-grid img {
+    width: 100%; height: 100%; object-fit: cover;
+    display: block; filter: saturate(0.88) brightness(0.9);
+    transition: filter 0.3s, transform 0.3s;
+  }
+  .gallery-grid img:hover { filter: saturate(1.2) brightness(1); transform: scale(1.01); }
+  .gallery-grid img.tall { grid-row: span 2; height: 100%; }
+  @media(max-width:620px){
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gallery-grid img { height: 160px; }
+    .gallery-grid img.tall { grid-row: span 1; height: 160px; }
+  }
+
+  /* ABOUT */
+  .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  @media(max-width:720px){ .about-layout { grid-template-columns: 1fr; gap: 32px; } }
+  .about-img-wrap { position: relative; }
+  .about-img { width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover; }
+  .about-img-wrap::after {
+    content: '';
+    position: absolute; bottom: -8px; right: -8px;
+    width: 50%; height: 50%;
+    border: 3px solid var(--orange);
+    pointer-events: none;
+  }
+  .about-text h2 { margin-bottom: 16px; }
+  .about-text p { font-size: 0.96rem; color: var(--text-light); line-height: 1.75; margin-bottom: 14px; font-weight: 300; }
+  .about-text p:last-of-type { margin-bottom: 26px; }
+  .geo-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .geo-tag {
+    background: var(--navy); color: var(--white);
+    padding: 7px 20px;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  }
+  .geo-tag.accent { background: var(--orange); }
+
+  /* CTA */
+  .cta-section {
+    background: var(--bg-dark);
+    text-align: center; padding: 100px 5%;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cyan), var(--orange), var(--cyan));
+  }
+  .cta-section .eyebrow { color: var(--cyan); }
+  .cta-section h2.stitle { color: var(--white); }
+  .cta-section > p {
+    font-size: 1rem; color: rgba(255,255,255,0.65);
+    max-width: 440px; margin: 0 auto 40px; line-height: 1.65; font-weight: 300;
+  }
+  .phone-cta {
+    display: inline-block;
+    background: var(--orange); color: var(--white);
+    padding: 22px 64px;
+    text-decoration: none; font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem); letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: background 0.15s;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    box-shadow: 0 6px 28px rgba(232,119,46,0.45);
+  }
+  .phone-cta:hover { background: var(--orange-hot); }
+  .cta-note { margin-top: 16px; font-size: 0.8rem; color: rgba(255,255,255,0.35); letter-spacing: 0.12em; text-transform: uppercase; }
+
+  /* FOOTER */
+  footer {
+    background: #060d17;
+    padding: 28px 5%;
+    display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: space-between; gap: 12px;
+    border-top: 2px solid var(--navy-mid);
+  }
+  .footer-logo { font-family: 'Archivo Black', sans-serif; font-size: 0.95rem; color: var(--white); text-transform: uppercase; }
+  .footer-logo span { color: var(--cyan); }
+  .footer-nav { display: flex; gap: 18px; }
+  .footer-nav a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+  .footer-nav a:hover { color: var(--orange); }
+  .footer-credit { font-size: 0.72rem; color: rgba(255,255,255,0.28); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo-link" href="#">
+    <div class="logo-mark">G'z</div>
+    <div class="logo-text">
+      <span class="logo-name">Cool G'z Air</span>
+      <span class="logo-city">Jonesboro, GA · HVAC &amp; More</span>
+    </div>
+  </a>
+  <div class="header-right">
+    <span class="hdr-tagline">Cool Air. Cold Prices.</span>
+    <a class="btn-hdr" href="tel:4043338709">(404) 333-8709</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-geo1"></div>
+  <div class="hero-geo2"></div>
+  <div class="hero-content">
+    <div class="hero-kicker">★★★★★ Jonesboro, GA</div>
+    <h1><span class="cold">Cool</span> Air.<br><span class="cold">Cold</span> Prices.<br><span class="hot">Hot</span> Service.</h1>
+    <p>Cool G'z Air keeps Jonesboro comfortable — with the kind of energy, hustle, and expertise that sets us apart from the rest.</p>
+    <div class="hero-actions">
+      <a class="btn-main" href="tel:4043338709">Call (404) 333-8709</a>
+      <a class="btn-outline" href="#services">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item">
+    <span class="trust-num">5.0★</span>
+    <span class="trust-label">Yelp Rating</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">Low</span>
+    <span class="trust-label">Cold Prices</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">4+</span>
+    <span class="trust-label">Services</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">GA</span>
+    <span class="trust-label">Jonesboro</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">Free</span>
+    <span class="trust-label">Estimates</span>
+  </div>
+</div>
+
+<section class="services-bg" id="services">
+  <div class="shdr">
+    <p class="eyebrow">What We Do</p>
+    <h2 class="stitle">Full Service. Real Hustle.</h2>
+    <p class="slead">HVAC, heating, handyman work, and supply — Cool G'z is the one call that handles it all in Jonesboro.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="svc-ico">🔧</span>
+      <h3>HVAC Repair</h3>
+      <p>Fast, reliable HVAC diagnosis and repair. We keep your system running right all year long.</p>
+    </div>
+    <div class="service-card">
+      <span class="svc-ico">🌡️</span>
+      <h3>Heating &amp; Air Conditioning</h3>
+      <p>Full heating and cooling solutions for your home — installed, repaired, and maintained right.</p>
+    </div>
+    <div class="service-card">
+      <span class="svc-ico">🛠️</span>
+      <h3>Handyman Services</h3>
+      <p>Beyond HVAC — general handyman work handled by skilled, reliable technicians.</p>
+    </div>
+    <div class="service-card">
+      <span class="svc-ico">📦</span>
+      <h3>HVAC Supply</h3>
+      <p>Need parts? We carry HVAC supply to get your system back up without the wait.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-bg" id="gallery">
+  <div class="shdr">
+    <p class="eyebrow">Our Work</p>
+    <h2 class="stitle">The G'z Standard</h2>
+    <p class="slead">Every job done with energy, precision, and the kind of results you'll call us back for.</p>
+  </div>
+  <div class="gallery-grid">
+    <img class="tall" src="https://s3-media0.fl.yelpcdn.com/bphoto/Izx6pAwdia7P0t5bx-i4Rw/l.jpg" alt="Cool G'z HVAC work">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/ZkNWtwTTkhsWB2hTA0ecyw/l.jpg" alt="HVAC repair Jonesboro">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/J2p3Op2xbsAugoPQSLLcUQ/l.jpg" alt="AC service Georgia">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/ws-qN0mZqhycwyjtrBQZZg/l.jpg" alt="Heating service Jonesboro">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/dWpEIBVkpMZ62KP16i35IA/l.jpg" alt="HVAC supply Georgia">
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-layout">
+    <div class="about-img-wrap">
+      <img class="about-img" src="https://s3-media0.fl.yelpcdn.com/bphoto/imsGCpse6w2DgTNw9mFDog/l.jpg" alt="Cool G'z Air team">
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">About Cool G'z</p>
+      <h2 class="stitle">Real Energy. Real Results.</h2>
+      <p>Cool G'z Air is Jonesboro's HVAC company built different — combining real technical skills with the work ethic and hustle that gets every job done right.</p>
+      <p>We go beyond standard HVAC by offering handyman services and HVAC supply, making us the one call you need for your home. Whether it's an emergency repair or a new install, Cool G'z brings the heat.</p>
+      <div class="geo-tags">
+        <span class="geo-tag">Licensed</span>
+        <span class="geo-tag">Insured</span>
+        <span class="geo-tag accent">5.0★</span>
+        <span class="geo-tag">Jonesboro, GA</span>
+        <span class="geo-tag">Free Estimates</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <p class="eyebrow">Make the Call</p>
+  <h2 class="stitle">Get Cool G'z on the Job</h2>
+  <p>Jonesboro's energy is our energy. Call Cool G'z Air and get fast, affordable HVAC service today.</p>
+  <a class="phone-cta" href="tel:4043338709">(404) 333-8709</a>
+  <p class="cta-note">Jonesboro, GA 30238 · Licensed &amp; Insured · Free Estimates</p>
+</section>
+
+<footer>
+  <div class="footer-logo">Cool <span>G'z</span> Air | Jonesboro, GA</div>
+  <nav class="footer-nav">
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="tel:4043338709">Call</a>
+  </nav>
+  <div class="footer-credit">Website by WebCare Digital</div>
+</footer>
+
+</body>
+</html>

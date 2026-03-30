@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A 1 Services | Top-Tier HVAC &amp; Home Services | Atlanta, GA</title>
+<meta name="description" content="A 1 Services — A-1 quality HVAC, electrical furnace installation, painting, and home services in Atlanta, GA. Call (404) 914-0032.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Open Sans', sans-serif; color: #1a1a2a; background: #fff; }
+
+  /* STICKY HEADER */
+  header {
+    position: sticky; top: 0; z-index: 1000;
+    background: #1e3a5f;
+    padding: 0 36px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+  }
+  .header-logo {
+    display: flex; align-items: baseline; gap: 2px;
+  }
+  .logo-a1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem; color: #e8772e;
+    letter-spacing: 0.04em; line-height: 1;
+  }
+  .logo-rest {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem; color: #fff;
+    letter-spacing: 0.06em; line-height: 1;
+    margin-left: 6px;
+  }
+  .header-cta a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #e8772e; color: #fff;
+    font-weight: 700; font-size: 0.95rem;
+    text-decoration: none; padding: 12px 26px;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+    transition: background 0.2s;
+  }
+  .header-cta a:hover { background: #cf651e; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(155deg, #0a1628 0%, #1e3a5f 35%, #24487a 60%, #162d4a 100%);
+    padding: 100px 36px 90px;
+    position: relative; overflow: hidden;
+    text-align: center;
+  }
+  .hero-rule-left {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 8px;
+    background: linear-gradient(180deg, #e8772e, transparent, #e8772e);
+  }
+  .hero-rule-right {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 8px;
+    background: linear-gradient(180deg, #e8772e, transparent, #e8772e);
+  }
+  .hero-a1 {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40vw; color: rgba(255,255,255,0.02);
+    white-space: nowrap; pointer-events: none;
+    letter-spacing: -0.05em;
+  }
+  .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+  .hero-sup {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: #e8772e; margin-bottom: 16px;
+    display: block;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    color: #fff;
+    line-height: 1.0; margin-bottom: 12px;
+    letter-spacing: 0.04em;
+  }
+  .hero h1 .orange { color: #e8772e; }
+  .hero-sub {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.12em; margin-bottom: 36px;
+  }
+  .hero p {
+    font-size: 1.05rem; color: rgba(255,255,255,0.75);
+    max-width: 500px; margin: 0 auto 44px;
+    line-height: 1.75;
+  }
+  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-a1 {
+    background: #e8772e; color: #fff;
+    font-weight: 700; font-size: 1rem;
+    text-decoration: none; padding: 16px 40px;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+    box-shadow: 0 4px 24px rgba(232,119,46,0.45);
+    transition: background 0.2s;
+  }
+  .btn-a1:hover { background: #cf651e; }
+  .btn-outline {
+    background: transparent; color: rgba(255,255,255,0.9);
+    border: 2px solid rgba(255,255,255,0.3);
+    font-weight: 600; font-size: 0.95rem;
+    text-decoration: none; padding: 14px 34px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: #e8772e; color: #e8772e; }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: #13273f;
+    padding: 0 36px;
+    display: flex; justify-content: center; flex-wrap: wrap;
+    border-bottom: 4px solid #e8772e;
+  }
+  .trust-item {
+    padding: 16px 28px;
+    display: flex; align-items: center; gap: 14px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-icon-wrap {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem; color: #e8772e;
+    min-width: 32px; text-align: center;
+  }
+  .trust-text {
+    font-size: 0.82rem; font-weight: 700;
+    color: rgba(255,255,255,0.85);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    line-height: 1.3;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 80px 36px;
+    background: #f8f9fb;
+  }
+  .services-inner { max-width: 1100px; margin: 0 auto; }
+  .section-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    color: #1e3a5f; letter-spacing: 0.04em;
+    margin-bottom: 6px;
+  }
+  .section-sub {
+    font-size: 0.88rem; color: #7a8fa8;
+    margin-bottom: 48px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .service-card {
+    background: #fff;
+    border-radius: 0;
+    padding: 32px 24px;
+    border: 1px solid #e0e8f0;
+    border-top: 5px solid #1e3a5f;
+    position: relative;
+    transition: border-top-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  }
+  .service-card:hover {
+    border-top-color: #e8772e;
+    box-shadow: 0 6px 28px rgba(30,58,95,0.1);
+    transform: translateY(-2px);
+  }
+  .service-rank {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem; color: rgba(30,58,95,0.07);
+    position: absolute; top: 16px; right: 20px;
+    line-height: 1;
+  }
+  .service-icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
+  .service-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.25rem; color: #1e3a5f;
+    letter-spacing: 0.04em;
+  }
+
+  /* ABOUT */
+  .about {
+    background: #1e3a5f;
+    padding: 80px 36px;
+  }
+  .about-inner {
+    max-width: 1000px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+    align-items: start;
+  }
+  .about-text {}
+  .about-kicker {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem; letter-spacing: 0.2em;
+    color: #e8772e; margin-bottom: 12px;
+  }
+  .about-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff; line-height: 1.05;
+    letter-spacing: 0.04em; margin-bottom: 22px;
+  }
+  .about-title em { color: #e8772e; font-style: normal; }
+  .about-text p {
+    color: rgba(255,255,255,0.78);
+    line-height: 1.8; font-size: 0.96rem;
+    margin-bottom: 16px;
+  }
+  .contact-block {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 0; overflow: hidden;
+  }
+  .cb-head {
+    background: #e8772e;
+    padding: 14px 24px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem; letter-spacing: 0.1em;
+    color: #fff;
+  }
+  .cb-body { padding: 24px; }
+  .cb-row {
+    display: flex; gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.9rem;
+  }
+  .cb-row:last-child { border-bottom: none; }
+  .cb-key { color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; min-width: 80px; margin-top: 2px; }
+  .cb-val { color: #fff; font-weight: 600; }
+  .cb-val a { color: #e8772e; text-decoration: none; font-weight: 700; }
+
+  /* PHONE CTA */
+  .phone-cta {
+    background: #e8772e;
+    padding: 72px 36px;
+    text-align: center;
+  }
+  .phone-cta h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    color: #fff; letter-spacing: 0.04em; margin-bottom: 8px;
+  }
+  .phone-cta p {
+    color: rgba(255,255,255,0.9); font-size: 1.05rem;
+    margin-bottom: 36px; font-weight: 500;
+  }
+  .phone-number-large {
+    display: inline-flex; align-items: center; gap: 16px;
+    background: #1e3a5f; color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    text-decoration: none;
+    padding: 20px 52px;
+    letter-spacing: 0.04em;
+    box-shadow: 0 6px 28px rgba(0,0,0,0.2);
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .phone-number-large:hover { background: #0f2540; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: #0a1628;
+    padding: 28px;
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.82rem;
+  }
+  footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  footer a:hover { color: #e8772e; }
+
+  @media (max-width: 768px) {
+    .about-inner { grid-template-columns: 1fr; gap: 32px; }
+    .trust-item { padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-logo">
+    <span class="logo-a1">A-1</span>
+    <span class="logo-rest">Services</span>
+  </div>
+  <div class="header-cta">
+    <a href="tel:4049140032">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      (404) 914-0032
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-rule-left"></div>
+  <div class="hero-rule-right"></div>
+  <div class="hero-a1">A1</div>
+  <div class="hero-inner">
+    <span class="hero-sup">Atlanta, GA 30302</span>
+    <h1><span class="orange">A-1</span><br>Quality.</h1>
+    <div class="hero-sub">Every Time. Every Job.</div>
+    <p>Top-tier HVAC, home services, and more. When you need work done right — and done at the highest standard — A 1 Services delivers.</p>
+    <div class="hero-actions">
+      <a href="tel:4049140032" class="btn-a1">Call (404) 914-0032</a>
+      <a href="#services" class="btn-outline">See All Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item"><div class="trust-icon-wrap">A1</div><div class="trust-text">Top-Tier<br>Quality</div></div>
+  <div class="trust-item"><div class="trust-icon-wrap">✓</div><div class="trust-text">Licensed &amp;<br>Insured</div></div>
+  <div class="trust-item"><div class="trust-icon-wrap">⚡</div><div class="trust-text">Fast<br>Response</div></div>
+  <div class="trust-item"><div class="trust-icon-wrap">ATL</div><div class="trust-text">Atlanta,<br>GA</div></div>
+</div>
+
+<section class="services" id="services">
+  <div class="services-inner">
+    <h2 class="section-heading">Our Services</h2>
+    <p class="section-sub">All the services you need, all at A-1 quality</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-rank">01</div>
+        <span class="service-icon">🌡️</span>
+        <h3>HVAC</h3>
+      </div>
+      <div class="service-card">
+        <div class="service-rank">02</div>
+        <span class="service-icon">🎨</span>
+        <h3>Painters</h3>
+      </div>
+      <div class="service-card">
+        <div class="service-rank">03</div>
+        <span class="service-icon">⚡</span>
+        <h3>Electric Furnace Installation</h3>
+      </div>
+      <div class="service-card">
+        <div class="service-rank">04</div>
+        <span class="service-icon">🏠</span>
+        <h3>Home Services</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <div class="about-kicker">About A 1 Services</div>
+      <h2 class="about-title">One Name.<br><em>One Standard.</em><br>A-1.</h2>
+      <p>A 1 Services brings Atlanta homeowners and businesses the highest standard of quality across HVAC, painting, electrical furnace installation, and home services. Our name says it all — we're always first in class.</p>
+      <p>Based in Atlanta, GA 30302, we combine skilled craftsmanship with reliable service delivery. When quality is non-negotiable, you call A 1.</p>
+    </div>
+    <div class="contact-block">
+      <div class="cb-head">Contact A 1 Services</div>
+      <div class="cb-body">
+        <div class="cb-row">
+          <span class="cb-key">Location</span>
+          <span class="cb-val">Atlanta, GA 30302</span>
+        </div>
+        <div class="cb-row">
+          <span class="cb-key">Phone</span>
+          <span class="cb-val"><a href="tel:4049140032">(404) 914-0032</a></span>
+        </div>
+        <div class="cb-row">
+          <span class="cb-key">Services</span>
+          <span class="cb-val">HVAC, Paint, Electric, Home</span>
+        </div>
+        <div class="cb-row">
+          <span class="cb-key">Status</span>
+          <span class="cb-val">Licensed &amp; Insured</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="phone-cta">
+  <h2>Ready for A-1 Service?</h2>
+  <p>Atlanta's top-tier home services team is one call away.</p>
+  <a href="tel:4049140032" class="phone-number-large">
+    <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    (404) 914-0032
+  </a>
+</section>
+
+<footer>
+  <p>&copy; 2025 A 1 Services &bull; Atlanta, GA 30302</p>
+  <p style="margin-top:8px;">Website by <a href="#">WebCare Digital</a></p>
+</footer>
+
+</body>
+</html>

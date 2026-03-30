@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save Brothers Cooling &amp; Heating — Riverdale, GA HVAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Nunito', sans-serif; color: #1e3a5f; background: #fff; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+    .header-name { color: #fff; font-size: 1.15rem; font-weight: 800; letter-spacing: 0.01em; }
+    .header-call {
+      background: #e8772e; color: #fff;
+      padding: 10px 22px; border-radius: 6px;
+      font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-call:hover { background: #cf6420; }
+
+    .hero {
+      background: linear-gradient(135deg, #0d2240 0%, #1e3a5f 45%, #254d7a 100%);
+      position: relative; overflow: hidden;
+      padding: 100px 32px 90px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.03) 40px),
+                        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.03) 40px);
+    }
+    .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(232,119,46,0.15); border: 1px solid rgba(232,119,46,0.4);
+      color: #e8772e; font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 20px;
+    }
+    .hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+    .hero-tagline { color: rgba(255,255,255,0.75); font-size: 1.15rem; margin-bottom: 36px; }
+    .hero-cta {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      padding: 16px 40px; border-radius: 8px;
+      font-weight: 800; font-size: 1.1rem;
+      text-decoration: none; letter-spacing: 0.02em;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.4);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
+
+    .stats {
+      background: #e8772e;
+      display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-item {
+      flex: 1 1 160px; text-align: center;
+      padding: 22px 24px;
+      border-right: 1px solid rgba(255,255,255,0.2);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 1.7rem; font-weight: 800; color: #fff; line-height: 1; }
+    .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.85); font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    .services { padding: 72px 32px; background: #f8f9fc; }
+    .section-label { text-align: center; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #e8772e; margin-bottom: 10px; }
+    .section-title { text-align: center; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: #1e3a5f; margin-bottom: 48px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+    .service-card {
+      background: #fff; border-radius: 10px;
+      padding: 32px 24px; text-align: center;
+      box-shadow: 0 2px 16px rgba(30,58,95,0.08);
+      border-top: 4px solid #e8772e;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(30,58,95,0.13); }
+    .service-icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .service-card h3 { font-size: 1rem; font-weight: 700; color: #1e3a5f; }
+
+    .about { padding: 72px 32px; background: #fff; }
+    .about-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .about-text p { font-size: 1rem; line-height: 1.75; color: #444; margin-bottom: 16px; }
+    .info-grid { display: flex; flex-direction: column; gap: 16px; }
+    .info-item { display: flex; gap: 14px; align-items: flex-start; }
+    .info-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .info-item strong { display: block; font-weight: 700; color: #1e3a5f; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+    .info-item span { font-size: 0.95rem; color: #555; line-height: 1.5; }
+    @media (max-width: 640px) { .about-inner { grid-template-columns: 1fr; } }
+
+    .cta-section {
+      background: linear-gradient(135deg, #0d2240, #1e3a5f);
+      padding: 72px 32px; text-align: center;
+    }
+    .cta-section h2 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 12px; }
+    .cta-section p { color: rgba(255,255,255,0.7); margin-bottom: 28px; font-size: 1rem; }
+    .cta-phone { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 800; color: #e8772e; display: block; margin-bottom: 24px; text-decoration: none; }
+    .cta-phone:hover { color: #f0944a; }
+    .cta-btn {
+      display: inline-block; background: #e8772e; color: #fff;
+      padding: 18px 48px; border-radius: 8px;
+      font-weight: 800; font-size: 1.1rem; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #cf6420; }
+
+    footer {
+      background: #0d1f36; color: rgba(255,255,255,0.5);
+      text-align: center; padding: 24px 32px;
+      font-size: 0.85rem;
+    }
+    footer strong { color: rgba(255,255,255,0.8); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-name">Save Brothers Cooling &amp; Heating</div>
+    <a href="tel:4049931338" class="header-call">&#128222; (404) 993-1338</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Riverdale, GA HVAC</div>
+      <h1>Save Brothers Cooling &amp; Heating</h1>
+      <p class="hero-tagline">Honest, Reliable HVAC Service When You Need It Most</p>
+      <a href="tel:4049931338" class="hero-cta">Call Now &mdash; (404) 993-1338</a>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">5.0&#9733;</div><div class="stat-label">Star Rating</div></div>
+    <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">5-Star Reviews</div></div>
+    <div class="stat-item"><div class="stat-num">Riverdale</div><div class="stat-label">Serving GA &amp; Surrounding</div></div>
+    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates Available</div></div>
+  </div>
+
+  <section class="services">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">&#10052;</div><h3>AC Repair</h3></div>
+      <div class="service-card"><div class="service-icon">&#128293;</div><h3>Heating Repair</h3></div>
+      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Service</h3></div>
+      <div class="service-card"><div class="service-icon">&#128295;</div><h3>Heater Repair</h3></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="section-label">About Us</div>
+    <h2 class="section-title">Serving Riverdale with Pride</h2>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>Save Brothers Cooling &amp; Heating has been a trusted name in the Riverdale, GA community. We bring professional HVAC expertise, honest pricing, and dependable service to every job &mdash; from emergency repairs to full system installations.</p>
+        <p>Whether your AC breaks down on the hottest day of summer or your heater goes out in the dead of winter, our team is ready to respond quickly and get your home comfortable again.</p>
+      </div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><strong>Phone</strong><span><a href="tel:4049931338" style="color:#e8772e;text-decoration:none;">(404) 993-1338</a></span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128205;</div>
+          <div><strong>Service Area</strong><span>Riverdale, GA &amp; Surrounding Areas</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128336;</div>
+          <div><strong>Hours</strong><span>Mon&ndash;Fri: 8am&ndash;6pm<br>Sat: 9am&ndash;4pm</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#10003;</div>
+          <div><strong>Free Estimates</strong><span>Call us for your free quote today</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Get Comfortable?</h2>
+    <p>Call now for fast, friendly HVAC service in Riverdale, GA</p>
+    <a href="tel:4049931338" class="cta-phone">(404) 993-1338</a>
+    <a href="tel:4049931338" class="cta-btn">Call Save Brothers Today</a>
+  </section>
+
+  <footer>
+    <p><strong>Save Brothers Cooling &amp; Heating</strong> &mdash; Riverdale, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
+  </footer>
+
+</body>
+</html>

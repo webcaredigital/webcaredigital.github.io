@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central Heating and Air Conditioning | Atlanta's HVAC Resource</title>
+<meta name="description" content="Central Heating and Air Conditioning — Atlanta's central HVAC resource for heating, air conditioning, and thermostat repair. 5.0★ rated. Call (404) 233-6989.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Sans 3', sans-serif; color: #2a2a2a; background: #fff; }
+
+  /* STICKY HEADER */
+  header {
+    position: sticky; top: 0; z-index: 1000;
+    background: #fff;
+    border-bottom: 3px solid #1e3a5f;
+    padding: 0 36px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+  .header-brand {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.05rem; font-weight: 700;
+    color: #1e3a5f;
+    line-height: 1.2;
+  }
+  .header-brand small {
+    display: block; font-size: 0.68rem;
+    color: #7a8fa8; font-family: 'Source Sans 3', sans-serif;
+    font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .header-cta a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #1e3a5f; color: #fff;
+    font-weight: 700; font-size: 0.95rem;
+    text-decoration: none; padding: 11px 24px;
+    border-radius: 2px;
+    border: 2px solid #1e3a5f;
+    transition: background 0.2s, color 0.2s;
+  }
+  .header-cta a:hover { background: transparent; color: #1e3a5f; }
+  .header-cta a:hover svg { fill: #1e3a5f; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, #0f1e30 0%, #1e3a5f 50%, #22426b 70%, #162d4a 100%);
+    padding: 100px 36px 90px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 75% 50%, rgba(232,119,46,0.07) 0%, transparent 70%);
+  }
+  .hero-inner { max-width: 720px; position: relative; }
+  .hero-ornament {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 26px;
+  }
+  .ornament-line { flex: 1; max-width: 48px; height: 1px; background: rgba(232,119,46,0.6); }
+  .ornament-text {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.78rem; font-style: italic;
+    color: rgba(232,119,46,0.9); letter-spacing: 0.06em;
+  }
+  .hero h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 700; color: #fff;
+    line-height: 1.25; margin-bottom: 20px;
+  }
+  .hero h1 em { color: #e8772e; font-style: italic; }
+  .hero p {
+    font-size: 1.1rem; color: rgba(255,255,255,0.78);
+    max-width: 580px; line-height: 1.8; margin-bottom: 42px;
+    font-weight: 400;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .btn-primary {
+    background: #e8772e; color: #fff;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700; font-size: 1rem;
+    text-decoration: none; padding: 15px 36px;
+    border-radius: 2px;
+    box-shadow: 0 4px 20px rgba(232,119,46,0.35);
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: #cf651e; }
+  .btn-link {
+    color: rgba(255,255,255,0.75);
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.92rem; font-style: italic;
+    text-decoration: underline; text-underline-offset: 4px;
+    transition: color 0.2s;
+  }
+  .btn-link:hover { color: #e8772e; }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: #f8f5f0;
+    border-bottom: 1px solid #e0d8ce;
+    padding: 18px 36px;
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 6px 28px;
+    border-right: 1px solid #d0c8bc;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.85rem; font-weight: 600; color: #1e3a5f;
+    letter-spacing: 0.02em;
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-bullet { color: #e8772e; font-size: 1.2rem; }
+
+  /* SERVICES */
+  .services {
+    padding: 80px 36px;
+    background: #fff;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .services-top {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 48px;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .section-ornament {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+  }
+  .orn-dash { width: 28px; height: 2px; background: #e8772e; }
+  .orn-text {
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: #e8772e;
+  }
+  .section-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 700; color: #1e3a5f; line-height: 1.25;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: #faf8f5;
+    border: 1px solid #e8ddd0;
+    padding: 32px 24px;
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+  .service-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: #e8772e;
+    transform: scaleX(0);
+    transition: transform 0.25s;
+    transform-origin: left;
+  }
+  .service-card:hover::after { transform: scaleX(1); }
+  .service-card:hover { box-shadow: 0 6px 24px rgba(30,58,95,0.1); transform: translateY(-2px); }
+  .service-roman {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic; font-size: 0.8rem;
+    color: #b0a090; margin-bottom: 10px;
+  }
+  .service-card h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.05rem; font-weight: 700;
+    color: #1e3a5f;
+  }
+
+  /* ABOUT */
+  .about {
+    background: #1e3a5f;
+    padding: 80px 36px;
+  }
+  .about-inner {
+    max-width: 960px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+    align-items: start;
+  }
+  .about-text {}
+  .about-text .section-ornament {}
+  .about-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    font-weight: 700; color: #fff;
+    margin-bottom: 20px; line-height: 1.3;
+  }
+  .about-title em { color: #e8772e; font-style: italic; }
+  .about-text p {
+    color: rgba(255,255,255,0.78);
+    line-height: 1.85; font-size: 0.97rem;
+    margin-bottom: 16px;
+  }
+  .aside-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 32px;
+  }
+  .aside-card-title {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic; font-size: 0.85rem;
+    color: #e8772e; margin-bottom: 22px;
+    letter-spacing: 0.04em;
+  }
+  .aside-row {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .aside-row:last-child { border-bottom: none; }
+  .aside-label {
+    font-size: 0.75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.4);
+    min-width: 75px; margin-top: 2px;
+  }
+  .aside-val {
+    font-size: 0.92rem; color: rgba(255,255,255,0.9);
+    font-weight: 600;
+  }
+  .aside-val a { color: #e8772e; text-decoration: none; font-weight: 700; font-size: 1rem; }
+
+  /* PHONE CTA */
+  .phone-cta {
+    background: #f8f5f0;
+    border-top: 1px solid #e8ddd0;
+    padding: 80px 36px;
+    text-align: center;
+  }
+  .phone-cta-ornament {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    margin-bottom: 20px;
+  }
+  .cta-orn-line { width: 60px; height: 1px; background: #e8772e; }
+  .cta-orn-text {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic; font-size: 0.85rem; color: #7a8fa8;
+  }
+  .phone-cta h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+    font-weight: 700; color: #1e3a5f;
+    margin-bottom: 10px;
+  }
+  .phone-cta p {
+    color: #6b7c93; font-size: 1.05rem; margin-bottom: 40px;
+  }
+  .phone-number-large {
+    display: inline-flex; align-items: center; gap: 16px;
+    background: #1e3a5f; color: #fff;
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700; text-decoration: none;
+    padding: 22px 52px; border-radius: 2px;
+    box-shadow: 0 4px 24px rgba(30,58,95,0.2);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .phone-number-large:hover { background: #162d4a; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: #0f1e30;
+    padding: 28px;
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.82rem;
+  }
+  footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+  footer a:hover { color: #e8772e; }
+
+  @media (max-width: 768px) {
+    .about-inner { grid-template-columns: 1fr; gap: 32px; }
+    .trust-item { padding: 6px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-brand">
+    Central Heating and Air Conditioning
+    <small>Atlanta's Central HVAC Resource</small>
+  </div>
+  <div class="header-cta">
+    <a href="tel:4042336989">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      (404) 233-6989
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-ornament">
+      <div class="ornament-line"></div>
+      <span class="ornament-text">Established in Atlanta, GA 30303 &nbsp;&bull;&nbsp; 5.0 Stars</span>
+      <div class="ornament-line"></div>
+    </div>
+    <h1>Atlanta's <em>Central</em><br>HVAC Resource</h1>
+    <p>Trusted heating and air conditioning service at the heart of Atlanta. From thermostat repair to complete system installations — Central Heating and Air is where Atlanta turns.</p>
+    <div class="hero-actions">
+      <a href="tel:4042336989" class="btn-primary">Call (404) 233-6989</a>
+      <a href="#services" class="btn-link">Explore our services</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item"><span class="trust-bullet">&#9654;</span> 5.0-Star Rated</div>
+  <div class="trust-item"><span class="trust-bullet">&#9654;</span> Atlanta, GA</div>
+  <div class="trust-item"><span class="trust-bullet">&#9654;</span> Licensed &amp; Insured</div>
+  <div class="trust-item"><span class="trust-bullet">&#9654;</span> Thermostat Repair</div>
+  <div class="trust-item"><span class="trust-bullet">&#9654;</span> All HVAC Systems</div>
+</div>
+
+<section class="services" id="services">
+  <div class="services-top">
+    <div>
+      <div class="section-ornament">
+        <div class="orn-dash"></div>
+        <span class="orn-text">Our Services</span>
+      </div>
+      <h2 class="section-title">Complete Comfort<br>Solutions</h2>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-roman">I.</div>
+      <h3>HVAC</h3>
+    </div>
+    <div class="service-card">
+      <div class="service-roman">II.</div>
+      <h3>Heating &amp; Air Conditioning</h3>
+    </div>
+    <div class="service-card">
+      <div class="service-roman">III.</div>
+      <h3>Thermostat Repair</h3>
+    </div>
+    <div class="service-card">
+      <div class="service-roman">IV.</div>
+      <h3>HVAC Companies</h3>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <div class="section-ornament">
+        <div class="orn-dash"></div>
+        <span class="orn-text" style="color:rgba(255,255,255,0.5);">About Us</span>
+      </div>
+      <h2 class="about-title"><em>Central</em> to Every<br>Comfortable Home</h2>
+      <p>Central Heating and Air Conditioning has been Atlanta's trusted HVAC resource for years. We're the steady, reliable choice for homeowners who expect their system to work perfectly — every season, every time.</p>
+      <p>Located in the heart of Atlanta at 30303, our technicians bring the expertise and professionalism that a 5-star reputation demands. No corners cut, no guesswork — just excellent work.</p>
+    </div>
+    <div class="aside-card">
+      <div class="aside-card-title">Contact &amp; Information</div>
+      <div class="aside-row">
+        <span class="aside-label">Location</span>
+        <span class="aside-val">Atlanta, GA 30303</span>
+      </div>
+      <div class="aside-row">
+        <span class="aside-label">Phone</span>
+        <span class="aside-val"><a href="tel:4042336989">(404) 233-6989</a></span>
+      </div>
+      <div class="aside-row">
+        <span class="aside-label">Rating</span>
+        <span class="aside-val">5.0 Stars &bull; 1 Review</span>
+      </div>
+      <div class="aside-row">
+        <span class="aside-label">Specialty</span>
+        <span class="aside-val">Thermostat Repair</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="phone-cta">
+  <div class="phone-cta-ornament">
+    <div class="cta-orn-line"></div>
+    <span class="cta-orn-text">Contact Us Today</span>
+    <div class="cta-orn-line"></div>
+  </div>
+  <h2>Atlanta's Central HVAC Resource</h2>
+  <p>For reliable heating and cooling service in Atlanta — one call is all it takes.</p>
+  <a href="tel:4042336989" class="phone-number-large">
+    <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    (404) 233-6989
+  </a>
+</section>
+
+<footer>
+  <p>&copy; 2025 Central Heating and Air Conditioning &bull; Atlanta, GA 30303</p>
+  <p style="margin-top:8px;">Website by <a href="#">WebCare Digital</a></p>
+</footer>
+
+</body>
+</html>

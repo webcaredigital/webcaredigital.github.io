@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hunter Heating &amp; Air Conditioning | Atlanta, GA | Comfort You Can Trust</title>
+<meta name="description" content="Hunter Heating &amp; Air Conditioning Company — trusted HVAC repair, AC repair, furnace service in Atlanta, GA. Call (404) 876-7700.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Cabin', sans-serif; color: #1e1e1e; background: #fff; }
+
+  /* STICKY HEADER */
+  header {
+    position: sticky; top: 0; z-index: 1000;
+    background: #1e3a5f;
+    padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 66px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+  }
+  .header-brand {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .brand-icon {
+    font-size: 1.5rem;
+  }
+  .brand-text {
+    font-size: 1.05rem; font-weight: 700; color: #fff;
+    line-height: 1.25;
+  }
+  .brand-text span { color: #e8772e; }
+  .brand-text small {
+    display: block; font-size: 0.65rem; font-weight: 500;
+    color: rgba(255,255,255,0.5); letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .header-cta a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #e8772e; color: #fff;
+    font-weight: 700; font-size: 0.95rem;
+    text-decoration: none; padding: 11px 24px;
+    border-radius: 3px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .header-cta a:hover { background: #cf651e; transform: scale(1.02); }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(150deg, #0c1e30 0%, #1e3a5f 40%, #28507e 65%, #1a3458 100%);
+    padding: 96px 32px 84px;
+    position: relative; overflow: hidden;
+  }
+  /* Earthy texture overlay */
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='rgba(255,255,255,0.015)'/%3E%3C/svg%3E") repeat;
+  }
+  .hero-divider {
+    position: absolute; bottom: -1px; left: 0; right: 0;
+    overflow: hidden; line-height: 0;
+  }
+  .hero-inner {
+    max-width: 760px;
+    position: relative;
+  }
+  .hero-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-bottom: 22px;
+  }
+  .label-dot { width: 8px; height: 8px; background: #e8772e; border-radius: 50%; }
+  .label-text {
+    font-size: 0.8rem; font-weight: 600;
+    color: rgba(255,255,255,0.65); letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 700; color: #fff;
+    line-height: 1.18; margin-bottom: 18px;
+  }
+  .hero h1 em { color: #e8772e; font-style: normal; }
+  .hero p {
+    font-size: 1.1rem; color: rgba(255,255,255,0.76);
+    max-width: 560px; line-height: 1.78; margin-bottom: 42px;
+    font-weight: 400;
+  }
+  .hero-meta {
+    display: flex; align-items: center; gap: 24px;
+    margin-bottom: 38px; flex-wrap: wrap;
+  }
+  .hero-meta-item {
+    display: flex; align-items: center; gap: 7px;
+    font-size: 0.85rem; font-weight: 600;
+    color: rgba(255,255,255,0.72);
+  }
+  .hero-meta-dot { color: #e8772e; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-hunt {
+    background: #e8772e; color: #fff;
+    font-weight: 700; font-size: 1rem;
+    text-decoration: none; padding: 15px 36px;
+    border-radius: 3px;
+    box-shadow: 0 4px 18px rgba(232,119,46,0.4);
+    transition: background 0.2s;
+  }
+  .btn-hunt:hover { background: #cf651e; }
+  .btn-text {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.85);
+    font-weight: 600; font-size: 0.95rem;
+    text-decoration: none; padding: 14px 30px;
+    border-radius: 3px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .btn-text:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.4); }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: #f5f1ec;
+    border-top: 4px solid #e8772e;
+    border-bottom: 1px solid #e0d5c8;
+    padding: 0 32px;
+    display: flex; justify-content: center; flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 14px;
+    padding: 18px 24px;
+    border-right: 1px solid #e0d5c8;
+    font-size: 0.87rem; font-weight: 700; color: #1e3a5f;
+    letter-spacing: 0.02em;
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-check {
+    width: 30px; height: 30px;
+    background: #1e3a5f; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #e8772e; font-size: 0.85rem; flex-shrink: 0;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 80px 32px;
+    background: #fff;
+  }
+  .services-inner { max-width: 1100px; margin: 0 auto; }
+  .section-tag {
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: #e8772e; margin-bottom: 10px;
+  }
+  .section-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 700; color: #1e3a5f;
+    margin-bottom: 48px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+  }
+  .service-card {
+    background: #faf7f3;
+    border: 1px solid #e8ddd0;
+    border-radius: 4px;
+    padding: 28px 22px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+  .service-card:hover {
+    box-shadow: 0 8px 28px rgba(30,58,95,0.12);
+    transform: translateY(-2px);
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    background: linear-gradient(180deg, #e8772e, #1e3a5f);
+  }
+  .service-top {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .service-icon { font-size: 1.6rem; }
+  .service-tag {
+    font-size: 0.68rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: #e8772e;
+    background: rgba(232,119,46,0.1);
+    padding: 3px 8px; border-radius: 2px;
+  }
+  .service-card h3 {
+    font-size: 1rem; font-weight: 700; color: #1e3a5f;
+  }
+
+  /* ABOUT */
+  .about {
+    background: linear-gradient(135deg, #1e3a5f 0%, #24487a 100%);
+    padding: 80px 32px;
+  }
+  .about-inner {
+    max-width: 960px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 52px;
+    align-items: start;
+  }
+  .about-text .section-tag { color: rgba(232,119,46,0.9); }
+  .about-title {
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    font-weight: 700; color: #fff;
+    margin-bottom: 20px; line-height: 1.25;
+  }
+  .about-title em { color: #e8772e; font-style: normal; }
+  .about-text p {
+    color: rgba(255,255,255,0.78);
+    line-height: 1.85; font-size: 0.97rem;
+    margin-bottom: 16px;
+  }
+  .contact-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .cc-header {
+    background: #e8772e;
+    padding: 14px 24px;
+    font-size: 0.8rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: #fff;
+  }
+  .cc-body { padding: 24px; }
+  .cc-row {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.9rem;
+  }
+  .cc-row:last-child { border-bottom: none; }
+  .cc-label {
+    min-width: 72px; font-size: 0.73rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.4); margin-top: 2px;
+  }
+  .cc-val { color: rgba(255,255,255,0.9); font-weight: 600; }
+  .cc-val a { color: #e8772e; text-decoration: none; font-weight: 700; }
+
+  /* PHONE CTA */
+  .phone-cta {
+    background: #f5f1ec;
+    border-top: 1px solid #e0d5c8;
+    padding: 80px 32px;
+    text-align: center;
+  }
+  .phone-cta h2 {
+    font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+    font-weight: 700; color: #1e3a5f;
+    margin-bottom: 10px;
+  }
+  .phone-cta h2 em { color: #e8772e; font-style: normal; }
+  .phone-cta p {
+    color: #6b7c93; font-size: 1.05rem;
+    margin-bottom: 40px;
+  }
+  .phone-number-large {
+    display: inline-flex; align-items: center; gap: 16px;
+    background: #1e3a5f; color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700; text-decoration: none;
+    padding: 22px 52px; border-radius: 4px;
+    box-shadow: 0 6px 24px rgba(30,58,95,0.2);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .phone-number-large:hover { background: #162d4a; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: #0c1e30;
+    padding: 28px;
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.82rem;
+  }
+  footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+  footer a:hover { color: #e8772e; }
+
+  @media (max-width: 768px) {
+    .about-inner { grid-template-columns: 1fr; gap: 32px; }
+    .trust-item { padding: 14px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-brand">
+    <span class="brand-icon">&#127981;</span>
+    <div class="brand-text">
+      Hunter Heating <span>&amp; Air</span>
+      <small>Conditioning Company</small>
+    </div>
+  </div>
+  <div class="header-cta">
+    <a href="tel:4048767700">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      (404) 876-7700
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">
+      <div class="label-dot"></div>
+      <span class="label-text">Atlanta, GA 30324 &bull; Manchester St NE</span>
+    </div>
+    <h1>Comfort You Can <em>Trust</em></h1>
+    <p>Hunter Heating &amp; Air Conditioning Company has served Atlanta with skilled, dependable HVAC repair and service for years. When your comfort matters, trust the hunters to find the fix.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><span class="hero-meta-dot">&#9679;</span> HVAC Repair</div>
+      <div class="hero-meta-item"><span class="hero-meta-dot">&#9679;</span> AC Repair</div>
+      <div class="hero-meta-item"><span class="hero-meta-dot">&#9679;</span> Furnace Service</div>
+    </div>
+    <div class="hero-actions">
+      <a href="tel:4048767700" class="btn-hunt">Call (404) 876-7700</a>
+      <a href="#services" class="btn-text">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item"><div class="trust-check">&#10003;</div> Licensed &amp; Insured</div>
+  <div class="trust-item"><div class="trust-check">&#127981;</div> Atlanta, GA</div>
+  <div class="trust-item"><div class="trust-check">&#9881;</div> All HVAC Systems</div>
+  <div class="trust-item"><div class="trust-check">&#128293;</div> Furnace Experts</div>
+  <div class="trust-item"><div class="trust-check">&#9889;</div> Fast Response</div>
+</div>
+
+<section class="services" id="services">
+  <div class="services-inner">
+    <p class="section-tag">What We Do</p>
+    <h2 class="section-title">Trusted HVAC Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-icon">&#128295;</span>
+          <span class="service-tag">Repair</span>
+        </div>
+        <h3>HVAC Repair</h3>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-icon">&#10052;&#65039;</span>
+          <span class="service-tag">Cooling</span>
+        </div>
+        <h3>AC Repair</h3>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-icon">&#127777;&#65039;</span>
+          <span class="service-tag">Full System</span>
+        </div>
+        <h3>Heating &amp; Air Conditioning</h3>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-icon">&#128293;</span>
+          <span class="service-tag">Heating</span>
+        </div>
+        <h3>Furnace</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <p class="section-tag">About Us</p>
+      <h2 class="about-title">Built on Trust.<br><em>Proven by Service.</em></h2>
+      <p>Hunter Heating &amp; Air Conditioning Company has been a part of Atlanta's home services landscape for years. Based at 2021 Manchester St NE in Atlanta, GA, we bring rugged reliability and deep HVAC expertise to every call we take.</p>
+      <p>Our team handles everything from AC repairs on sweltering August afternoons to furnace diagnostics when winter rolls in. No job too urgent, no system too complex.</p>
+    </div>
+    <div class="contact-card">
+      <div class="cc-header">Contact Hunter Heating</div>
+      <div class="cc-body">
+        <div class="cc-row">
+          <span class="cc-label">Address</span>
+          <span class="cc-val">2021 Manchester St NE<br>Atlanta, GA 30324</span>
+        </div>
+        <div class="cc-row">
+          <span class="cc-label">Phone</span>
+          <span class="cc-val"><a href="tel:4048767700">(404) 876-7700</a></span>
+        </div>
+        <div class="cc-row">
+          <span class="cc-label">Services</span>
+          <span class="cc-val">HVAC, AC, Furnace</span>
+        </div>
+        <div class="cc-row">
+          <span class="cc-label">Area</span>
+          <span class="cc-val">Atlanta Metro</span>
+        </div>
+        <div class="cc-row">
+          <span class="cc-label">Status</span>
+          <span class="cc-val">Licensed &amp; Insured</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="phone-cta">
+  <h2>Ready to Call the <em>Hunters?</em></h2>
+  <p>Reliable HVAC service you can count on — from a team that takes pride in every job.</p>
+  <a href="tel:4048767700" class="phone-number-large">
+    <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    (404) 876-7700
+  </a>
+</section>
+
+<footer>
+  <p>&copy; 2025 Hunter Heating &amp; Air Conditioning Company &bull; 2021 Manchester St NE, Atlanta, GA 30324</p>
+  <p style="margin-top:8px;">Website by <a href="#">WebCare Digital</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaby HVAC | Heating &amp; Air Conditioning — Smyrna, GA</title>
+<meta name="description" content="Gaby HVAC provides HVAC repair, heating & air conditioning, air duct repair, furnace, AC installation, and commercial services in Smyrna, GA 30080. Call (678) 388-0146.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1e3a5f;
+    --navy-dark: #162d48;
+    --navy-soft: #22426a;
+    --navy-lighter: #2e5584;
+    --orange: #e8772e;
+    --orange-warm: #f08040;
+    --orange-dark: #c9621a;
+    --teal-hint: #2e5070;
+    --white: #ffffff;
+    --off-white: #f4f7fb;
+    --cream: #fdf8f4;
+    --border: #dde5f0;
+    --gray: #697688;
+    --gray-light: #e8eef6;
+    --text: #1c2b3a;
+    --font: 'Nunito', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--white); }
+
+  /* HEADER */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(16px, 4vw, 56px);
+    height: 68px;
+    border-bottom: 2px solid var(--border);
+    box-shadow: 0 2px 12px rgba(30,58,95,0.08);
+  }
+  .logo-area { display: flex; align-items: center; gap: 10px; }
+  .logo-badge {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-lighter) 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--orange);
+  }
+  .logo-words { display: flex; flex-direction: column; line-height: 1.1; }
+  .logo-main { font-size: 1.15rem; font-weight: 800; color: var(--navy); }
+  .logo-city { font-size: 0.62rem; font-weight: 600; color: var(--gray); text-transform: uppercase; letter-spacing: 0.08em; }
+  .header-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--navy);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .header-cta a:hover { background: var(--navy-lighter); }
+  .header-cta svg { width: 14px; height: 14px; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-soft) 55%, var(--teal-hint) 100%);
+    overflow: hidden;
+  }
+  /* Friendly dot pattern */
+  .hero-dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .hero-blob {
+    position: absolute;
+    bottom: -100px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,119,46,0.14) 0%, transparent 65%);
+  }
+  .hero-blob2 {
+    position: absolute;
+    top: -100px;
+    left: 40%;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(46,84,132,0.4) 0%, transparent 65%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: clamp(52px, 9vw, 100px) clamp(24px, 6vw, 72px);
+    max-width: 640px;
+  }
+  .hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255,255,255,0.1);
+    border: 1.5px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.85);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(4px);
+  }
+  .hero-pill .star { color: #ffd166; }
+  .hero h1 {
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+  .hero h1 .warm { color: var(--orange-warm); }
+  .hero p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.75;
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-warm {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(232,119,46,0.4);
+  }
+  .btn-warm:hover { background: var(--orange-dark); transform: translateY(-2px); }
+  .btn-clear {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid rgba(255,255,255,0.4);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 26px;
+    border-radius: 50px;
+    transition: all 0.2s;
+  }
+  .btn-clear:hover { border-color: rgba(255,255,255,0.8); }
+
+  /* TRUST */
+  .trust-strip {
+    background: var(--cream);
+    border-bottom: 2px solid var(--border);
+    padding: 18px clamp(20px, 5vw, 64px);
+  }
+  .trust-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+  .trust-items li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 0.88rem;
+  }
+  .trust-items li .t-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+  }
+
+  /* SECTIONS */
+  .section { padding: clamp(52px, 8vw, 90px) clamp(20px, 5vw, 64px); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 10px;
+  }
+  .section-tag::before { content: ''; width: 16px; height: 2px; background: var(--orange); border-radius: 1px; display: block; }
+  .section-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+    font-weight: 900;
+    color: var(--navy);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .section-desc {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 520px;
+    font-weight: 300;
+  }
+  .section-head { margin-bottom: 44px; }
+
+  /* SERVICES */
+  .services-light { background: var(--off-white); }
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 16px;
+  }
+  .svc-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 22px;
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .svc-card:hover { box-shadow: 0 10px 30px rgba(30,58,95,0.1); transform: translateY(-3px); }
+  .svc-icon-wrap {
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, var(--orange) 0%, var(--orange-warm) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 12px rgba(232,119,46,0.3);
+  }
+  .svc-icon-wrap svg { width: 22px; height: 22px; stroke: var(--white); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  .svc-card h3 { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 6px; line-height: 1.25; }
+  .svc-card p { font-size: 0.82rem; color: var(--gray); line-height: 1.55; font-weight: 400; }
+
+  /* ABOUT */
+  .about-flex { display: grid; grid-template-columns: 1.15fr 1fr; gap: 60px; align-items: center; }
+  @media (max-width: 720px) { .about-flex { grid-template-columns: 1fr; gap: 32px; } }
+  .about-copy p { font-size: 0.98rem; color: var(--gray); line-height: 1.8; margin-bottom: 14px; font-weight: 300; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--off-white);
+    border: 1.5px solid var(--border);
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .badge .b-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; }
+  .visual-card {
+    background: linear-gradient(140deg, var(--navy) 0%, var(--navy-lighter) 100%);
+    border-radius: 18px;
+    padding: 38px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 20px 48px rgba(30,58,95,0.25);
+  }
+  .v-kpi-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .v-kpi {
+    background: rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 18px 14px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .v-kpi-val { font-size: 1.8rem; font-weight: 900; color: var(--orange-warm); line-height: 1; margin-bottom: 4px; }
+  .v-kpi-lbl { font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; }
+  .v-addr {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .v-addr svg { width: 16px; height: 16px; stroke: var(--orange-warm); fill: none; stroke-width: 2.2; flex-shrink: 0; }
+  .v-addr span { font-size: 0.82rem; color: rgba(255,255,255,0.7); font-weight: 500; }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-soft) 60%, var(--teal-hint) 100%);
+    padding: clamp(60px, 10vw, 100px) clamp(20px, 5vw, 64px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .cta-section > * { position: relative; z-index: 1; }
+  .cta-section .section-tag { justify-content: center; color: var(--orange-warm); }
+  .cta-section .section-tag::before { background: var(--orange-warm); }
+  .cta-section h2 {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    margin-bottom: 14px;
+  }
+  .cta-section h2 em { color: var(--orange-warm); font-style: normal; }
+  .cta-section p { color: rgba(255,255,255,0.6); font-size: 1rem; font-weight: 300; margin-bottom: 36px; max-width: 440px; margin-left: auto; margin-right: auto; }
+  .big-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 900;
+    padding: 22px 48px;
+    border-radius: 50px;
+    letter-spacing: -0.02em;
+    transition: all 0.2s;
+    box-shadow: 0 8px 36px rgba(232,119,46,0.45);
+  }
+  .big-call:hover { background: var(--orange-dark); transform: translateY(-3px); }
+  .big-call svg { width: 26px; height: 26px; }
+  .cta-addr { margin-top: 18px; font-size: 0.83rem; color: rgba(255,255,255,0.45); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy-dark);
+    padding: 32px clamp(20px, 5vw, 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+  footer .f-brand { font-size: 1.05rem; font-weight: 900; color: var(--white); }
+  footer p { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.6; }
+  footer a { color: var(--orange-warm); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .f-line { width: 36px; height: 2px; background: var(--orange); opacity: 0.35; border-radius: 1px; }
+
+  @media (max-width: 480px) {
+    .hero-actions { flex-direction: column; }
+    .btn-warm, .btn-clear { justify-content: center; }
+    .header-cta a { font-size: 0.82rem; padding: 8px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-area">
+    <div class="logo-badge">G</div>
+    <div class="logo-words">
+      <span class="logo-main">Gaby HVAC</span>
+      <span class="logo-city">Smyrna, GA · 5.0★ Rated</span>
+    </div>
+  </div>
+  <div class="header-cta">
+    <a href="tel:6783880146">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (678) 388-0146
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-dots"></div>
+  <div class="hero-blob"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-content">
+    <div class="hero-pill">
+      <span class="star">★★★★★</span> 5.0 Rated · Smyrna, GA 30080
+    </div>
+    <h1>Your Local<br><span class="warm">HVAC Team.</span><br>Your Comfort.</h1>
+    <p>Gaby HVAC brings friendly, expert heating and air service to Smyrna and the surrounding Atlanta area. We're your neighbors — and we treat every home like our own.</p>
+    <div class="hero-actions">
+      <a href="tel:6783880146" class="btn-warm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (678) 388-0146
+      </a>
+      <a href="#services" class="btn-clear">Our Services ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <ul class="trust-items">
+    <li><span class="t-dot"></span> 5.0 Star Rated</li>
+    <li><span class="t-dot"></span> Licensed &amp; Insured</li>
+    <li><span class="t-dot"></span> Residential &amp; Commercial</li>
+    <li><span class="t-dot"></span> Honest, Upfront Pricing</li>
+    <li><span class="t-dot"></span> Smyrna, GA Local</li>
+  </ul>
+</div>
+
+<!-- SERVICES -->
+<section class="section services-light" id="services">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-tag">Services</div>
+      <h2 class="section-title">Everything Comfort-Related</h2>
+      <p class="section-desc">From HVAC repairs and duct work to full AC installations and commercial jobs — Gaby HVAC handles it all with care.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>HVAC Repair</h3>
+        <p>Comprehensive repair for all HVAC systems — we diagnose it right and fix it fast.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01M2.457 7.462A10 10 0 0121.54 7.46M5.454 10.464a7 7 0 0113.09 0"/></svg>
+        </div>
+        <h3>Heating &amp; Air Conditioning</h3>
+        <p>Year-round comfort with expert heating and AC service for every season.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Air Duct Repair</h3>
+        <p>Leaky ducts hurt your system's efficiency. We seal and repair for better airflow.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Furnace</h3>
+        <p>Furnace repair, maintenance, and replacement to keep you warm all winter long.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>AC Installation</h3>
+        <p>New, energy-efficient AC installations tailored to your home and Atlanta's summers.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M2 20h20M5 20V8h3M16 20V8h3M9 20v-6h6v6M12 8V4"/></svg>
+        </div>
+        <h3>Commercial Services</h3>
+        <p>Commercial HVAC solutions for offices, retail, and multi-unit properties in Smyrna.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="about-flex">
+      <div class="about-copy">
+        <div class="section-tag">About Gaby HVAC</div>
+        <h2 class="section-title">Friendly Service, Expert Results</h2>
+        <p>Gaby HVAC is a family-focused heating and cooling company rooted in Smyrna, GA. We've built our reputation on treating every customer like a neighbor — because here, you are one.</p>
+        <p>Whether you need a quick repair, a full system install, or commercial HVAC support, we bring the same warmth and professionalism to every job. Located at 1640 Roswell St Ste O, Smyrna, GA 30080.</p>
+        <div class="trust-badges">
+          <span class="badge"><span class="b-dot"></span> Licensed &amp; Insured</span>
+          <span class="badge"><span class="b-dot"></span> 5.0 Star Rated</span>
+          <span class="badge"><span class="b-dot"></span> Upfront Pricing</span>
+          <span class="badge"><span class="b-dot"></span> Local Smyrna Team</span>
+        </div>
+      </div>
+      <div class="visual-card">
+        <div class="v-kpi-row">
+          <div class="v-kpi">
+            <div class="v-kpi-val">5.0★</div>
+            <div class="v-kpi-lbl">Rating</div>
+          </div>
+          <div class="v-kpi">
+            <div class="v-kpi-val">Fast</div>
+            <div class="v-kpi-lbl">Response</div>
+          </div>
+          <div class="v-kpi">
+            <div class="v-kpi-val">Com.</div>
+            <div class="v-kpi-lbl">Commercial</div>
+          </div>
+          <div class="v-kpi">
+            <div class="v-kpi-val">Local</div>
+            <div class="v-kpi-lbl">Smyrna Based</div>
+          </div>
+        </div>
+        <div class="v-addr">
+          <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          <span>1640 Roswell St Ste O, Smyrna, GA 30080</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="section-tag">Call Us Today</div>
+  <h2>Ready to Feel<br><em>Comfortable Again?</em></h2>
+  <p>Give Gaby HVAC a call. We're friendly, fast, and ready to help with any heating or cooling need.</p>
+  <a href="tel:6783880146" class="big-call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    (678) 388-0146
+  </a>
+  <p class="cta-addr">Gaby HVAC · 1640 Roswell St Ste O · Smyrna, GA 30080</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="f-brand">Gaby HVAC</span>
+  <div class="f-line"></div>
+  <p>1640 Roswell St Ste O · Smyrna, GA 30080 &nbsp;·&nbsp; <a href="tel:6783880146">(678) 388-0146</a></p>
+  <p>HVAC Repair · Heating &amp; Air · Air Duct Repair · Furnace · AC Installation · Commercial Services</p>
+  <p style="margin-top:10px; font-size:0.76rem; color:rgba(255,255,255,0.3);">Website by <span style="color:rgba(255,255,255,0.5); font-weight:700;">WebCare Digital</span></p>
+</footer>
+
+</body>
+</html>

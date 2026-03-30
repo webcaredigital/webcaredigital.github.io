@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>True Patriot Mechanical — Atlanta, GA HVAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Open Sans', sans-serif; color: #1e3a5f; background: #fff; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e3a5f;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 40px;
+      box-shadow: 0 3px 16px rgba(0,0,0,0.3);
+    }
+    .header-name { color: #fff; font-family: 'Oswald', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+    .header-call {
+      background: #e8772e; color: #fff;
+      padding: 10px 24px; border-radius: 4px;
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.06em;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-call:hover { background: #cf6420; }
+
+    .hero {
+      background: linear-gradient(160deg, #0a1929 0%, #1e3a5f 50%, #1a4f7a 100%);
+      position: relative; overflow: hidden;
+      padding: 110px 40px 100px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.015) 20px, rgba(255,255,255,0.015) 40px);
+    }
+    .hero-content { position: relative; max-width: 720px; margin: 0 auto; }
+    .hero-icon { font-size: 3rem; margin-bottom: 16px; }
+    .hero h1 { color: #fff; font-family: 'Oswald', sans-serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.1; margin-bottom: 18px; }
+    .hero h1 span { color: #e8772e; }
+    .hero-tagline { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 40px; }
+    .hero-cta {
+      display: inline-block;
+      background: #e8772e; color: #fff;
+      padding: 16px 44px; border-radius: 4px;
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.15rem; letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(232,119,46,0.45);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: #cf6420; transform: translateY(-2px); }
+
+    .stats {
+      background: #e8772e;
+      display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-item {
+      flex: 1 1 160px; text-align: center;
+      padding: 24px 20px;
+      border-right: 1px solid rgba(255,255,255,0.25);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Oswald', sans-serif; font-size: 1.9rem; font-weight: 700; color: #fff; line-height: 1; }
+    .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.85); font-weight: 600; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .services { padding: 80px 40px; background: #f5f7fa; }
+    .section-eyebrow { text-align: center; font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #e8772e; margin-bottom: 8px; }
+    .section-title { text-align: center; font-family: 'Oswald', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; color: #1e3a5f; margin-bottom: 52px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 960px; margin: 0 auto; }
+    .service-card {
+      background: #fff; border-radius: 6px;
+      padding: 36px 24px; text-align: center;
+      box-shadow: 0 2px 12px rgba(30,58,95,0.07);
+      border-left: 5px solid #e8772e;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(30,58,95,0.12); }
+    .service-icon { font-size: 2rem; margin-bottom: 14px; }
+    .service-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600; color: #1e3a5f; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    .about { padding: 80px 40px; background: #fff; }
+    .about-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .about-text p { font-size: 0.97rem; line-height: 1.8; color: #455; margin-bottom: 16px; }
+    .info-grid { display: flex; flex-direction: column; gap: 18px; }
+    .info-item { display: flex; gap: 14px; align-items: flex-start; padding: 16px; background: #f5f7fa; border-radius: 6px; }
+    .info-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .info-item strong { display: block; font-family: 'Oswald', sans-serif; font-weight: 600; color: #1e3a5f; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+    .info-item span { font-size: 0.9rem; color: #555; }
+    @media (max-width: 620px) { .about-inner { grid-template-columns: 1fr; } }
+
+    .cta-section {
+      background: linear-gradient(160deg, #0a1929, #1e3a5f);
+      padding: 80px 40px; text-align: center;
+    }
+    .cta-section h2 { color: #fff; font-family: 'Oswald', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
+    .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+    .cta-phone { font-family: 'Oswald', sans-serif; font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 700; color: #e8772e; display: block; margin-bottom: 28px; text-decoration: none; letter-spacing: 0.04em; }
+    .cta-phone:hover { color: #f0944a; }
+    .cta-btn {
+      display: inline-block; background: #e8772e; color: #fff;
+      padding: 18px 52px; border-radius: 4px;
+      font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.08em;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,46,0.4);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #cf6420; }
+
+    footer {
+      background: #070e18; color: rgba(255,255,255,0.45);
+      text-align: center; padding: 24px 40px;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.75); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-name">True Patriot Mechanical</div>
+    <a href="tel:6784986726" class="header-call">&#128222; (678) 498-6726</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-icon">&#127482;&#127480;</div>
+      <h1>True <span>Patriot</span> Mechanical</h1>
+      <p class="hero-tagline">Professional HVAC Service for Atlanta Homes &amp; Businesses</p>
+      <a href="tel:6784986726" class="hero-cta">Call Now &mdash; (678) 498-6726</a>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">5.0&#9733;</div><div class="stat-label">Star Rating</div></div>
+    <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">5-Star Reviews</div></div>
+    <div class="stat-item"><div class="stat-num">Atlanta</div><div class="stat-label">Atlanta, GA</div></div>
+    <div class="stat-item"><div class="stat-num">FREE</div><div class="stat-label">Estimates</div></div>
+  </div>
+
+  <section class="services">
+    <div class="section-eyebrow">What We Offer</div>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">&#127777;</div><h3>HVAC Repair</h3></div>
+      <div class="service-card"><div class="service-icon">&#128293;</div><h3>Heating &amp; Air Conditioning</h3></div>
+      <div class="service-card"><div class="service-icon">&#127968;</div><h3>Residential HVAC</h3></div>
+      <div class="service-card"><div class="service-icon">&#127970;</div><h3>Commercial HVAC</h3></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="section-eyebrow">About Us</div>
+    <h2 class="section-title">Atlanta's Trusted HVAC Pros</h2>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>True Patriot Mechanical brings dedication, integrity, and expert craftsmanship to every HVAC job in Atlanta. We serve both residential and commercial clients with the same level of commitment and professionalism.</p>
+        <p>From heating repairs on cold Georgia nights to AC service during the summer heat, our team delivers reliable solutions with upfront pricing and zero surprises.</p>
+      </div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><strong>Phone</strong><span><a href="tel:6784986726" style="color:#e8772e;text-decoration:none;">(678) 498-6726</a></span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128205;</div>
+          <div><strong>Location</strong><span>Atlanta, GA</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128336;</div>
+          <div><strong>Hours</strong><span>Mon&ndash;Fri: 8am&ndash;6pm<br>Sat: By Appointment</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#127970;</div>
+          <div><strong>Service Types</strong><span>Residential &amp; Commercial</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Call Us Today</h2>
+    <p>Fast response across Atlanta, GA for all heating and cooling needs</p>
+    <a href="tel:6784986726" class="cta-phone">(678) 498-6726</a>
+    <a href="tel:6784986726" class="cta-btn">Get Your Free Estimate</a>
+  </section>
+
+  <footer>
+    <p><strong>True Patriot Mechanical</strong> &mdash; Atlanta, GA &nbsp;|&nbsp; Website by WebCare Digital</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hill HVAC | AC Repair, Furnace &amp; Duct Work — Atlanta, GA</title>
+<meta name="description" content="Hill HVAC provides HVAC repair, AC repair, furnace replacement, gas furnace repair, AC tune-up, and duct work in Atlanta, GA 30341. Call (770) 241-5023.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1e3a5f;
+    --navy-dark: #0f1e32;
+    --navy-mid: #1a2f4a;
+    --orange: #e8772e;
+    --orange-dark: #c25c14;
+    --iron: #2e3f52;
+    --steel-blue: #2a4464;
+    --white: #ffffff;
+    --off-white: #f2f5f8;
+    --light-gray: #e2e8f0;
+    --gray: #607080;
+    --text: #1a2433;
+    --heading: 'Oswald', sans-serif;
+    --body: 'Open Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); color: var(--text); background: var(--white); }
+
+  /* HEADER */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--navy-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(16px, 4vw, 56px);
+    height: 68px;
+    border-bottom: 4px solid var(--orange);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  }
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .logo-h {
+    font-family: var(--heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--orange);
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+  .logo-rest {
+    font-family: var(--heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+  .logo-sub {
+    font-family: var(--body);
+    font-size: 0.58rem;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-top: -2px;
+    padding-left: 2px;
+  }
+  .logo-wrap { display: flex; flex-direction: column; }
+  .header-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--heading);
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    padding: 10px 22px;
+    border-radius: 2px;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .header-cta a:hover { background: var(--orange-dark); }
+  .header-cta svg { width: 15px; height: 15px; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(170deg, var(--navy-dark) 0%, var(--navy-mid) 45%, var(--steel-blue) 100%);
+    overflow: hidden;
+  }
+  /* Industrial diagonal bars */
+  .hero-bars {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      60deg,
+      rgba(255,255,255,0.025) 0px,
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px,
+      transparent 36px
+    );
+  }
+  .hero-highlight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--orange);
+  }
+  .hero-corner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 280px;
+    height: 280px;
+    border-top: 3px solid rgba(232,119,46,0.2);
+    border-left: 3px solid rgba(232,119,46,0.2);
+    opacity: 0.5;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: clamp(52px, 9vw, 108px) clamp(24px, 6vw, 72px);
+    max-width: 660px;
+  }
+  .hero-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(232,119,46,0.15);
+    border: 1px solid rgba(232,119,46,0.35);
+    padding: 6px 14px;
+    margin-bottom: 20px;
+  }
+  .stars { color: var(--orange); font-size: 0.95rem; letter-spacing: 1px; }
+  .rating-text { font-family: var(--body); font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.8); }
+  .hero h1 {
+    font-family: var(--heading);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.05;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero h1 .accent { color: var(--orange); }
+  .hero p {
+    font-family: var(--body);
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--heading);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    padding: 14px 30px;
+    border-radius: 2px;
+    transition: background 0.2s;
+    text-transform: uppercase;
+  }
+  .btn-main:hover { background: var(--orange-dark); }
+  .btn-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--heading);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    padding: 14px 26px;
+    border-radius: 2px;
+    transition: border-color 0.2s;
+    text-transform: uppercase;
+  }
+  .btn-line:hover { border-color: rgba(255,255,255,0.7); }
+
+  /* TRUST */
+  .trust-strip {
+    background: var(--navy-mid);
+    border-bottom: 3px solid var(--orange);
+    padding: 18px clamp(20px, 5vw, 64px);
+  }
+  .trust-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 30px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+  .trust-items li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.85);
+    font-family: var(--heading);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .trust-items li span.t-icon {
+    color: var(--orange);
+    font-size: 1rem;
+  }
+
+  /* SECTIONS */
+  .section { padding: clamp(52px, 8vw, 90px) clamp(20px, 5vw, 64px); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .kicker {
+    font-family: var(--heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: var(--heading);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .section-desc {
+    font-family: var(--body);
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 540px;
+    font-weight: 300;
+  }
+  .section-head { margin-bottom: 44px; }
+
+  /* SERVICES */
+  .svc-bg { background: var(--off-white); }
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+  }
+  .svc-card {
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    padding: 26px 20px;
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .svc-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--orange);
+  }
+  .svc-card:hover { box-shadow: 0 8px 28px rgba(30,58,95,0.14); transform: translateY(-3px); }
+  .svc-num-big {
+    font-family: var(--heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--light-gray);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .svc-card h3 {
+    font-family: var(--heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .svc-card p { font-family: var(--body); font-size: 0.8rem; color: var(--gray); line-height: 1.55; font-weight: 300; }
+
+  /* ABOUT */
+  .about-cols { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; }
+  @media (max-width: 720px) { .about-cols { grid-template-columns: 1fr; gap: 32px; } }
+  .metrics-panel {
+    background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 100%);
+    padding: 38px 32px;
+    border-left: 5px solid var(--orange);
+  }
+  .metrics-panel h4 {
+    font-family: var(--body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 22px;
+  }
+  .metric-rows { display: flex; flex-direction: column; gap: 16px; }
+  .metric-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .metric-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .m-val {
+    font-family: var(--heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--orange);
+    min-width: 72px;
+    line-height: 1;
+  }
+  .m-lbl { font-family: var(--body); font-size: 0.85rem; color: rgba(255,255,255,0.65); font-weight: 300; }
+  .about-body { }
+  .about-body p { font-family: var(--body); font-size: 0.97rem; color: var(--gray); line-height: 1.78; margin-bottom: 14px; font-weight: 300; }
+  .chk-list { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+  .chk-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .chk-list li span {
+    width: 20px;
+    height: 20px;
+    background: var(--orange);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: var(--navy-dark);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: clamp(60px, 10vw, 104px) clamp(20px, 5vw, 64px);
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      60deg,
+      rgba(255,255,255,0.02) 0px,
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px,
+      transparent 36px
+    );
+  }
+  .cta-section > * { position: relative; z-index: 1; }
+  .cta-section .kicker { color: #f4a865; margin-bottom: 10px; }
+  .cta-section h2 {
+    font-family: var(--heading);
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .cta-section h2 span { color: var(--orange); }
+  .cta-section p { font-family: var(--body); color: rgba(255,255,255,0.55); font-size: 1rem; font-weight: 300; margin-bottom: 40px; }
+  .big-num {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--heading);
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 22px 48px;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 8px 32px rgba(232,119,46,0.4);
+    text-transform: uppercase;
+  }
+  .big-num:hover { background: var(--orange-dark); transform: translateY(-2px); }
+  .big-num svg { width: 28px; height: 28px; }
+  .cta-sub { margin-top: 18px; font-family: var(--body); font-size: 0.82rem; color: rgba(255,255,255,0.35); }
+
+  /* FOOTER */
+  footer {
+    background: #080f1a;
+    padding: 32px clamp(20px, 5vw, 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    border-top: 4px solid var(--orange);
+  }
+  footer .f-name { font-family: var(--heading); font-size: 1.1rem; font-weight: 700; color: var(--white); letter-spacing: 0.06em; text-transform: uppercase; }
+  footer p { font-family: var(--body); font-size: 0.8rem; color: rgba(255,255,255,0.38); line-height: 1.6; }
+  footer a { color: var(--orange); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    .hero-btns { flex-direction: column; }
+    .btn-main, .btn-line { justify-content: center; }
+    .header-cta a { font-size: 0.85rem; padding: 8px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-wrap">
+    <div class="logo">
+      <span class="logo-h">H</span><span class="logo-rest">ILL HVAC</span>
+    </div>
+    <span class="logo-sub">Atlanta, GA 30341 · 5.0★ Rated</span>
+  </div>
+  <div class="header-cta">
+    <a href="tel:7702415023">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (770) 241-5023
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bars"></div>
+  <div class="hero-highlight"></div>
+  <div class="hero-corner"></div>
+  <div class="hero-content">
+    <div class="hero-rating">
+      <span class="stars">★★★★★</span>
+      <span class="rating-text">5.0 Star Rated · Atlanta, GA 30341</span>
+    </div>
+    <h1>Hill <span class="accent">HVAC</span><br>Atlanta's Best</h1>
+    <p>Expert AC repair, furnace service, and complete duct work from a team that treats every job with the precision it deserves. 5-star service, every call.</p>
+    <div class="hero-btns">
+      <a href="tel:7702415023" class="btn-main">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (770) 241-5023
+      </a>
+      <a href="#services" class="btn-line">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust-strip">
+  <ul class="trust-items">
+    <li><span class="t-icon">★</span> 5.0 Rated</li>
+    <li><span class="t-icon">●</span> Licensed &amp; Insured</li>
+    <li><span class="t-icon">●</span> All Makes &amp; Models</li>
+    <li><span class="t-icon">●</span> Upfront Pricing</li>
+    <li><span class="t-icon">●</span> Atlanta Local</li>
+  </ul>
+</div>
+
+<!-- SERVICES -->
+<section class="section svc-bg" id="services">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="kicker">Services</div>
+      <h2 class="section-title">Full HVAC Coverage</h2>
+      <p class="section-desc">From AC tune-ups to full furnace replacements and duct work — Hill HVAC handles every aspect of your home comfort system.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-num-big">01</div>
+        <h3>HVAC Repair</h3>
+        <p>Fast diagnosis and repair across all HVAC systems and brands. We fix it right.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num-big">02</div>
+        <h3>AC Repair</h3>
+        <p>AC not cooling? We diagnose and fix air conditioning problems quickly and reliably.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num-big">03</div>
+        <h3>Furnace Replacement</h3>
+        <p>Out with the old. New energy-efficient furnace installation done to the highest standard.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num-big">04</div>
+        <h3>Gas Furnace Repair</h3>
+        <p>Expert gas furnace diagnostics and repair — safe, thorough, and reliable every time.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num-big">05</div>
+        <h3>AC Tune-Up</h3>
+        <p>Preventive maintenance to maximize efficiency and extend the life of your AC system.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num-big">06</div>
+        <h3>Duct Work</h3>
+        <p>Duct installation, repair, and sealing for improved airflow and system performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="about-cols">
+      <div class="metrics-panel">
+        <h4>Performance Record</h4>
+        <div class="metric-rows">
+          <div class="metric-row">
+            <div class="m-val">5.0★</div>
+            <div class="m-lbl">Customer satisfaction rating — no exceptions</div>
+          </div>
+          <div class="metric-row">
+            <div class="m-val">All</div>
+            <div class="m-lbl">Major HVAC brands serviced</div>
+          </div>
+          <div class="metric-row">
+            <div class="m-val">Fast</div>
+            <div class="m-lbl">Same-day appointments available</div>
+          </div>
+          <div class="metric-row">
+            <div class="m-val">ATL</div>
+            <div class="m-lbl">Local, accountable, community-trusted</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-body">
+        <div class="kicker">About Hill HVAC</div>
+        <h2 class="section-title">Built on a 5-Star Standard</h2>
+        <p>Hill HVAC is an Atlanta-based heating and cooling specialist built on one simple idea: every customer deserves 5-star service. That means showing up on time, diagnosing correctly the first time, and standing behind every repair.</p>
+        <p>We serve homes and businesses across Atlanta, GA 30341 with the precision and professionalism the work demands.</p>
+        <ul class="chk-list">
+          <li><span>✓</span> Licensed, bonded, and fully insured</li>
+          <li><span>✓</span> Accurate diagnosis before any repair</li>
+          <li><span>✓</span> No upsells, no hidden charges</li>
+          <li><span>✓</span> All major HVAC brands and systems</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="kicker">Get Service</div>
+  <h2>HVAC Problems?<br><span>We Fix Them Fast.</span></h2>
+  <p>Call Hill HVAC now. Honest pricing, quality work, 5-star results guaranteed.</p>
+  <a href="tel:7702415023" class="big-num">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    (770) 241-5023
+  </a>
+  <p class="cta-sub">Hill HVAC · Atlanta, GA 30341</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="f-name">Hill HVAC</span>
+  <p>Atlanta, GA 30341 &nbsp;·&nbsp; <a href="tel:7702415023">(770) 241-5023</a></p>
+  <p>HVAC Repair · AC Repair · Furnace Replacement · Gas Furnace Repair · AC Tune-Up · Duct Work</p>
+  <p style="margin-top:10px; font-size:0.76rem; color:rgba(255,255,255,0.25);">Website by <span style="color:rgba(255,255,255,0.45); font-weight:600;">WebCare Digital</span></p>
+</footer>
+
+</body>
+</html>
