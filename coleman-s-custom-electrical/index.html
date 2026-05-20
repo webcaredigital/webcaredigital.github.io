@@ -42,6 +42,24 @@ body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--chalk);
   color:var(--white);letter-spacing:-0.02em;
   display:flex;align-items:center;gap:0.5rem;
 }
+.topbar.with-logo{height:76px}
+.hero.with-logo-spacer{margin-top:76px}
+.topbar-brand.has-logo{
+  background:transparent;
+  padding:0;
+  gap:0;
+  height:auto;
+}
+.topbar-brand.has-logo img{
+  height:66px;max-width:260px;width:auto;
+  display:block;
+  object-fit:contain;
+}
+@media(max-width:480px){
+  .topbar.with-logo{height:60px}
+  .hero.with-logo-spacer{margin-top:60px}
+  .topbar-brand.has-logo img{height:50px;max-width:180px}
+}
 .topbar-brand .dot{
   width:8px;height:8px;border-radius:50%;
   background:var(--copper);display:inline-block;
@@ -142,6 +160,26 @@ body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--chalk);
 }
 .btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,0.08)}
 .btn svg{width:18px;height:18px;fill:currentColor}
+
+.hero-logo-mark{
+  position:relative;z-index:3;
+  margin-bottom:1.25rem;
+  display:inline-block;
+  background:rgba(255,255,255,0.97);
+  padding:14px 22px;
+  border-radius:14px;
+  box-shadow:0 12px 40px rgba(0,0,0,0.35);
+  border:1px solid rgba(255,255,255,0.15);
+}
+.hero-logo-mark img{
+  display:block;
+  height:120px;max-width:280px;width:auto;
+  object-fit:contain;
+}
+@media(max-width:768px){
+  .hero-logo-mark{padding:10px 16px;border-radius:10px}
+  .hero-logo-mark img{height:90px;max-width:220px}
+}
 
 /* ═══════════════════════════════════════════
    OFFERS STRIP
@@ -384,10 +422,9 @@ footer a:hover{text-decoration:underline}
 <body>
 
 <!-- ═══ STICKY HEADER ═══ -->
-<header class="topbar">
-  <div class="topbar-brand">
-    <span class="dot"></span>
-    <span>Coleman&apos;s Custom Electrical, A/C &amp; Plumbing</span>
+<header class="topbar with-logo">
+  <div class="topbar-brand has-logo">
+    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/RNeVRniNYRCryVDY_0_7hA/l.jpg" alt="Coleman's Custom Electrical, A/C & Plumbing logo" loading="eager">
   </div>
   <a href="tel:+18187547183" class="topbar-phone">
     <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
@@ -396,9 +433,10 @@ footer a:hover{text-decoration:underline}
 </header>
 
 <!-- ═══ HERO ═══ -->
-<section class="hero">
+<section class="hero with-logo-spacer">
   <img src="https://s3-media0.fl.yelpcdn.com/bphoto/3gH7h36VoBZTZV8xoerr4w/l.jpg" alt="Coleman's Custom Electrical, A/C & Plumbing services in Tujunga" class="hero-img" loading="eager">
   <div class="hero-content">
+    <div class="hero-logo-mark"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/RNeVRniNYRCryVDY_0_7hA/l.jpg" alt="Coleman's Custom Electrical, A/C & Plumbing logo" loading="eager"></div>
     <div class="hero-badge"><span class="pulse"></span> Open 24/7 &mdash; Tujunga, CA</div>
     <h1>Your Trusted <span>HVAC Partner</span> in Tujunga</h1>
     <p class="hero-sub">A/C, electrical, and plumbing under one roof. Bathroom remodels, valve work, and full HVAC service across Tujunga and the foothills.</p>
